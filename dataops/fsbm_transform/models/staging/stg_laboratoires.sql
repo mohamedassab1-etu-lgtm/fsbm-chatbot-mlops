@@ -2,6 +2,7 @@ WITH lab_main AS (
     SELECT 
         "_dlt_id",
         title AS nom_laboratoire,
+        acronyme,
         description,
         directeur,
         directeur_adjoint
@@ -30,6 +31,7 @@ equipes_agg AS (
 -- 3. On rassemble tout
 SELECT
     l.nom_laboratoire,
+    l.acronyme,
     l.description,
     l.directeur,
     l.directeur_adjoint,

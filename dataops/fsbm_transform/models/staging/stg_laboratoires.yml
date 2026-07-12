@@ -9,6 +9,11 @@ models:
         tests:
           - not_null
           - unique
+      - name: acronyme
+        description: "Acronyme ou abréviation du laboratoire (peut être vide)."
+        tests:
+          - not_null
+          - unique
       - name: description
         description: "Description ou nom long du laboratoire."
       - name: directeur
