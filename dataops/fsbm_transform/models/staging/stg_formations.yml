@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_formations
+    description: "Table structurée de toutes les formations (Licences, Masters, Doctorats)."
+    columns:
+      - name: cycle
+        tests:
+          - not_null
+      - name: nom_departement
+        tests:
+          - not_null
+      - name: nom_filiere
+        tests:
+          - not_null
+      - name: coordonnateur
+      - name: specialite
+      - name: objectifs
+      - name: debouches
+      - name: cible
+      - name: domaine
+        description: "Domaine de recherche (spécifique aux doctorats)."
+      - name: description
+        description: "Description de la formation (spécifique aux doctorats)."
+      - name: modules_json
+        description: "Structure contenant le détail des modules enseignés."
+      - name: axes_recherche_json
+        description: "Axes de recherche (spécifique aux doctorats)."

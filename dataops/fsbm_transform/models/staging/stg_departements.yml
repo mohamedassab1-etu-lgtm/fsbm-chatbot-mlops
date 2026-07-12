@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_departements
+    description: "Table nettoyée et structurée des départements de la FSBM."
+    columns:
+      - name: nom_departement
+        description: "Le nom officiel et complet du département."
+        tests:
+          - not_null
+          - unique
+      - name: chef
+        description: "Le nom du chef de département (Responsable académique)."
+        tests:
+          - not_null
+      - name: description_dept
+        description: "Description détaillée des missions et axes de recherche du département."

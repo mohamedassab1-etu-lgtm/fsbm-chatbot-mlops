@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_emplois
+    description: "Table des emplois du temps structurés par section."
+    columns:
+      - name: section
+        description: "Nom de la section ou du groupe d'étudiants (ex: Tronc Commun PC1)."
+        tests:
+          - not_null
+      - name: planning_json
+        description: "Planning complet de la semaine au format JSON, avec les jours et les créneaux horaires."
+        tests:
+          - not_null

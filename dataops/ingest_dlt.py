@@ -60,6 +60,12 @@ def get_laboratoires_data():
     if data:
         yield data
 
+@dlt.resource(name="professeurs", write_disposition="replace")
+def get_professeurs_data():
+    """Extrait la liste des professeurs et leurs informations"""
+    data = load_json("professeurs.json")
+    if data:
+        yield data
 
 if __name__ == "__main__":
     print("[INFO] Démarrage de l'ingestion dlt vers DuckDB...")
@@ -70,7 +76,8 @@ if __name__ == "__main__":
         get_departements_data(),
         get_formations_data(),
         get_emplois_data(),
-        get_laboratoires_data()
+        get_laboratoires_data(),
+        get_professeurs_data()
     ])
     
     print("\n[SUCCESS] Ingestion terminée avec succès !")

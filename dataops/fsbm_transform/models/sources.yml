@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: fsbm
+    schema: raw_data
+    tables:
+      - name: departements
+      - name: formations
+      - name: formations__departements
+      - name: formations__departements__formations
+      - name: formations__departements__formations__contenu
+      - name: formations__departements__formations__contenu__modules
+      - name: formations__departements__formations__axes_de_recherche
+      - name: emplois
+      - name: laboratoires
+      - name: laboratoires__equipes
+      - name: laboratoires__equipes__membres
+      - name: faculte
+      - name: faculte__contact__telephone
+      - name: faculte__departements_inclus
+      - name: professeurs
