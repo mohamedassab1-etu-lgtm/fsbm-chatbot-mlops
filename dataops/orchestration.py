@@ -27,7 +27,8 @@ dbt_source_tables = [
     "laboratoires",
     "laboratoires__equipes",
     "laboratoires__equipes__membres",
-    "professeurs"
+    "professeurs",
+    "professeurs__email"
 ]
 
 # On crée dynamiquement les sorties pour Dagster. 
