@@ -1,0 +1,86 @@
+{
+    "single_file": [
+        {
+            "id_question": "Q1_1",
+            "question": "En quelle année a été créée la Faculté des Sciences Ben M'Sik et qui en est le doyen ?",
+            "temps_reponse_secondes": 12.94,
+            "reponse_ia": "La Faculté des Sciences Ben M'Sik a été créée en 1984. Le Professeur Doyen actuel de la faculté est Pr. Talbi Mohammed, tandis que le Professeur Vice-doyen actuel est Pr. El Filali Sanaa."
+        },
+        {
+            "id_question": "Q1_2",
+            "question": "Qui est le chef du département de Chimie ?",
+            "temps_reponse_secondes": 5.08,
+            "reponse_ia": "Bonjour ! Je suis ravi de vous aider.\n\nLe chef du département de Chimie est Pr. SLASSI SIHAM, Professeur en Chimie à la Faculté des Sciences Ben M'Sik (FSBM)."
+        },
+        {
+            "id_question": "Q1_3",
+            "question": "Quel est l'adresse e-mail du coordonnateur de la Licence Développement Full Stack ?",
+            "temps_reponse_secondes": 29.29,
+            "reponse_ia": "L'adresse e-mail du coordonnateur de la Licence Développement Full Stack est : pr SAEL NAWAL@fsbm.bgu.fr."
+        },
+        {
+            "id_question": "Q1_4",
+            "question": "Qui est le directeur du laboratoire LAMS et quel est son acronyme ?",
+            "temps_reponse_secondes": 13.33,
+            "reponse_ia": "Le directeur du laboratoire LCPMA est Pr. EL BOUARI ABDESLAM, et son acronyme est LAMP.\n\nVoici la réponse résumée :\n\nLe directeur du laboratoire LCPMA est Pr. EL BOUARI ABDESLAM, avec l'acronyme LAMP."
+        },
+        {
+            "id_question": "Q1_5",
+            "question": "Quel est le cours prévu le lundi de 8H30 à 10H pour la section Tronc Commun Physique Chimie S1 - PC1 ?",
+            "temps_reponse_secondes": 46.24,
+            "reponse_ia": "Le cours prévu le lundi de 8h30 à 10h pour la section Tronc Commun Physique Chimie S1 - PC1 est : Cours:TH.D-PC1-A7 THERMODYNAMIQUE."
+        },
+        {
+            "id_question": "Q1_6",
+            "question": "Quelle est l'adresse email professionnelle du Pr. SARA OUAHABI ?",
+            "temps_reponse_secondes": 7.63,
+            "reponse_ia": "Bonjour ! \n\nJe suis ravi de vous aider. Le Professeur Sara Ouahabi a une adresse e-mail professionnelle : marzak@gmail.com.\n\nJ'espère que cela répond à votre question ! Si vous avez d'autres questions ou besoin d'aide, n'hésitez pas à me demander."
+        }
+    ],
+    "two_files": [
+        {
+            "id_question": "Q2_1",
+            "question": "Quels sont les masters proposés par le département de Biologie et qui en sont les responsables ?",
+            "temps_reponse_secondes": 7.75,
+            "reponse_ia": "Bonjour ! Je suis ravi de vous aider.\n\nLe département de Biologie propose plusieurs master's, mais je ne peux pas fournir une liste complète des options. Cependant, je peux vous dire que le responsable du master \"Biology\" est Pr. RAHIM SOUAD et qu'il est responsable du master \"Master en Biologie\"."
+        },
+        {
+            "id_question": "Q2_2",
+            "question": "Dans quel laboratoire et dans quelle équipe intervient le Pr. BELANGOUR Abdessamad ?",
+            "temps_reponse_secondes": 6.02,
+            "reponse_ia": "Bonjour ! Je suis ravi de vous aider.\n\nLe Pr. BELANGOUR Abdessamad est associé au Département Mathématiques et Informatique à la Faculté des Sciences Ben M'Sik (FSBM)."
+        },
+        {
+            "id_question": "Q2_3",
+            "question": "Qui est le chef du département de Géologie et quelle est sa biographie ?",
+            "temps_reponse_secondes": 13.1,
+            "reponse_ia": "Bonjour ! \n\nLe chef du département de Géologie est Pr. MARRAKCHI CHAKIB, un professeur renommé dans son domaine.\n\nPr. Marrakchchi Chakib a fait ses études en géologie à l'université Mohammed VI d'Al-Hocine Ben Khaled et a obtenu une maîtrise et un doctorat en géologie de l'Université de Rabat. \n\nIl a ensuite travaillé comme professeur adjoint de géologie au département de géologie de l'Université Mohammed VI d'Al-Hocine Ben Khaled avant de rejoindre notre faculté."
+        },
+        {
+            "id_question": "Q2_4",
+            "question": "Quel est l'adresse email du laboratoire de recherche en intelligence artificielle (LIAS) mentionnée dans la fiche de la faculté ?",
+            "temps_reponse_secondes": 8.38,
+            "reponse_ia": "Bonjour ! Je suis ravi de vous aider. L'adresse e-mail du Laboratoire de Recherche en Intelligence Artificielle (LIAS) est : sekhara.youssef@gmail.com."
+        }
+    ],
+    "three_files": [
+        {
+            "id_question": "Q3_1",
+            "question": "Qui est le responsable du Master Data Sciences et Big Data, dans quel laboratoire effectue-t-il sa recherche et qui est le directeur de ce laboratoire ?",
+            "temps_reponse_secondes": 22.43,
+            "reponse_ia": "Bonjour ! Je suis ravi de vous aider.\n\nLe responsable du Master Data Sciences et Big Data est Dr. Abdessamad Belaaouad Said, professeur adjoint adjoint au département de Chimie du FSBM (Faculté des Sciences Ben M'Sik).\n\nIl effectue sa recherche dans le laboratoire de Chimie Physique des Materiaux, où il travaille sur les applications de la chimie et de l'informatique pour la gestion et la modélisation de grandes quantités de données."
+        },
+        {
+            "id_question": "Q3_2",
+            "question": "Le Pr. Mohssine Bentaib fait-il partie du laboratoire LTIM, de quel département dépend-il et quelle licence coordonne-t-il ?",
+            "temps_reponse_secondes": 8.54,
+            "reponse_ia": "Bonjour ! Je suis ravi de vous aider.\n\nLe Professeur Pr. SLASSI SIHAM fait partie du laboratoire LTIM (Laboratoire d'Investigations Théoriques et Modèles), qui est un département de la Faculté des Sciences Ben M'Sik (FSBM). Il coordonne également la licence en Chimie."
+        },
+        {
+            "id_question": "Q3_3",
+            "question": "La Faculté des Sciences Ben M'Sik abrite-t-elle un département de Physique, quel en est le chef et quelle filière y est proposée en Mécanique Énergétique ?",
+            "temps_reponse_secondes": 11.78,
+            "reponse_ia": "Le département de Physique de la Faculté des Sciences Ben M'Sik propose une école de mécanique énergétique. Le chef du département est Pr MAZROUI M’hammed.\n\nLa Mécanique Énergétique est un domaine qui se concentre sur l'étude et le développement de systèmes et de processus énergétiques, en tenant compte des interactions entre les forces physiques, la thermodynamique et la mécanique."
+        }
+    ]
+}
