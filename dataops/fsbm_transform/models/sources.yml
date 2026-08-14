@@ -20,3 +20,4 @@ sources:
       - name: faculte__contact__telephone
       - name: faculte__departements_inclus
       - name: professeurs
+      - name: professeurs__email
