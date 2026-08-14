@@ -12,8 +12,8 @@ models:
         description: "Grade ou fonction académique (ex: Chef d'équipe, MCH)."
       - name: linkedin_url
         description: "Lien vers le profil LinkedIn."
-      - name: email
-        description: "Adresse email professionnelle."
+      - name: emails_json
+        description: "Liste JSON des adresses emails professionnelles."
       - name: scopus_profile_url
         description: "Lien vers le profil de recherche Scopus."
       - name: biographie
