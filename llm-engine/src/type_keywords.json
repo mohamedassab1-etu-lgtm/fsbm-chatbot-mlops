@@ -1,0 +1,107 @@
+{
+  "_comment": "Keyword bank per type, used by classify_intent_keywords() in chat_engine.py. Matching is done on a lowercased question. Some words genuinely appear in more than one data source (e.g. both professeurs and formations have an E.MAIL field, and role labels like 'Responsable'/'Professeur' show up inside laboratoires too) - those ambiguous single words are deliberately listed under every type they belong to so they don't tip the balance alone. It's the more specific, distinctive phrases in each list that should actually decide the classification when a question mixes vocabulary.",
+
+  "professeur": [
+    "professeur", "professeurs", "prof ", "prof.", "profs",
+    "enseignant", "enseignants", "enseignant-chercheur", "enseignants-chercheurs",
+    "chercheur", "chercheurs", "corps professoral",
+
+    "statut", "statut académique", "statut academique",
+    "grade", "grade académique", "grade academique",
+    "mch", "pes", "pa ", "titre académique", "titre academique",
+
+    "email du professeur", "e-mail du professeur", "mail du professeur",
+    "contact du professeur", "coordonnées du professeur", "coordonnees du professeur",
+    "joindre le professeur", "contacter le professeur",
+    "linkedin", "profil linkedin",
+    "scopus", "profil scopus", "profil de recherche",
+    "biographie", "parcours académique", "parcours academique", "cv du professeur",
+    "spécialité de recherche", "specialite de recherche",
+    "publications de", "travaux de recherche de",
+
+    "qui est le professeur", "qui est la professeure", "qui enseigne",
+    "quel est l'email de", "quelle est l'adresse mail de",
+    "département du professeur", "departement du professeur",
+
+    "email", "e-mail", "mail",
+    "responsable", "membre", "membres"
+  ],
+
+  "formation": [
+    "licence", "licences", "licence fondamentale",
+    "master", "masters", "doctorat", "doctorats",
+    "cycle", "cycle d'étude", "cycle d'etude",
+
+    "filière", "filiere", "filières", "filieres",
+    "spécialité", "specialite", "spécialités", "specialites",
+    "formation", "formations", "cursus",
+    "programme de", "programme d'études", "programme d'etudes",
+
+    "module", "modules", "matières enseignées", "matieres enseignees",
+    "contenu du module", "semestre", "s1", "s2", "s3", "s4", "s5", "s6",
+
+    "débouché", "debouche", "débouchés", "debouches",
+    "objectif", "objectifs", "objectifs pédagogiques", "objectifs pedagogiques",
+    "condition d'admission", "conditions d'admission",
+    "public cible", "que peut-on faire après", "que peut on faire apres",
+    "insertion professionnelle", "métiers après", "metiers apres",
+
+    "coordonnateur", "coordonnatrice", "coordination de la formation",
+    "responsable de la formation", "responsable de la filière", "responsable de la filiere",
+    "email du coordonnateur", "contact du coordonnateur",
+    "comment s'inscrire en licence", "comment s'inscrire en master",
+
+    "email", "e-mail", "mail", "responsable"
+  ],
+
+  "laboratoire": [
+    "laboratoire", "laboratoires", "labo", "labos",
+    "équipe de recherche", "equipe de recherche",
+    "équipes de recherche", "equipes de recherche",
+    "axe de recherche", "axes de recherche", "thématique de recherche", "thematique de recherche",
+    "directeur du laboratoire", "directeur adjoint", "directrice du laboratoire",
+    "membres de l'équipe", "membres de l'equipe", "membre du laboratoire",
+    "acronyme du laboratoire", "unité de recherche", "unite de recherche",
+    "recherche scientifique", "équipe dirigée par", "equipe dirigee par",
+
+    "responsable", "membre", "membres", "équipe", "equipe"
+  ],
+
+  "emploi_du_temps": [
+    "emploi du temps", "emplois du temps", "planning", "plannings",
+    "horaire", "horaires", "séance", "seance", "séances", "seances",
+    "salle", "salles", "créneau", "creneau", "créneaux", "creneaux",
+    "cours du", "td de", "tp de", "groupe", "section",
+    "semaine", "hebdomadaire", "matin", "après-midi", "apres-midi",
+    "quand ai-je cours", "quel jour", "quelle heure", "prochain cours",
+    "emploi du temps de la section", "planning hebdomadaire",
+    "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi",
+    "lu ", "ma ", "me ", "je ", "ve ", "sa "
+  ],
+
+  "departement": [
+    "département", "departement", "départements", "departements",
+    "chef de département", "chef de departement", "chef du département", "chef du departement",
+    "mission du département", "mission du departement",
+    "description du département", "description du departement",
+    "structure académique", "structure academique"
+  ],
+
+  "etablissement": [
+    "faculté", "faculte", "fsbm", "faculté des sciences ben m'sik",
+    "doyen", "vice-doyen", "vice doyen",
+    "adresse de la faculté", "adresse de la faculte",
+    "contact de la faculté", "contact de la faculte",
+    "université de rattachement", "universite de rattachement",
+    "université hassan", "universite hassan",
+    "année de création", "annee de creation", "date de création", "date de creation",
+    "site web", "site internet",
+    "téléphone de la faculté", "telephone de la faculte", "numéro de téléphone de la faculté",
+    "fax", "b.p.", "boîte postale", "boite postale",
+    "casablanca", "sidi othmane", "ben m'sik",
+    "localisation de la faculté", "localisation de la faculte",
+    "région", "region", "quartier",
+    "présentation de la faculté", "presentation de la faculte",
+    "à propos de la fsbm", "a propos de la fsbm", "historique de la faculté", "historique de la faculte"
+  ]
+}
