@@ -36,3 +36,7 @@ jobs:
       - name: Check Python syntax
         run: |
           python -m compileall src main.py run_benchmark.py
+
+      - name: Run unit tests
+        run: |
+          pytest -v
