@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_laboratoires
+    description: "Table structurée des laboratoires de recherche de la FSBM, incluant leurs équipes et les chercheurs associés."
+    columns:
+      - name: nom_laboratoire
+        description: "Nom officiel du laboratoire."
+        tests:
+          - not_null
+          - unique
+      - name: acronyme
+        description: "Acronyme ou abréviation du laboratoire (peut être vide)."
+        tests:
+          - not_null
+          - unique
+      - name: description
+        description: "Description ou nom long du laboratoire."
+      - name: directeur
+        description: "Professeur responsable ou directeur du laboratoire."
+      - name: directeur_adjoint
+        description: "Directeur adjoint du laboratoire (peut être vide)."
+      - name: equipes_json
+        description: "Structure JSON contenant la liste des équipes de recherche et les noms/rôles de leurs membres."

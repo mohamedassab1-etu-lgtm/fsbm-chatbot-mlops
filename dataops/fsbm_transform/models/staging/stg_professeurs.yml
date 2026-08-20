@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_professeurs
+    description: "Répertoire des professeurs de la FSBM avec leurs profils professionnels et académiques."
+    columns:
+      - name: nom_professeur
+        description: "Nom complet du professeur."
+        tests:
+          - not_null
+      - name: statut
+        description: "Grade ou fonction académique (ex: Chef d'équipe, MCH)."
+      - name: linkedin_url
+        description: "Lien vers le profil LinkedIn."
+      - name: emails_json
+        description: "Liste JSON des adresses emails professionnelles."
+      - name: scopus_profile_url
+        description: "Lien vers le profil de recherche Scopus."
+      - name: biographie
+        description: "Biographie détaillée du parcours et des travaux de recherche."
+      - name: nom_departement
+        description: "Département de rattachement."
+        tests:
+          - not_null

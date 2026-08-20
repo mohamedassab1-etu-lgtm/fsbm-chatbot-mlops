@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_faculte
+    description: "Table contenant les informations générales, la direction et les contacts de la Faculté des Sciences Ben M'Sik."
+    columns:
+      - name: nom_officiel
+        description: "Nom complet de l'établissement."
+        tests:
+          - not_null
+      - name: acronyme
+        description: "Acronyme de la faculté (ex: FSBM)."
+      - name: universite_de_rattachement
+      - name: annee_de_creation
+      - name: doyen
+      - name: vice_doyen
+      - name: description
+      - name: adresse
+      - name: fax
+      - name: site_web
+      - name: emails_json
+        description: "Objet JSON contenant les emails de contact (principal, scolarité, IA)."
+      - name: localisation_json
+        description: "Objet JSON contenant les informations de localisation (ville, pays, région, quartier)."
+      - name: telephones_json
+        description: "Liste JSON des numéros de téléphone de la faculté."
+      - name: departements_inclus_json
+        description: "Liste JSON des noms des départements inclus dans la faculté."
