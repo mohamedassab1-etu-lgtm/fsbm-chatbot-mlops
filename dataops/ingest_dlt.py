@@ -48,10 +48,42 @@ def get_formations_data():
 
 @dlt.resource(name="emplois", write_disposition="replace")
 def get_emplois_data():
-    """Extrait les emplois du temps par section"""
-    data = load_json("emplois.json")
+    """Extracts the schedule and serializes complex arrays to prevent dlt sub-tables"""
+    data = load_json("emplois_final.json")
+    
+    day_map = {'LU': 'lu', 'MA': 'ma', 'ME': 'me', 'JE': 'je', 'VE': 've', 'SA': 'sa'}
+    hour_map = {
+        '8H30 / 10H': '8_h30_10_h',
+        '10H15 / 11H45': '10_h15_11_h45',
+        '12H / 13H30': '12_h_13_h30',
+        '13H45 / 15H15': '13_h45_15_h15',
+        '15H30 / 17H': '15_h30_17_h'
+    }
+
     if data:
-        yield data
+        for row in data:
+            section = row.get("section")
+            if not section or "Template" in section:
+                continue
+            
+            flat_row = {"section": section}
+            emploi = row.get("emploi_du_temps", {})
+            
+            for jour, creneaux in emploi.items():
+                j = day_map.get(jour)
+                if not j: continue
+                
+                for heure, liste_cours in creneaux.items():
+                    h_col = hour_map.get(heure)
+                    if not h_col: continue
+                    
+                    # Match your exact SQL column naming convention
+                    col_name = f"emploi_du_temps__{j}___{h_col}"
+                    
+                    # Serialize the list of dicts into a JSON string
+                    flat_row[col_name] = json.dumps(liste_cours, ensure_ascii=False)
+            
+            yield flat_row
 
 @dlt.resource(name="laboratoires", write_disposition="replace")
 def get_laboratoires_data():
