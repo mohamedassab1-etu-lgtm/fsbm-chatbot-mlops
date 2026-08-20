@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from src.chat_engine import get_chat_engine
 
@@ -6,6 +7,15 @@ app = FastAPI(
     title="API Chatbot FSBM",
     description="API RAG pour interroger les données de la Faculté des Sciences Ben M'Sik",
     version="1.0.0"
+)
+
+# Configuration du CORS pour autoriser Next.js à communiquer avec l'API
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # En production, on mettra ["http://localhost:3000", "ton-domaine.com"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 print("Chargement du modèle et de la base vectorielle...")
