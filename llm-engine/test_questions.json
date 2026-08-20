@@ -1,0 +1,73 @@
+{
+  "single_file": [
+    {
+      "id": "Q1_1",
+      "sources": ["fsbm.json"],
+      "question": "En quelle année a été créée la Faculté des Sciences Ben M'Sik et qui en est le doyen ?"
+    },
+    {
+      "id": "Q1_2",
+      "sources": ["departements.json"],
+      "question": "Qui est le chef du département de Chimie ?"
+    },
+    {
+      "id": "Q1_3",
+      "sources": ["formations.json"],
+      "question": "Quel est l'adresse e-mail du coordonnateur de la Licence Développement Full Stack ?"
+    },
+    {
+      "id": "Q1_4",
+      "sources": ["laboratoires.json"],
+      "question": "Qui est le directeur du laboratoire LAMS et quel est son acronyme ?"
+    },
+    {
+      "id": "Q1_5",
+      "sources": ["emplois.json"],
+      "question": "Quel est le cours prévu le lundi de 8H30 à 10H pour la section Tronc Commun Physique Chimie S1 - PC1 ?"
+    },
+    {
+      "id": "Q1_6",
+      "sources": ["professeurs.json"],
+      "question": "Quelle est l'adresse email professionnelle du Pr. SARA OUAHABI ?"
+    }
+  ],
+  "two_files": [
+    {
+      "id": "Q2_1",
+      "sources": ["departements.json", "formations.json"],
+      "question": "Quels sont les masters proposés par le département de Biologie et qui en sont les responsables ?"
+    },
+    {
+      "id": "Q2_2",
+      "sources": ["professeurs.json", "laboratoires.json"],
+      "question": "Dans quel laboratoire et dans quelle équipe intervient le Pr. BELANGOUR Abdessamad ?"
+    },
+    {
+      "id": "Q2_3",
+      "sources": ["departements.json", "professeurs.json"],
+      "question": "Qui est le chef du département de Géologie et quelle est sa biographie ?"
+    },
+    {
+      "id": "Q2_4",
+      "sources": ["laboratoires.json", "fsbm.json"],
+      "question": "Quel est l'adresse email du laboratoire de recherche en intelligence artificielle (LIAS) mentionnée dans la fiche de la faculté ?"
+    }
+  ],
+  "three_files": [
+    {
+      "id": "Q3_1",
+      "sources": ["departements.json", "formations.json", "laboratoires.json"],
+      "question": "Qui est le responsable du Master Data Sciences et Big Data, dans quel laboratoire effectue-t-il sa recherche et qui est le directeur de ce laboratoire ?"
+    },
+    {
+      "id": "Q3_2",
+      "sources": ["professeurs.json", "laboratoires.json", "departements.json"],
+      "question": "Le Pr. Mohssine Bentaib fait-il partie du laboratoire LTIM, de quel département dépend-il et quelle licence coordonne-t-il ?"
+    },
+    {
+      "id": "Q3_3",
+      "sources": ["fsbm.json", "departements.json", "formations.json"],
+      "question": "La Faculté des Sciences Ben M'Sik abrite-t-elle un département de Physique, quel en est le chef et quelle filière y est proposée en Mécanique Énergétique ?"
+    }
+  ]
+}

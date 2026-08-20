@@ -1,0 +1,86 @@
+{
+    "single_file": [
+        {
+            "id_question": "Q1_1",
+            "question": "En quelle année a été créée la Faculté des Sciences Ben M'Sik et qui en est le doyen ?",
+            "temps_reponse_secondes": 31.06,
+            "reponse_ia": "La Faculté des Sciences Ben M'Sik (FSBM) a été créée en 1984. Le professeur Doyen actuel est Pr. Talbi Mohammed."
+        },
+        {
+            "id_question": "Q1_2",
+            "question": "Qui est le chef du département de Chimie ?",
+            "temps_reponse_secondes": 45.22,
+            "reponse_ia": "Le chef du département de Chimie est le Professeur El Kouali Mohammed."
+        },
+        {
+            "id_question": "Q1_3",
+            "question": "Quel est l'adresse e-mail du coordonnateur de la Licence Développement Full Stack ?",
+            "temps_reponse_secondes": 49.05,
+            "reponse_ia": "Le coordonateur de la Licence Fondamentale Développement Full Stack est Pr. MOHSSINE BENTAIB. \n\nL'adresse e-mail professionnelle de contact pour ce professeur est : Mohssine.bentaib@univh2c.ma\n\nSi vous avez besoin d'autres informations ou des détails supplémentaires, n'hésitez pas à me le faire savoir."
+        },
+        {
+            "id_question": "Q1_4",
+            "question": "Qui est le directeur du laboratoire LAMS et quel est son acronyme ?",
+            "temps_reponse_secondes": 52.32,
+            "reponse_ia": "Le document ne mentionne pas de laboratoire avec l'acronyme \"LAMS\". Il semble y avoir une confusion entre les acronymes des laboratoires. Selon la fiche du professeur Pr. LAASRI LAILA, il est directeur du Laboratoire de Géosciences, Géomatique et Environnement (LGGE). Pour le laboratoire LAMS, il n'y a aucune information fournie dans les fiches fournies."
+        },
+        {
+            "id_question": "Q1_5",
+            "question": "Quel est le cours prévu le lundi de 8H30 à 10H pour la section Tronc Commun Physique Chimie S1 - PC1 ?",
+            "temps_reponse_secondes": 38.76,
+            "reponse_ia": "Je suis désolé, mais avec les informations fournies dans le contexte fourni, je ne suis pas en mesure d'identifier précisément quel cours est prévu pour le lundi de 8H30 à 10H dans la section Tronc Commun Physique-Chimie S1 (PC1). Les horaires détaillés des cours par semaine sont généralement publiés officiellement sur les sites web de la faculté ou directement avec votre professeur. Je vous recommande de consulter ces sources pour obtenir l'information exacte."
+        },
+        {
+            "id_question": "Q1_6",
+            "question": "Quelle est l'adresse email professionnelle du Pr. SARA OUAHABI ?",
+            "temps_reponse_secondes": 20.04,
+            "reponse_ia": "L'adresse e-mail professionnelle de contact pour le Professeur SARA OUAHABI est : s3.ouahabi@gmail.com ou sara.ouahabi@univh2c.ma"
+        }
+    ],
+    "two_files": [
+        {
+            "id_question": "Q2_1",
+            "question": "Quels sont les masters proposés par le département de Biologie et qui en sont les responsables ?",
+            "temps_reponse_secondes": 65.98,
+            "reponse_ia": "Je n'ai pas d'informations spécifiques sur les masters proposés par le département de Biologie dans cette fiche de formation. Les fiches fournies ne mentionnent pas directement ces détails. Pour obtenir des informations précises sur les masters et leurs responsables, il faudrait consulter un catalogue officiel de master ou contacter directement l'université concernée.\n\nCependant, je peux noter que :\n\n- Le département de Biologie est rattaché au Département de Biologie dans toutes les fiches fournies.\n  \n- Les professeurs coordonnateurs mentionnés (Pr. FARH MOHAMED, Pr. SAMIR KARIMA et Pr. RACHDI BOUCHRA) sont tous liés au département de Biologie.\n\nPour avoir des détails précis sur les masters et leurs responsables, il faudrait consulter un catalogue officiel ou contacter directement l'université concernée."
+        },
+        {
+            "id_question": "Q2_2",
+            "question": "Dans quel laboratoire et dans quelle équipe intervient le Pr. BELANGOUR Abdessamad ?",
+            "temps_reponse_secondes": 47.33,
+            "reponse_ia": "Le Pr. BELANGOUR Abdessamad n'est pas mentionné dans les fiches des laboratoires ou des professeurs fournies. Donc, je ne peux pas déterminer dans quel laboratoire et quelle équipe il intervient basé sur les informations disponibles."
+        },
+        {
+            "id_question": "Q2_3",
+            "question": "Qui est le chef du département de Géologie et quelle est sa biographie ?",
+            "temps_reponse_secondes": 76.79,
+            "reponse_ia": "Le Chef du Département de Géologie à la Faculté des Sciences Ben M'Sik (FSBM) est Pr. MOUFLIH Mustapha.\n\nPr. MOUFLIH Mustapha a reçu son doctorat en géologie et dispose d'une solide expérience académique et professionnelle dans ce domaine. Il enseigne depuis de nombreuses années et contribue significativement à la formation des étudiants dans le département de Géologie. Son expertise couvre une gamme de sujets, allant des processus géodynamiques de la Terre aux ressources naturelles et aux enjeux environnementaux contemporains.\n\nIl coordonne également plusieurs formations spécialisées au sein du département de Géologie, notamment le Master Géologie Appliquée à la Prospection Des Ressources Naturelles (GAPRN) et le Master Géomatique Appliquée aux Géosciences et Environnement (GAGE)."
+        },
+        {
+            "id_question": "Q2_4",
+            "question": "Quel est l'adresse email du laboratoire de recherche en intelligence artificielle (LIAS) mentionnée dans la fiche de la faculté ?",
+            "temps_reponse_secondes": 54.84,
+            "reponse_ia": "L'adresse e-mail professionnelle de contact pour le Laboratoire d’Intelligence Artificielle et Systèmes (LIAS) est : faouzia.benabbou@univh2c.ma\n\nNotez que cette adresse est également mentionnée dans la fiche du professeur Pr. FAOUZIA BENABBOU, qui est le directeur de ce laboratoire."
+        }
+    ],
+    "three_files": [
+        {
+            "id_question": "Q3_1",
+            "question": "Qui est le responsable du Master Data Sciences et Big Data, dans quel laboratoire effectue-t-il sa recherche et qui est le directeur de ce laboratoire ?",
+            "temps_reponse_secondes": 55.23,
+            "reponse_ia": "Le responsable du Master Data Sciences et Big Data est Pr. BELANGOUR ABDESSAMAD.\n\nPour ce master, il n'y a pas d'information spécifiquement indiquant dans quelle laboratoire il effectue sa recherche. Cependant, étant donné que le Master est coordonné par lui, il pourrait travailler dans un laboratoire lié à la Data Sciences ou Big Data, comme le Laboratoire Analyse, Modélisation et Simulation (LAMS).\n\nEn ce qui concerne le directeur de ce laboratoire, c'est Pr. MOULINE JAMAL."
+        },
+        {
+            "id_question": "Q3_2",
+            "question": "Le Pr. Mohssine Bentaib fait-il partie du laboratoire LTIM, de quel département dépend-il et quelle licence coordonne-t-il ?",
+            "temps_reponse_secondes": 76.37,
+            "reponse_ia": "Basé sur les informations fournies dans les fiches de professeur, il n'y a pas d'évidence directe que le Pr. Mohssine Bentaib fait partie du laboratoire LTIM ou qu'il soit lié à ce laboratoire par son département de rattachement.\n\nVoici la réponse aux questions posées :\n\n1. **Département de rattachement :** Il n'y a pas d'information spécifique sur le département de rattachement du Pr. Mohssine Bentaib dans ces fiches de professeur.\n   \n2. **Licence coordonnée :** Il n'est pas mentionné qu'il coordonne une licence particulière.\n\nEn revanche, il est noté que :\n\n- Le Pr. Benzouine Fatna est rattaché au département de Physiques.\n- Le Pr. Benniss Mohamed est rattaché à la Chimie.\n- Le Pr. Bennaï Mohamed est rattaché au département de Physiques.\n- La Professeur Mohtadi Karima est rattachée à la Biologie.\n\nDonc, pour répondre précisément à votre question : \n\nLe Pr. Mohssine Bentaib n'est pas mentionné comme faisant partie du laboratoire LTIM et il n'y a pas d'information sur son département de rattachement ou sur les licences qu'il coordonne dans ces fiches."
+        },
+        {
+            "id_question": "Q3_3",
+            "question": "La Faculté des Sciences Ben M'Sik abrite-t-elle un département de Physique, quel en est le chef et quelle filière y est proposée en Mécanique Énergétique ?",
+            "temps_reponse_secondes": 51.59,
+            "reponse_ia": "Oui, la Faculté des Sciences Ben M'Sik (FSBM) abrite un département de Physique. Le professeur Chef du département de Physique est le Pr. MAZROUI M'HAMMED.\n\nEn ce qui concerne les filières proposées en Mécanique Énergétique dans le département de Physique, il n'y a pas de mention spécifique directe pour cette filière dans les fiches fournies. Cependant, je peux vous informer que la FSBM propose une Licence Fondamentale MÉCANIQUE ÉNERGÉTIQUE avec un coordonnateur attribué au Pr. MOURABIT M'BARKA du département de Physique.\n\nJe tiens à préciser que cette information est basée sur les données fournies et peut ne pas être exhaustive ou à jour. Pour obtenir des informations plus détaillées, il serait préférable de vérifier auprès directement de la FSBM ou de contacter leurs services d'information."
+        }
+    ]
+}
