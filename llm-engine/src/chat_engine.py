@@ -83,8 +83,12 @@ def emails_from_doc(doc) -> list[str]:
 
 def ground_emails_in_answer(answer: str, context_docs, question: str = "") -> str:
     """Replace any email in the answer that doesn't exactly match an email
-    found in the retrieved context. Prevents duplicating emails by tracking
-    which ones have already been correctly used by the LLM."""
+    found in the retrieved context. If the exact email isn't found, try to
+    identify which specific document the question is about and pull the
+    correct email straight from its labeled field - this handles the case
+    where the correct data IS in context but the (small) LLM still
+    garbled it while generating prose. Only falls back to a generic
+    warning when we genuinely can't determine the right value."""
     context_text = "\n".join(getattr(d, "page_content", "") for d in (context_docs or []))
     valid_emails = extract_emails(context_text)
 
@@ -94,45 +98,22 @@ def ground_emails_in_answer(answer: str, context_docs, question: str = "") -> st
     target_doc = best_matching_doc(question, context_docs)
     target_emails = emails_from_doc(target_doc)
 
-    # 1. Track which valid emails the LLM *already* used correctly in its answer
-    used_emails = set()
-    for match in EMAIL_REGEX.finditer(answer):
-        found = match.group(0)
-        if found in valid_emails or any(ve.lower() == found.lower() for ve in valid_emails):
-            used_emails.add(found.lower())
-
     def replace_if_invalid(match: re.Match) -> str:
         found = match.group(0)
-        
-        # If the LLM got it right, keep it
         if found in valid_emails:
             return found
         for ve in valid_emails:
             if ve.lower() == found.lower():
-                return ve 
+                return ve  # exact match modulo case
 
-        # The LLM hallucinated an email. Let's find a real one to replace it with.
-        # Pick the first target email that HAS NOT been printed yet.
-        available_targets = [te for te in target_emails if te.lower() not in used_emails]
-        if available_targets:
-            chosen = available_targets[0]
-            used_emails.add(chosen.lower())
-            return chosen
-        
-        # If all target emails are already printed, try any available valid email
-        available_valid = [ve for ve in valid_emails if ve.lower() not in used_emails]
-        if available_valid:
-            chosen = available_valid[0]
-            used_emails.add(chosen.lower())
-            return chosen
-        
-        # Fallback if everything was already used
-        if target_emails:
+        # Not a real email anywhere in context - try to confidently correct it
+        if len(target_emails) == 1:
             return target_emails[0]
-        if valid_emails:
+        if len(target_emails) > 1:
+            return " / ".join(target_emails)
+        if len(valid_emails) == 1:
             return next(iter(valid_emails))
-            
-        return "[adresse e-mail non vérifiée]"
+        return "[adresse e-mail non vérifiée - voir la fiche source]"
 
     return EMAIL_REGEX.sub(replace_if_invalid, answer)
 
@@ -317,7 +298,7 @@ def get_chat_engine():
     dept_name_index = build_identifier_index(vectorstore, "departement", "nom")
 
     retriever = make_filtered_retriever(
-        vectorstore, llm, k=7, fallback_k=5,
+        vectorstore, llm, k=4, fallback_k=3,
         identifier_indexes=(lab_acronym_index, emploi_section_index, prof_name_index, dept_name_index),
     )
 
@@ -345,22 +326,34 @@ Réponse de l'assistant :
     )
 
     document_chain = create_stuff_documents_chain(llm, prompt)
-    base_chain = create_retrieval_chain(retriever, document_chain)
+    chain = create_retrieval_chain(retriever, document_chain)
 
-    def ground_output(output: dict) -> dict:
-        """Runs after the LLM has generated its answer: verifies any
-        emails mentioned against what's actually in the retrieved
-        context, and corrects/flags mismatches. See ground_emails_in_answer
-        above for why this is necessary even with a good prompt."""
-        output = dict(output)
-        output["answer"] = ground_emails_in_answer(
-            output["answer"], output.get("context"), output.get("input", "")
-        )
-        return output
-
-    chain = base_chain | RunnableLambda(ground_output)
-
+    # NOTE: grounding is deliberately NOT piped into this chain via
+    # RunnableLambda. LangChain buffers a plain function step's input
+    # into one fully-accumulated value before calling it, which silently
+    # turns .stream() into "wait for the whole answer, then emit one
+    # final chunk" - defeating token-by-token streaming entirely. Instead:
+    # - non-streaming callers (JSON API, benchmark script) should call
+    #   get_grounded_answer(chain, question) below, which invokes the
+    #   chain and grounds the result afterward in plain Python.
+    # - streaming callers should call chain.stream(...) directly for live
+    #   token output, then apply ground_emails_in_answer() themselves once
+    #   the stream completes, using the full accumulated answer + context.
     return chain
+
+
+def get_grounded_answer(chain, question: str) -> dict:
+    """Non-streaming helper: invokes the chain and applies email grounding
+    to the final answer. Use this wherever full correctness matters more
+    than perceived latency (the JSON /api/chat endpoint, benchmarking) -
+    for a live-typing UI, stream the chain directly instead and ground
+    the accumulated text at the end (see main.py's /api/chat/stream)."""
+    response = chain.invoke({"input": question})
+    response = dict(response)
+    response["answer"] = ground_emails_in_answer(
+        response["answer"], response.get("context"), question
+    )
+    return response
 
 
 if __name__ == "__main__":
@@ -377,7 +370,19 @@ if __name__ == "__main__":
         print(f"[debug] intent (keyword pass): {intent_debug}")
 
         print("IA: ", end="", flush=True)
+        accumulated_answer = ""
+        context_docs = None
         for chunk in bot.stream({"input": query}):
+            if "context" in chunk and context_docs is None:
+                context_docs = chunk["context"]
             if "answer" in chunk:
+                accumulated_answer += chunk["answer"]
                 print(chunk["answer"], end="", flush=True)
-        print("\n")
+        print()
+
+        # Grounding runs once, after the full answer has streamed - see
+        # the note in get_chat_engine() for why this can't happen mid-stream.
+        grounded = ground_emails_in_answer(accumulated_answer, context_docs, query)
+        if grounded != accumulated_answer:
+            print(f"[correction appliquée] {grounded}")
+        print()
