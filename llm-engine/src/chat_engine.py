@@ -347,20 +347,18 @@ Réponse de l'assistant :
     document_chain = create_stuff_documents_chain(llm, prompt)
     base_chain = create_retrieval_chain(retriever, document_chain)
 
-    def ground_output(output: dict) -> dict:
-        """Runs after the LLM has generated its answer: verifies any
-        emails mentioned against what's actually in the retrieved
-        context, and corrects/flags mismatches. See ground_emails_in_answer
-        above for why this is necessary even with a good prompt."""
-        output = dict(output)
-        output["answer"] = ground_emails_in_answer(
-            output["answer"], output.get("context"), output.get("input", "")
-        )
-        return output
-
-    chain = base_chain | RunnableLambda(ground_output)
-
-    return chain
+    # NOTE: email grounding is intentionally NOT chained on here via
+    # RunnableLambda anymore. A plain RunnableLambda has no streaming
+    # ("transform") implementation, so LangChain can't pass partial
+    # chunks through it - it has to buffer the ENTIRE answer, run the
+    # lambda once, and emit a single chunk at the end. That silently
+    # turns real token-by-token streaming into "wait for everything,
+    # then get it all at once". Grounding only needs the *finished*
+    # answer anyway, so callers should stream this chain directly for
+    # real deltas, then call ground_emails_in_answer() themselves once
+    # on the accumulated text (see the __main__ block below, or
+    # main.py's /api/chat endpoint).
+    return base_chain
 
 
 if __name__ == "__main__":
@@ -377,7 +375,16 @@ if __name__ == "__main__":
         print(f"[debug] intent (keyword pass): {intent_debug}")
 
         print("IA: ", end="", flush=True)
+        full_answer = ""
+        context_docs = None
         for chunk in bot.stream({"input": query}):
+            if "context" in chunk:
+                context_docs = chunk["context"]
             if "answer" in chunk:
+                full_answer += chunk["answer"]
                 print(chunk["answer"], end="", flush=True)
         print("\n")
+
+        grounded = ground_emails_in_answer(full_answer, context_docs, query)
+        if grounded != full_answer:
+            print(f"[debug] correction appliquée -> {grounded}\n")
