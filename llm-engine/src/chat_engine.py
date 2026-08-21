@@ -326,21 +326,21 @@ Réponse de l'assistant :
     )
 
     document_chain = create_stuff_documents_chain(llm, prompt)
-    chain = create_retrieval_chain(retriever, document_chain)
 
-    # NOTE: grounding is deliberately NOT piped into this chain via
-    # RunnableLambda. LangChain buffers a plain function step's input
-    # into one fully-accumulated value before calling it, which silently
-    # turns .stream() into "wait for the whole answer, then emit one
-    # final chunk" - defeating token-by-token streaming entirely. Instead:
-    # - non-streaming callers (JSON API, benchmark script) should call
-    #   get_grounded_answer(chain, question) below, which invokes the
-    #   chain and grounds the result afterward in plain Python.
-    # - streaming callers should call chain.stream(...) directly for live
-    #   token output, then apply ground_emails_in_answer() themselves once
-    #   the stream completes, using the full accumulated answer + context.
-    return chain
+    base_chain = create_retrieval_chain(retriever, document_chain)
 
+    # NOTE: email grounding is intentionally NOT chained on here via
+    # RunnableLambda anymore. A plain RunnableLambda has no streaming
+    # ("transform") implementation, so LangChain can't pass partial
+    # chunks through it - it has to buffer the ENTIRE answer, run the
+    # lambda once, and emit a single chunk at the end. That silently
+    # turns real token-by-token streaming into "wait for everything,
+    # then get it all at once". Grounding only needs the *finished*
+    # answer anyway, so callers should stream this chain directly for
+    # real deltas, then call ground_emails_in_answer() themselves once
+    # on the accumulated text (see the __main__ block below, or
+    # main.py's /api/chat endpoint).
+    return base_chain
 
 def get_grounded_answer(chain, question: str) -> dict:
     """Non-streaming helper: invokes the chain and applies email grounding
@@ -370,6 +370,7 @@ if __name__ == "__main__":
         print(f"[debug] intent (keyword pass): {intent_debug}")
 
         print("IA: ", end="", flush=True)
+<<<<<<< HEAD
         accumulated_answer = ""
         context_docs = None
         for chunk in bot.stream({"input": query}):
@@ -386,3 +387,18 @@ if __name__ == "__main__":
         if grounded != accumulated_answer:
             print(f"[correction appliquée] {grounded}")
         print()
+=======
+        full_answer = ""
+        context_docs = None
+        for chunk in bot.stream({"input": query}):
+            if "context" in chunk:
+                context_docs = chunk["context"]
+            if "answer" in chunk:
+                full_answer += chunk["answer"]
+                print(chunk["answer"], end="", flush=True)
+        print("\n")
+
+        grounded = ground_emails_in_answer(full_answer, context_docs, query)
+        if grounded != full_answer:
+            print(f"[debug] correction appliquée -> {grounded}\n")
+>>>>>>> team-web
