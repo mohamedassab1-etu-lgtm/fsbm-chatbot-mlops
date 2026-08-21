@@ -46,7 +46,7 @@ jobs:
           black --check .
       
       - name: Security audit
-         continue-on-error: true          
+        continue-on-error: true          
          run: |
           pip install pip-audit
           pip-audit -r requirements.txt
