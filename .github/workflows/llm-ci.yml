@@ -40,3 +40,7 @@ jobs:
       - name: Run unit tests
         run: |
           pytest -v
+
+      - name: Check code formatting
+        run: |
+          black --check .
