@@ -370,24 +370,6 @@ if __name__ == "__main__":
         print(f"[debug] intent (keyword pass): {intent_debug}")
 
         print("IA: ", end="", flush=True)
-<<<<<<< HEAD
-        accumulated_answer = ""
-        context_docs = None
-        for chunk in bot.stream({"input": query}):
-            if "context" in chunk and context_docs is None:
-                context_docs = chunk["context"]
-            if "answer" in chunk:
-                accumulated_answer += chunk["answer"]
-                print(chunk["answer"], end="", flush=True)
-        print()
-
-        # Grounding runs once, after the full answer has streamed - see
-        # the note in get_chat_engine() for why this can't happen mid-stream.
-        grounded = ground_emails_in_answer(accumulated_answer, context_docs, query)
-        if grounded != accumulated_answer:
-            print(f"[correction appliquée] {grounded}")
-        print()
-=======
         full_answer = ""
         context_docs = None
         for chunk in bot.stream({"input": query}):
@@ -401,4 +383,3 @@ if __name__ == "__main__":
         grounded = ground_emails_in_answer(full_answer, context_docs, query)
         if grounded != full_answer:
             print(f"[debug] correction appliquée -> {grounded}\n")
->>>>>>> team-web
