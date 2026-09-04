@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from src.chat_engine import get_chat_engine, ground_emails_in_answer
+from src.generate_title import generate_conversation_title
 
 app = FastAPI(
     title="API Chatbot FSBM",
@@ -29,6 +30,10 @@ print("Moteur IA prêt !")
 class ChatRequest(BaseModel):
     question: str
 
+class TitleRequest(BaseModel):
+    prompt: str
+    language: str | None = None
+    exception_titles: list[str] | None = None
 
 def sse_event(data: dict) -> str:
     """Formats one Server-Sent-Event block. The frontend splits on '\\n\\n'
@@ -83,6 +88,26 @@ async def chat_endpoint(request: ChatRequest):
         },
     )
 
+@app.post("/generate-title")
+async def api_generate_title(request: TitleRequest):
+    try:
+        title_info = await generate_conversation_title(
+            prompt=request.prompt,
+            language=request.language,
+            exception_titles=request.exception_titles
+        )
+
+        return {
+            "title": title_info["title"],
+            "language": title_info["target_language"],
+            "detected_language": title_info["detected_language"]
+        }
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Title generation failed: {str(e)}"
+        )
 
 
 def _sse_event(event_type: str, text: str) -> str:
