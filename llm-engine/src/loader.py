@@ -20,7 +20,9 @@ def normalize_name(name: str) -> str:
     return " ".join(tokens)
 
 
-TITLE_PREFIX_REGEX = re.compile(r"^\s*(pr\.?|prof\.?|professeure?|dr\.?)\s+", re.IGNORECASE)
+TITLE_PREFIX_REGEX = re.compile(
+    r"^\s*(pr\.?|prof\.?|professeure?|dr\.?)\s+", re.IGNORECASE
+)
 
 
 def format_prof_name(name: str) -> str:
@@ -37,7 +39,9 @@ def format_prof_name(name: str) -> str:
     return f"Pr. {stripped}" if stripped else name
 
 
-TEAM_BLOCK_REGEX = re.compile(r"\{'name':\s*(?P<team>[^,]+?),\s*'membres':\s*\[(?P<members>.*?)\]\}")
+TEAM_BLOCK_REGEX = re.compile(
+    r"\{'name':\s*(?P<team>[^,]+?),\s*'membres':\s*\[(?P<members>.*?)\]\}"
+)
 MEMBER_NAME_REGEX = re.compile(r"'name':\s*([^,}]+)")
 
 
@@ -68,7 +72,9 @@ def parse_lab_teams(equipes_raw: str) -> list:
     teams = []
     for m in TEAM_BLOCK_REGEX.finditer(equipes_raw):
         team_name = clean_stray_quotes(m.group("team").strip())
-        member_names = [mm.strip() for mm in MEMBER_NAME_REGEX.findall(m.group("members"))]
+        member_names = [
+            mm.strip() for mm in MEMBER_NAME_REGEX.findall(m.group("members"))
+        ]
         teams.append((team_name, member_names))
     return teams
 
@@ -88,7 +94,9 @@ def parse_email_list(raw):
 
 
 def load_data_as_documents():
-    con = duckdb.connect('../data/duckdb/fsbm.duckdb') # Assure-toi que le chemin est correct selon l'emplacement du script
+    con = duckdb.connect(
+        "../data/duckdb/fsbm.duckdb"
+    )  # Assure-toi que le chemin est correct selon l'emplacement du script
     documents = []
 
     # Fetch laboratoires first (before professeurs/formations) so we can
@@ -154,9 +162,10 @@ def load_data_as_documents():
             f"Département de rattachement : {f[1]}\n"
             f"Cycle d'étude : {f[0]}\n"
         )
-        
+
         # On ajoute les champs dynamiquement seulement s'ils existent (pour éviter les "None")
-        if f[4]: content += f"Spécialité de la formation : {f[4]}\n"
+        if f[4]:
+            content += f"Spécialité de la formation : {f[4]}\n"
         if f[3]:
             content += f"Professeur Coordonnateur / Responsable de la formation : {format_prof_name(f[3])}\n"
             coord_key = normalize_name(f[3])
@@ -164,7 +173,9 @@ def load_data_as_documents():
 
             coord_emails = prof_email_lookup.get(coord_key, [])
             if len(coord_emails) == 1:
-                content += f"Adresse e-mail de contact du coordonnateur : {coord_emails[0]}\n"
+                content += (
+                    f"Adresse e-mail de contact du coordonnateur : {coord_emails[0]}\n"
+                )
             elif len(coord_emails) > 1:
                 content += f"Adresses e-mail de contact du coordonnateur : {', '.join(coord_emails)}\n"
 
@@ -174,16 +185,30 @@ def load_data_as_documents():
                 content += f"Laboratoire de recherche du coordonnateur : {lab_nom} ({lab_acronyme})\n"
                 if team_name:
                     content += f"Équipe de recherche du coordonnateur : {team_name}\n"
-                content += f"Directeur de ce laboratoire : {format_prof_name(lab_directeur)}\n"
-        if f[8]: content += f"Domaine de recherche : {f[8]}\n"
-        if f[9]: content += f"Description de la formation : {f[9]}\n"
-        if f[5]: content += f"Objectifs pédagogiques : {f[5]}\n"
-        if f[6]: content += f"Débouchés professionnels : {f[6]}\n"
-        if f[7]: content += f"Public cible / Conditions d'admission : {f[7]}\n"
-        if f[10]: content += f"Liste des modules enseignés : {f[10]}\n"
-        if f[11]: content += f"Axes de recherche : {f[11]}\n"
+                content += (
+                    f"Directeur de ce laboratoire : {format_prof_name(lab_directeur)}\n"
+                )
+        if f[8]:
+            content += f"Domaine de recherche : {f[8]}\n"
+        if f[9]:
+            content += f"Description de la formation : {f[9]}\n"
+        if f[5]:
+            content += f"Objectifs pédagogiques : {f[5]}\n"
+        if f[6]:
+            content += f"Débouchés professionnels : {f[6]}\n"
+        if f[7]:
+            content += f"Public cible / Conditions d'admission : {f[7]}\n"
+        if f[10]:
+            content += f"Liste des modules enseignés : {f[10]}\n"
+        if f[11]:
+            content += f"Axes de recherche : {f[11]}\n"
 
-        documents.append(Document(page_content=content, metadata={"source": "formations", "type": "formation", "filiere": f[2]}))
+        documents.append(
+            Document(
+                page_content=content,
+                metadata={"source": "formations", "type": "formation", "filiere": f[2]},
+            )
+        )
 
     # 2. Professeurs
     profs = profs_rows
@@ -201,20 +226,27 @@ def load_data_as_documents():
             f"--- FICHE PROFESSEUR ---\n"
             f"Nom complet du professeur : {format_prof_name(p[0])}\n"
         )
-        
+
         # Ajout conditionnel pour éviter les valeurs "None" ou vides
-        if p[6]: content += f"Département de rattachement : {p[6]}\n"
-        if p[1] and str(p[1]).strip(): content += f"Statut / Grade académique : {p[1]}\n"
+        if p[6]:
+            content += f"Département de rattachement : {p[6]}\n"
+        if p[1] and str(p[1]).strip():
+            content += f"Statut / Grade académique : {p[1]}\n"
 
         emails = parse_email_list(p[3])
         if len(emails) == 1:
             content += f"Adresse e-mail professionnelle de contact : {emails[0]}\n"
         elif len(emails) > 1:
-            content += f"Adresses e-mail professionnelles de contact : {', '.join(emails)}\n"
+            content += (
+                f"Adresses e-mail professionnelles de contact : {', '.join(emails)}\n"
+            )
 
-        if p[2]: content += f"Lien vers le profil professionnel LinkedIn : {p[2]}\n"
-        if p[4]: content += f"Lien vers le profil de recherche académique Scopus : {p[4]}\n"
-        if p[5]: content += f"Biographie, parcours et spécialités de recherche : {p[5]}\n"
+        if p[2]:
+            content += f"Lien vers le profil professionnel LinkedIn : {p[2]}\n"
+        if p[4]:
+            content += f"Lien vers le profil de recherche académique Scopus : {p[4]}\n"
+        if p[5]:
+            content += f"Biographie, parcours et spécialités de recherche : {p[5]}\n"
 
         prof_lab = member_to_lab.get(normalize_name(p[0]))
         if prof_lab:
@@ -227,7 +259,12 @@ def load_data_as_documents():
         if coordinated:
             content += f"Formation(s) coordonnée(s) par ce professeur : {', '.join(coordinated)}\n"
 
-        documents.append(Document(page_content=content, metadata={"source": "professeurs", "type": "professeur", "nom": p[0]}))
+        documents.append(
+            Document(
+                page_content=content,
+                metadata={"source": "professeurs", "type": "professeur", "nom": p[0]},
+            )
+        )
 
     # 3. Laboratoires
     labos = labs_rows
@@ -242,7 +279,16 @@ def load_data_as_documents():
             f"Professeur Directeur Adjoint : {format_prof_name(l[4])}\n"
             f"Liste des équipes de recherche et leurs membres : {l[5]}\n"
         )
-        documents.append(Document(page_content=content, metadata={"source": "laboratoires", "type": "laboratoire", "acronyme": l[1]}))
+        documents.append(
+            Document(
+                page_content=content,
+                metadata={
+                    "source": "laboratoires",
+                    "type": "laboratoire",
+                    "acronyme": l[1],
+                },
+            )
+        )
 
     # 4. Départements
     dept_filieres = {}
@@ -261,8 +307,17 @@ def load_data_as_documents():
         )
         filieres = dept_filieres.get(d[0], [])
         if filieres:
-            content += f"Filières et formations proposées par ce département :\n" + "\n".join(filieres) + "\n"
-        documents.append(Document(page_content=content, metadata={"source": "departements", "type": "departement", "nom": d[0]}))
+            content += (
+                f"Filières et formations proposées par ce département :\n"
+                + "\n".join(filieres)
+                + "\n"
+            )
+        documents.append(
+            Document(
+                page_content=content,
+                metadata={"source": "departements", "type": "departement", "nom": d[0]},
+            )
+        )
 
     # 5. Emplois du temps
     emplois = con.execute("SELECT * FROM clean_data.stg_emplois").fetchall()
@@ -273,7 +328,7 @@ def load_data_as_documents():
             dict_planning = json.loads(e[1])
             for jour, creneaux in dict_planning.items():
                 for heure, liste_cours in creneaux.items():
-                    
+
                     # FIX: If DuckDB returned the list as a string, decode it into a Python list
                     if isinstance(liste_cours, str):
                         try:
@@ -282,28 +337,34 @@ def load_data_as_documents():
                             pass
 
                     # Ensure there are courses in this time slot
-                    if liste_cours and isinstance(liste_cours, list): 
+                    if liste_cours and isinstance(liste_cours, list):
                         for cours in liste_cours:
                             c_type = cours.get("type", "")
                             c_mod = cours.get("module", "")
                             c_salle = cours.get("salle", "")
                             c_groupe = cours.get("groupe", "")
-                            
+
                             # Skip if the course object is essentially empty
                             if not c_mod and not c_type:
                                 continue
-                                
+
                             # Format the time nicely (e.g., "08h30_10h00" -> "08h30 à 10h00")
-                            heure_propre = heure.replace('_', ' à ')
-                            
+                            heure_propre = heure.replace("_", " à ")
+
                             # Build the descriptive sentence
                             details = ""
-                            if c_type: details += f"[{c_type}] "
-                            if c_mod: details += f"{c_mod}"
-                            if c_groupe: details += f" pour le groupe {c_groupe}"
-                            if c_salle: details += f" (Salle: {c_salle})"
-                                
-                            planning_text += f"- Le {jour} de {heure_propre} : {details.strip()}\n"
+                            if c_type:
+                                details += f"[{c_type}] "
+                            if c_mod:
+                                details += f"{c_mod}"
+                            if c_groupe:
+                                details += f" pour le groupe {c_groupe}"
+                            if c_salle:
+                                details += f" (Salle: {c_salle})"
+
+                            planning_text += (
+                                f"- Le {jour} de {heure_propre} : {details.strip()}\n"
+                            )
         except Exception as ex:
             planning_text = f"Erreur de lecture du planning : {ex}"
 
@@ -315,7 +376,16 @@ def load_data_as_documents():
             f"Section / Classe concernée : {e[0]}\n"
             f"Planning complet des cours de la semaine :\n{planning_text}\n"
         )
-        documents.append(Document(page_content=content, metadata={"source": "emplois", "type": "emploi_du_temps", "section": e[0]}))
+        documents.append(
+            Document(
+                page_content=content,
+                metadata={
+                    "source": "emplois",
+                    "type": "emploi_du_temps",
+                    "section": e[0],
+                },
+            )
+        )
 
     # 6. Faculté (FSBM)
     fac = con.execute("SELECT * FROM clean_data.stg_faculte").fetchall()
@@ -340,23 +410,43 @@ def load_data_as_documents():
             f"--- FICHE ÉTABLISSEMENT ---\n"
             f"Nom officiel de l'établissement : {f[0]}\n"
         )
-        
-        # Ajout conditionnel pour plus de propreté
-        if f[1]: content += f"Acronyme de la faculté : {f[1]}\n"
-        if f[2]: content += f"Université de rattachement : {f[2]}\n"
-        if f[3]: content += f"Année de création : {f[3]}\n"
-        if f[4]: content += f"Professeur Doyen actuel : {format_prof_name(f[4])}\n"
-        if f[5]: content += f"Professeur Vice-doyen actuel : {format_prof_name(f[5])}\n"
-        if f[6]: content += f"Description générale et missions de l'établissement : {f[6]}\n"
-        if f[7]: content += f"Adresse postale complète : {f[7]}\n"
-        if f[8]: content += f"Numéro de Fax : {f[8]}\n"
-        if f[9]: content += f"Site web officiel : {f[9]}\n"
-        if f[10]: content += f"Adresses e-mail de contact (Administration, Scolarité, IA) : {f[10]}\n"
-        if f[11]: content += f"Localisation géographique détaillée (Ville, Région, Pays) : {f[11]}\n"
-        if f[12]: content += f"Numéros de téléphone officiels : {f[12]}\n"
-        if f[13]: content += f"Liste des départements inclus dans la faculté : {f[13]}\n"
 
-        documents.append(Document(page_content=content, metadata={"source": "faculte", "type": "etablissement", "nom": f[0]}))
+        # Ajout conditionnel pour plus de propreté
+        if f[1]:
+            content += f"Acronyme de la faculté : {f[1]}\n"
+        if f[2]:
+            content += f"Université de rattachement : {f[2]}\n"
+        if f[3]:
+            content += f"Année de création : {f[3]}\n"
+        if f[4]:
+            content += f"Professeur Doyen actuel : {format_prof_name(f[4])}\n"
+        if f[5]:
+            content += f"Professeur Vice-doyen actuel : {format_prof_name(f[5])}\n"
+        if f[6]:
+            content += f"Description générale et missions de l'établissement : {f[6]}\n"
+        if f[7]:
+            content += f"Adresse postale complète : {f[7]}\n"
+        if f[8]:
+            content += f"Numéro de Fax : {f[8]}\n"
+        if f[9]:
+            content += f"Site web officiel : {f[9]}\n"
+        if f[10]:
+            content += f"Adresses e-mail de contact (Administration, Scolarité, IA) : {f[10]}\n"
+        if f[11]:
+            content += (
+                f"Localisation géographique détaillée (Ville, Région, Pays) : {f[11]}\n"
+            )
+        if f[12]:
+            content += f"Numéros de téléphone officiels : {f[12]}\n"
+        if f[13]:
+            content += f"Liste des départements inclus dans la faculté : {f[13]}\n"
+
+        documents.append(
+            Document(
+                page_content=content,
+                metadata={"source": "faculte", "type": "etablissement", "nom": f[0]},
+            )
+        )
 
     con.close()
     return documents

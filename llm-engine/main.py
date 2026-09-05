@@ -10,13 +10,15 @@ from src.generate_title import generate_conversation_title
 app = FastAPI(
     title="API Chatbot FSBM",
     description="API RAG pour interroger les données de la Faculté des Sciences Ben M'Sik",
-    version="1.0.0"
+    version="1.0.0",
 )
 
 # Configuration du CORS pour autoriser Next.js à communiquer avec l'API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # En production, on mettra ["http://localhost:3000", "ton-domaine.com"]
+    allow_origins=[
+        "*"
+    ],  # En production, on mettra ["http://localhost:3000", "ton-domaine.com"]
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -160,6 +162,7 @@ async def chat_stream_endpoint(request: ChatRequest):
     )
 
 
+
 @app.get("/api/health", tags=["Système"])
 async def health_check():
     return {"status": "L'API FSBM est opérationnelle"}
@@ -167,4 +170,5 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)

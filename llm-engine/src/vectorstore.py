@@ -12,6 +12,7 @@ def get_device() -> str:
     for a model the size of multilingual-e5-large."""
     try:
         import torch
+
         if torch.cuda.is_available():
             return "cuda"
         if torch.backends.mps.is_available():  # Apple Silicon
@@ -29,7 +30,9 @@ def create_vector_store(batch_size: int = 32):
     # Quick breakdown by source so you know where the time is going
     counts = {}
     for d in docs:
-        counts[d.metadata.get("source", "?")] = counts.get(d.metadata.get("source", "?"), 0) + 1
+        counts[d.metadata.get("source", "?")] = (
+            counts.get(d.metadata.get("source", "?"), 0) + 1
+        )
     for source, n in counts.items():
         print(f"   - {source}: {n} documents")
 
@@ -51,8 +54,10 @@ def create_vector_store(batch_size: int = 32):
     vectorstore = None
     start = time.time()
 
-    for i in tqdm(range(0, len(docs), batch_size), desc="Embedding + indexation", unit="batch"):
-        batch = docs[i:i + batch_size]
+    for i in tqdm(
+        range(0, len(docs), batch_size), desc="Embedding + indexation", unit="batch"
+    ):
+        batch = docs[i : i + batch_size]
 
         if vectorstore is None:
             # First batch creates the collection
@@ -65,7 +70,9 @@ def create_vector_store(batch_size: int = 32):
             vectorstore.add_documents(batch)
 
     elapsed = time.time() - start
-    print(f"Base vectorielle créée avec succès en {elapsed:.1f}s ({len(docs)} documents) !")
+    print(
+        f"Base vectorielle créée avec succès en {elapsed:.1f}s ({len(docs)} documents) !"
+    )
     return vectorstore
 
 

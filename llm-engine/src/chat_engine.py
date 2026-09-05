@@ -11,7 +11,6 @@ import json
 import re
 from pathlib import Path
 
-
 # ---------------------------------------------------------------------------
 # 0. Fact grounding - correct exact strings (emails) the LLM may have
 #    subtly altered while generating natural-sounding prose
@@ -58,7 +57,13 @@ def best_matching_doc(question: str, docs):
     best_doc, best_score = None, 0
     for d in docs:
         meta = getattr(d, "metadata", {}) or {}
-        identifier = meta.get("filiere") or meta.get("nom") or meta.get("acronyme") or meta.get("section") or ""
+        identifier = (
+            meta.get("filiere")
+            or meta.get("nom")
+            or meta.get("acronyme")
+            or meta.get("section")
+            or ""
+        )
         tokens = [t for t in re.split(r"\W+", identifier.lower()) if len(t) > 2]
         score = sum(1 for t in tokens if t in q)
         if score > best_score:
@@ -136,17 +141,23 @@ def build_identifier_index(vectorstore, type_name: str, metadata_key: str) -> di
     filter, no embedding search involved) and builds a lookup from their
     short identifier (lowercased) to the actual Document."""
     try:
-        raw = vectorstore.get(where={"type": type_name}, include=["documents", "metadatas"])
+        raw = vectorstore.get(
+            where={"type": type_name}, include=["documents", "metadatas"]
+        )
     except Exception:
         return {}
 
     from langchain_core.documents import Document
 
     index = {}
-    for doc_text, meta in zip(raw.get("documents", []) or [], raw.get("metadatas", []) or []):
+    for doc_text, meta in zip(
+        raw.get("documents", []) or [], raw.get("metadatas", []) or []
+    ):
         identifier = (meta or {}).get(metadata_key)
         if identifier:
-            index[str(identifier).strip().lower()] = Document(page_content=doc_text, metadata=meta or {})
+            index[str(identifier).strip().lower()] = Document(
+                page_content=doc_text, metadata=meta or {}
+            )
     return index
 
 
@@ -242,7 +253,10 @@ def classify_intent(question: str, llm) -> str | None:
 # 2. Metadata-filtered retriever
 # ---------------------------------------------------------------------------
 
-def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, identifier_indexes: tuple = ()):
+
+def make_filtered_retriever(
+    vectorstore, llm, k: int = 6, fallback_k: int = 5, identifier_indexes: tuple = ()
+):
     def retrieve(inputs):
         question = inputs["input"] if isinstance(inputs, dict) else inputs
         forced_docs = find_forced_docs(question, *identifier_indexes)
@@ -253,7 +267,7 @@ def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, i
             # On prend les meilleurs documents de la catégorie détectée
             docs = vectorstore.similarity_search(question, k=k, filter={"type": intent})
 
-        # NOUVEAUTÉ : On ajoute TOUJOURS des documents généraux (sans filtre) 
+        # NOUVEAUTÉ : On ajoute TOUJOURS des documents généraux (sans filtre)
         # pour croiser les données (par exemple si la question parle d'une formation ET d'un labo)
         general_docs = vectorstore.similarity_search(question, k=fallback_k)
 
@@ -269,13 +283,12 @@ def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, i
 
     return RunnableLambda(retrieve)
 
+
 # ---------------------------------------------------------------------------
 # 3. Chat engine assembly
 # ---------------------------------------------------------------------------
 def get_chat_engine():
-    embeddings = HuggingFaceEmbeddings(
-        model_name="intfloat/multilingual-e5-large"
-    )
+    embeddings = HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-large")
 
     vectorstore = Chroma(
         persist_directory="../data/vector_db",
@@ -288,7 +301,9 @@ def get_chat_engine():
     # Built once at startup (small dataset, cheap) - see build_identifier_index
     # for why acronyms/section codes need this exact-match override.
     lab_acronym_index = build_identifier_index(vectorstore, "laboratoire", "acronyme")
-    emploi_section_index = build_identifier_index(vectorstore, "emploi_du_temps", "section")
+    emploi_section_index = build_identifier_index(
+        vectorstore, "emploi_du_temps", "section"
+    )
     # A question naming a specific professor or département shouldn't
     # depend on the keyword classifier guessing the right "type" - their
     # own card (now enriched with department, lab/équipe, coordinated
@@ -302,8 +317,7 @@ def get_chat_engine():
         identifier_indexes=(lab_acronym_index, emploi_section_index, prof_name_index, dept_name_index),
     )
 
-    prompt = ChatPromptTemplate.from_template(
-        """
+    prompt = ChatPromptTemplate.from_template("""
 Tu es un assistant virtuel expert de la Faculté des Sciences Ben M'Sik (FSBM).
 Ton rôle est d'aider les étudiants et les visiteurs avec des réponses claires, professionnelles et naturelles.
 
@@ -322,8 +336,7 @@ Question de l'utilisateur :
 {input}
 
 Réponse de l'assistant :
-"""
-    )
+""")
 
     document_chain = create_stuff_documents_chain(llm, prompt)
 
