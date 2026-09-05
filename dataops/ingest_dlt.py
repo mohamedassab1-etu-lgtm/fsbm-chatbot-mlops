@@ -3,8 +3,8 @@ import json
 import os
 
 # Configuration des chemins
-RAW_JSON_DIR = "../data/raw_json/"
-DUCKDB_PATH = "../data/duckdb/fsbm.duckdb"
+RAW_JSON_DIR = "./data/raw_json/"
+DUCKDB_PATH = "./data/duckdb/fsbm.duckdb"
 
 # 1. Initialisation du pipeline dlt
 pipeline = dlt.pipeline(
