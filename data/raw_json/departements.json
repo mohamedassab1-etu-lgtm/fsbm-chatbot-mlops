@@ -1,0 +1,197 @@
+{
+    "etablissement": "Faculté des Sciences Ben M'Sik (Université Hassan II de Casablanca)",
+    "departements": [
+        {
+            "nom": "Biologie",
+            "description": "Le Département de Biologie de la Faculté des Sciences Ben M’Sik (Université Hassan II de Casablanca) est une structure académique et scientifique dédiée à la formation et à la recherche dans les domaines des sciences du vivant. Il offre un cadre pédagogique complet et rigoureux, favorisant l’acquisition de connaissances fondamentales et appliquées dans les différentes disciplines de la biologie. Le département vise à former des biologistes capables de contribuer aux avancées scientifiques et technologiques dans les secteurs de la santé, de l’environnement, de l’agroalimentaire, et des biotechnologies.",
+            "chef_de_departement": "FARH Mohamed",
+            "formations": {
+                "licences": [
+                    {
+                        "filiere": "BCG - SCIENCES DE L'ENVIRONNEMENT",
+                        "specialite": "Gestion de l’Environnement et des Ressources Naturelles",
+                        "responsable": "NAHLI ABDELMOTTALIB"
+                    },
+                    {
+                        "filiere": "BCG – BIOSCIENCES",
+                        "specialite": "Sciences Biomédicales Appliquées",
+                        "responsable": "FARH MOHAMED"
+                    },
+                    {
+                        "filiere": "BCG – BIOSCIENCES",
+                        "specialite": "Biotechnologie et Production Végétale",
+                        "responsable": "EL MOUKHTARI AHMED"
+                    }
+                ],
+                "masters": [
+                    {
+                        "intitule": "Sciences de la Santé",
+                        "responsable": "TAKI Hassan"
+                    },
+                    {
+                        "intitule": "Biologie et Santé",
+                        "responsable": "BOUSFIHA Amal"
+                    },
+                    {
+                        "intitule": "Biotechnologie et Qualité",
+                        "responsable": "ECH CHERIF EL KETTANI Mohammed Anass"
+                    },
+                    {
+                        "intitule": "Gestion de l’Environnement et Développement Durable",
+                        "responsable": "EL HAJJOUJI Houda"
+                    }
+                ]
+            }
+        },
+        {
+            "nom": "Chimie",
+            "description": "Le Département de Chimie de la Faculté des Sciences Ben M’Sik (Université Hassan II de Casablanca) est une structure pédagogique et scientifique spécialisée dans l’enseignement et la recherche en sciences chimiques. Il joue un rôle fondamental dans la formation de cadres qualifiés capables de répondre aux besoins du tissu industriel, environnemental, pharmaceutique et académique. Le département allie rigueur scientifique, expérimentation et innovation, tout en mettant l’accent sur la démarche analytique et la compréhension des phénomènes chimiques au service du développement durable.",
+            "chef_de_departement": "EL KOUALI Mhammed",
+            "formations": {
+                "licences": [
+                    {
+                        "filiere": "PC-CHIMIE",
+                        "specialite": "Génie des matériaux",
+                        "responsable": "MEHDAOUI BOUBKER"
+                    },
+                    {
+                        "filiere": "PC-CHIMIE",
+                        "specialite": "Procédés analytiques et industriels",
+                        "responsable": "BENNANI LAILA"
+                    }
+                ],
+                "masters": [
+                    {
+                        "intitule": "Instrumentation, Procédés, Analyse et Qualité",
+                        "responsable": "MOUMOU MOHAMED"
+                    },
+                    {
+                        "intitule": "Génie des Matériaux et Energie",
+                        "responsable": "SADIK CHAOUKI"
+                    }
+                ]
+            }
+        },
+        {
+            "nom": "Géologie",
+            "description": "Le Département de Géologie de la Faculté des Sciences Ben M’Sik (Université Hassan II de Casablanca) est un pôle académique et scientifique dédié à l’étude des sciences de la Terre. Il propose des formations théoriques et pratiques de qualité, intégrant des sorties de terrain, des travaux en laboratoire et des projets de recherche appliquée. Ce département vise à former des géologues capables de comprendre et d’interpréter les processus géodynamiques de la Terre, de valoriser les ressources naturelles et de répondre aux enjeux environnementaux et sociétaux contemporains.",
+            "chef_de_departement": "MOUFLIH Mustapha",
+            "formations": {
+                "licences": [
+                    {
+                        "filiere": "BCG – GEOSCIENCES",
+                        "specialite": "Géosciences et Géoressources",
+                        "responsable": "OUKASSOU MOSTAFA"
+                    }
+                ],
+                "masters": [
+                    {
+                        "intitule": "Géomatique Appliquée aux Géosciences et à l’Environnement",
+                        "responsable": "MAIMOUNI Soufiane"
+                    },
+                    {
+                        "intitule": "Géologie Appliquée à la Prospection des Ressources Naturelles",
+                        "responsable": "ALIKOUSS Saida"
+                    }
+                ]
+            }
+        },
+        {
+            "nom": "Mathématiques et informatique",
+            "description": "Le Département de Mathématiques et Informatique de la Faculté des Sciences Ben M’Sik est un pôle académique de référence pour la formation, la recherche et l’innovation dans les domaines des mathématiques fondamentales, appliquées et de l’informatique. Il répond aux exigences croissantes de la société numérique et scientifique en formant des étudiants capables de modéliser, analyser, résoudre et implémenter des solutions mathématiques et informatiques complexes.",
+            "chef_de_departement": "ADNAOUI Khalid",
+            "formations": {
+                "licences": [
+                    {
+                        "filiere": "MIP – MATHÉMATIQUES",
+                        "specialite": "Statistiques",
+                        "responsable": "FERJOUCHA HANANE"
+                    },
+                    {
+                        "filiere": "MIP – MATHÉMATIQUES",
+                        "specialite": "Analyses Mathématiques",
+                        "responsable": "BOUZKOURA KHADIJA"
+                    },
+                    {
+                        "filiere": "INFORMATIQUE APPLIQUÉE",
+                        "specialite": "Cybersécurité et Administration des Systèmes et Réseaux",
+                        "responsable": "OUAHABI SARA"
+                    },
+                    {
+                        "filiere": "INFORMATIQUE APPLIQUÉE",
+                        "specialite": "Développement FULL STACK",
+                        "responsable": "Mohssine Bentaib"
+                    },
+                    {
+                        "filiere": "MIP – INFORMATIQUE",
+                        "specialite": "Administration Réseaux et Systèmes",
+                        "responsable": "ACHTAICH KHADIJA"
+                    },
+                    {
+                        "filiere": "MIP – INFORMATIQUE",
+                        "specialite": "Développement Informatique",
+                        "responsable": "SAEL NAWAL"
+                    }
+                ],
+                "masters": [
+                    {
+                        "intitule": "Data Sciences et Big Data",
+                        "responsable": "BELANGOUR Abdessamad"
+                    }
+                ]
+            }
+        },
+        {
+            "nom": "Physique",
+            "description": "Le Département de Physique de la Faculté des Sciences Ben M’Sik est une structure académique dédiée à l’enseignement et à la recherche dans les domaines fondamentaux et appliqués de la physique. Il forme des étudiants capables de modéliser, expérimenter et résoudre des phénomènes physiques complexes, en lien avec les avancées technologiques, industrielles et scientifiques. Le département met en œuvre une pédagogie dynamique alliant rigueur théorique, expérimentation pratique et ouverture vers l’innovation.",
+            "chef_de_departement": "MAZROUI M’hammed",
+            "formations": {
+                "licences": [
+                    {
+                        "filiere": "PC-PHYSIQUE",
+                        "specialite": "Physique Appliquée",
+                        "responsable": "SAID TAOUFIK"
+                    },
+                    {
+                        "filiere": "PC-PHYSIQUE",
+                        "specialite": "Electronique, Systèmes embarqués & Télécommunication",
+                        "responsable": "EL BAKALI KASSIMI AZIZA"
+                    },
+                    {
+                        "filiere": "PC-PHYSIQUE",
+                        "specialite": "Mécanique Energétique",
+                        "responsable": "MOURABIT M BARKA"
+                    },
+                    {
+                        "filiere": "PC-PHYSIQUE",
+                        "specialite": "Physique & Ingénierie des Matériaux",
+                        "responsable": "ABDERRAFI KAMAL"
+                    }
+                ],
+                "masters": [
+                    {
+                        "intitule": "Traitement de l’Information",
+                        "responsable": "ATOUF Issam"
+                    },
+                    {
+                        "intitule": "Matériaux Intelligents et Systèmes Energétiques",
+                        "responsable": "EDDIAI Adil"
+                    },
+                    {
+                        "intitule": "Sciences Mécaniques",
+                        "responsable": "HAMDAOUI Abdellah"
+                    }
+                ]
+            }
+        },
+        {
+            "nom": "Sciences de la communication et Humanités",
+            "description": "Le Département des Sciences de la Communication et Humanités de la Faculté des Sciences Ben M’Sik est une structure académique engagée dans la formation et la recherche autour des pratiques communicationnelles, des cultures contemporaines et des sciences humaines. Il prépare les étudiants à analyser, concevoir et transmettre des messages et des contenus complexes dans divers contextes sociétaux, médiatiques et institutionnels. Le département adopte une approche pédagogique interactive et critique, combinant savoirs théoriques, compétences pratiques et sensibilité aux enjeux culturels et sociaux actuels.",
+            "chef_de_departement": "CHAFIQ Nadia",
+            "formations": {
+                "licences": [],
+                "masters": []
+            }
+        }
+    ]
+}
