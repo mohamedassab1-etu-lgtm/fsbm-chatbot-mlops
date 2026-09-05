@@ -6,4 +6,3 @@
 .idea/
 
 data/duckdb/*
-data/vector_db/*
