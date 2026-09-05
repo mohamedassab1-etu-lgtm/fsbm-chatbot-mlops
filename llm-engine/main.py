@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from src.chat_engine import get_chat_engine, ground_emails_in_answer
+from src.generate_title import generate_conversation_title
 
 app = FastAPI(
     title="API Chatbot FSBM",
@@ -29,6 +30,10 @@ print("Moteur IA prêt !")
 class ChatRequest(BaseModel):
     question: str
 
+class TitleRequest(BaseModel):
+    prompt: str
+    language: str | None = None
+    exception_titles: list[str] | None = None
 
 def sse_event(data: dict) -> str:
     """Formats one Server-Sent-Event block. The frontend splits on '\\n\\n'
@@ -80,6 +85,77 @@ async def chat_endpoint(request: ChatRequest):
             # Disables buffering on nginx-style proxies sitting in front of
             # uvicorn, so chunks reach the browser as they're produced.
             "X-Accel-Buffering": "no",
+        },
+    )
+
+@app.post("/generate-title")
+async def api_generate_title(request: TitleRequest):
+    try:
+        title_info = await generate_conversation_title(
+            prompt=request.prompt,
+            language=request.language,
+            exception_titles=request.exception_titles
+        )
+
+        return {
+            "title": title_info["title"],
+            "language": title_info["target_language"],
+            "detected_language": title_info["detected_language"]
+        }
+
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Title generation failed: {str(e)}"
+        )
+
+
+def _sse_event(event_type: str, text: str) -> str:
+    """Formats one Server-Sent Event. Payload is JSON-encoded so that
+    newlines or special characters inside the answer text can't break
+    the SSE framing (which relies on blank-line-terminated messages)."""
+    payload = json.dumps({"type": event_type, "text": text}, ensure_ascii=False)
+    return f"data: {payload}\n\n"
+
+
+def _stream_answer(question: str):
+    """Generator driving the SSE response: streams each answer token as
+    it's generated (raw, ungrounded - for live-typing responsiveness),
+    then emits one final 'done' event carrying the grounded/corrected
+    full answer. The frontend should append 'delta' events to the
+    displayed message as they arrive, then REPLACE the displayed text
+    entirely with the 'done' event's text once it arrives - this way the
+    user sees live typing, but the text they're left with is always the
+    verified-correct version, even in the rare case grounding changes
+    something the model streamed differently."""
+    accumulated_answer = ""
+    context_docs = None
+
+    try:
+        for chunk in chat_engine.stream({"input": question}):
+            if "context" in chunk and context_docs is None:
+                context_docs = chunk["context"]
+            if "answer" in chunk and chunk["answer"]:
+                accumulated_answer += chunk["answer"]
+                yield _sse_event("delta", chunk["answer"])
+
+        final_answer = ground_emails_in_answer(accumulated_answer, context_docs, question)
+        yield _sse_event("done", final_answer)
+
+    except Exception as e:
+        yield _sse_event("error", str(e))
+
+
+@app.post("/api/chat/stream", tags=["Chat"])
+async def chat_stream_endpoint(request: ChatRequest):
+    """Streaming endpoint: emits the answer live, token by token, via
+    Server-Sent Events. Use this for the website's chat UI."""
+    return StreamingResponse(
+        _stream_answer(request.question),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no",  # disables nginx response buffering, if you're behind one
         },
     )
 

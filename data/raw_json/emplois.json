@@ -1,0 +1,5191 @@
+[
+    {
+        "section": "Tronc Commun Physique Chimie (PC)/S1 - PC1",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "THERMODYNAMIQUE",
+                        "salle": "A7"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "MTU",
+                        "salle": "A7"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G4",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G5",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G1",
+                        "salle": "TD7"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G4",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G5",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ATOM",
+                        "groupe": "G1",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ATOM",
+                        "groupe": "G2",
+                        "salle": "TD8"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G3",
+                        "salle": "TD9"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G3",
+                        "salle": "TD9"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "THERMOCHIMIE",
+                        "salle": "A1"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G3",
+                        "salle": "TD3"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G4",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G1",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G2",
+                        "salle": "TD14"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G4",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G1",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G2",
+                        "salle": "TD14"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G5",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ATOM.LIA",
+                        "groupe": "G4",
+                        "salle": "TD5"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G3",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G5",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "COURS",
+                        "module": "ANALYSE 1",
+                        "salle": "A1"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G3",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G5",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "COURS",
+                        "module": "ATOMISTIQUE",
+                        "salle": "A1"
+                    }
+                ]
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "ALGEBRE 1",
+                        "salle": "A7"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "MECANIQUE DU POINT",
+                        "salle": "A7"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G2",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G4",
+                        "salle": "TD2"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G2",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G4",
+                        "salle": "TD2"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G1",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G3",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ATOM",
+                        "groupe": "G5",
+                        "salle": "TD8"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G1",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ATOM",
+                        "groupe": "G3",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G5",
+                        "salle": "TD8"
+                    }
+                ],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Physique Chimie (PC)/S1 - PC2",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "ALGEBRE 1",
+                        "salle": "A2"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G4",
+                        "salle": "TD12"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G1",
+                        "salle": "TD3"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G5",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ATOM.LIA",
+                        "groupe": "G3",
+                        "salle": "TD9"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G3",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G5",
+                        "salle": "TD7"
+                    }
+                ]
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G1",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G5",
+                        "salle": "TD2"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ATOM.LIA",
+                        "groupe": "G5",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G2",
+                        "salle": "TD21"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G5",
+                        "salle": "TD8"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "ATOM.LIA",
+                        "groupe": "G4",
+                        "salle": "TD6"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "salle": "TD3"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G4",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G3",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G5",
+                        "salle": "TD5"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G3",
+                        "salle": "TD3"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "COURS",
+                        "module": "MTU",
+                        "salle": "A7"
+                    }
+                ]
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "ATOMISTIQUE",
+                        "salle": "A2"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "MECANIQUE DU POINT",
+                        "salle": "A2"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ATOM.LIA",
+                        "groupe": "G1",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G2",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G4",
+                        "salle": "TD1"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G5",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ATOM.LIA",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G1",
+                        "salle": "TD21"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G3",
+                        "salle": "TD5"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G1",
+                        "salle": "TD21"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G3",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G4",
+                        "salle": "TD9"
+                    }
+                ]
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "ANALYSE 1",
+                        "salle": "A3"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "THERMOCHIMIE",
+                        "salle": "A3"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "THERMODYNAMIQUE",
+                        "salle": "A3"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Physique Chimie(PC)/S1 - PC3",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G3",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ATOM",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G5",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G2",
+                        "salle": "TD6"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G3",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G5",
+                        "salle": "TD5"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ATOM",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G3",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G3",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "THERMODYNAMIQUE",
+                        "salle": "A3"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "AN",
+                        "groupe": "G5",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G4",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.D",
+                        "groupe": "G5",
+                        "salle": "TD11"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "ATOM",
+                        "groupe": "G5",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "COURS",
+                        "module": "ANALYSE 1",
+                        "salle": "A1"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "MECANIQUE DU POINT",
+                        "salle": "A1"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "ATOM",
+                        "groupe": "G3",
+                        "salle": "TD9"
+                    }
+                ],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G4",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G5",
+                        "salle": "TD5"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "MTU",
+                        "salle": "A7"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "COURS",
+                        "module": "THERMOCHIMIE",
+                        "salle": "A7"
+                    }
+                ]
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "ATOMISTIQUE",
+                        "salle": "A2"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G3",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G1",
+                        "salle": "TD21"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G2",
+                        "salle": "TD3"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G2",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G3",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TH.CH",
+                        "groupe": "G1",
+                        "salle": "TD9"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G4",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ATOM.LIA",
+                        "groupe": "G1",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G5",
+                        "salle": "TD21"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "ALGEBRE 1",
+                        "salle": "A1"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Biologie Géologie (BG)/S1 - BG1",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "BIOLOGIE CELLULAIRE",
+                        "salle": "A6"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G2",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G3",
+                        "salle": "TD11"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G4",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G5",
+                        "salle": "TD14"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G1",
+                        "salle": "TD9"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "B.CELLULAIRE HISTOLOGIE.N.E",
+                        "salle": "A2"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "COURS",
+                        "module": "MATHEMATIQUES",
+                        "salle": "A7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G4",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G3",
+                        "salle": "TD2"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G3",
+                        "salle": "TD3"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "CHIMIQUES",
+                        "salle": "A2"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "THERMODYNAMIQUE ET MECANIQUE",
+                        "salle": "A2"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G2",
+                        "salle": "TD20"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G5",
+                        "salle": "TD3"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G5",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G1",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G5",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G3",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G2",
+                        "salle": "TD6"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "GEOLOGIE GENERALE",
+                        "salle": "A7"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "MTU",
+                        "salle": "A7"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G4",
+                        "salle": "TD8"
+                    }
+                ],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G3",
+                        "salle": "TD14"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G4",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G1",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G2",
+                        "salle": "TD3"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "COURS",
+                        "module": "HISTOLOGIE ET NOTIONS D'EMBRYO",
+                        "salle": "A2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G1",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G2",
+                        "salle": "TD3"
+                    }
+                ]
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "H.N.EBG1",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G5",
+                        "salle": "TD6"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G3",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G5",
+                        "salle": "TD6"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Biologie Géologie (BG)/S1 - BG2",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "MTU",
+                        "salle": "A1"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "BIOLOGIE CELLULAIRE",
+                        "salle": "A1"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G5",
+                        "salle": "TD20"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G3",
+                        "salle": "TD21"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "GEOLOGIE GENERALE",
+                        "salle": "A7"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "CHIMIQUES",
+                        "salle": "A7"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G1",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G2",
+                        "salle": "TD12"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G3",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G5",
+                        "salle": "TD15"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G4",
+                        "salle": "TD9"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G5",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G1",
+                        "salle": "TD2"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G2",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G3",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G2",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G3",
+                        "salle": "TD7"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G2",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G1",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G5",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    }
+                ]
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G4",
+                        "salle": "TD8"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "THERMODYNAMIQUE ET MECANIQUE",
+                        "salle": "A1"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "B.CELLULAIRE HISTOLOGIE.N.E",
+                        "salle": "A1"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G3",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G1",
+                        "salle": "TD19"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G5",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G4",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G2",
+                        "salle": "TD7"
+                    }
+                ]
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "MATHEMATIQUES",
+                        "salle": "A7"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "HISTOLOGIE ET NOTIONS D'EMBRYO",
+                        "salle": "A7"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G1",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G2",
+                        "salle": "TD14"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G4",
+                        "salle": "TD16"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G5",
+                        "salle": "TD19"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Biologie Géologie (BG)/S1 - BG3",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G2",
+                        "salle": "TD21"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "BIOLOGIE CELLULAIRE",
+                        "salle": "A3"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    }
+                ]
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G3",
+                        "salle": "TD11"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "MTU",
+                        "salle": "A1"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "COURS",
+                        "module": "MATHEMATIQUES",
+                        "salle": "A1"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G4",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G5",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G2",
+                        "salle": "TD3"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "GEOLOGIE GENERALE",
+                        "salle": "A3"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G5",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G1",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "salle": "TD7"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G2",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G3",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G4",
+                        "salle": "TD13"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "B.CELLULAIRE HISTOLOGIE.N.E",
+                        "salle": "A6"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G2",
+                        "salle": "TD8"
+                    },
+                    {
+                        "type": "COURS",
+                        "module": "HISTOLOGIE ET NOTIONS D'EMBRYO",
+                        "salle": "A6"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G5",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G5",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G3",
+                        "salle": "TD21"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G4",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G5",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G3",
+                        "salle": "TD21"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G4",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAT",
+                        "groupe": "G1",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G2",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G2",
+                        "salle": "TD7"
+                    }
+                ]
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "PHY",
+                        "groupe": "G3",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI",
+                        "groupe": "G5",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "H.N.E",
+                        "groupe": "G1",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIO/GEO",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "THERMODYNAMIQUE ET MECANIQUE",
+                        "salle": "A6"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "CHIMIQUES",
+                        "salle": "A6"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Mathématiques Informatique(MI)/S1 - MI1",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "INFORMATIQUE 1",
+                        "salle": "A3"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "ALGEBRE 2",
+                        "salle": "A3"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G1",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "THERMO",
+                        "groupe": "G2",
+                        "salle": "TD5"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "INFO",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 2",
+                        "groupe": "G4",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "THERM",
+                        "groupe": "G5",
+                        "salle": "TD8"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "THERMODYNAMIQUE",
+                        "salle": "A6"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "THERMO",
+                        "groupe": "G1",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 2",
+                        "groupe": "G2",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN1",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G4",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN1",
+                        "groupe": "G5",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 2",
+                        "groupe": "G1",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G2",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "MECANIQUE DU POINT",
+                        "salle": "A7"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "ANALYSE 1",
+                        "salle": "A7"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G5",
+                        "salle": "TD8"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "THERMO",
+                        "groupe": "G4",
+                        "salle": "TD7"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "ALGEBRE 1",
+                        "salle": "A1"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "ALG 2",
+                        "groupe": "G5",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "INFO",
+                        "groupe": "G4",
+                        "salle": "TD7"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "INFO",
+                        "groupe": "G1",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN1",
+                        "groupe": "G2",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 2",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    }
+                ]
+            },
+            "VE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "THERMO",
+                        "groupe": "G3",
+                        "salle": "TD8"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G2",
+                        "salle": "TD9"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G4",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G5",
+                        "salle": "TD8"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G3",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G4",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "INFO",
+                        "groupe": "G5",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN1",
+                        "groupe": "G1",
+                        "salle": "TD8"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G2",
+                        "salle": "TD9"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "AN1",
+                        "groupe": "G4",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G5",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "groupe": "G3",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ME.PO",
+                        "groupe": "G1",
+                        "salle": "TD8"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "INFO",
+                        "groupe": "G2",
+                        "salle": "TD9"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "MTU",
+                        "salle": "A1"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Informatique Appliquée (I.A)/S1 - IA1",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "ALGO.PRO.C1",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "AN 1",
+                        "groupe": "G2",
+                        "salle": "TD9"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "AN 1",
+                        "groupe": "G1",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALGO.PRO.C1",
+                        "salle": "TD8"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "ELECTRONIQUE NUMERIQUE",
+                        "salle": "A6"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "ALGORITHMIQUE ET PROG. C1",
+                        "salle": "A1"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "PROGRAMMATION PYTHON 1",
+                        "salle": "A3"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "ALGEBRE 1",
+                        "salle": "A1"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ARCH.OR",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G2",
+                        "salle": "TD8"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "ALG 1",
+                        "groupe": "G1",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ARCH.OR",
+                        "groupe": "G2",
+                        "salle": "TD8"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "ELEC.NU",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PRO.PYT",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "PRO.PYT",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ELEC.NU",
+                        "salle": "TD2"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "ANALYSE 1",
+                        "salle": "A2"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "ARCHIT ET FONCT DES ORDINATEURS",
+                        "salle": "A4"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "MTU",
+                        "salle": "A4"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "salle": "TD20"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MTU",
+                        "salle": "TD21"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Physique (PC)/S3 - P3A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Circuits électriques",
+                        "salle": "A5"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "ELECTRO",
+                        "groupe": "G4",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MEC.S",
+                        "groupe": "G3",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAH.P",
+                        "groupe": "G5",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI ORG",
+                        "groupe": "G2",
+                        "salle": "TD8"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "THERMO 2",
+                        "groupe": "G1",
+                        "salle": "TD9"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "CHI ORG",
+                        "groupe": "G4",
+                        "salle": "TD9"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ELECTRO",
+                        "groupe": "G3",
+                        "salle": "TD8"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAH.P",
+                        "groupe": "G1",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MEC.S",
+                        "groupe": "G5",
+                        "salle": "TD20"
+                    }
+                ]
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "THERMO 2",
+                        "groupe": "G2",
+                        "salle": "TD6"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "Electromagnétisme",
+                        "salle": "A2"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ELECTROMA",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "THERMO 2",
+                        "groupe": "G3",
+                        "salle": "TD3"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "MEC.S",
+                        "groupe": "G4",
+                        "salle": "TD4"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Thermodynamique 2",
+                        "salle": "A1"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Mathématiques pour la physique",
+                        "salle": "A1"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G5",
+                        "salle": "TD5"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "CHI ORG",
+                        "groupe": "G1",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAH.P",
+                        "groupe": "G2",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ELECTROMA",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "THERMO 2",
+                        "groupe": "G4",
+                        "salle": "TD7"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "ELECTROMA",
+                        "groupe": "G1",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ELECTRO",
+                        "groupe": "G2",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI ORG",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAH.P",
+                        "groupe": "G4",
+                        "salle": "TD7"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ELECTROMA",
+                        "groupe": "G4",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MEC.S",
+                        "groupe": "G1",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MEC.S",
+                        "groupe": "G2",
+                        "salle": "TD5"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "ELECTRO",
+                        "groupe": "G5",
+                        "salle": "TD8"
+                    },
+                    {
+                        "type": "COURS",
+                        "module": "Mécanique du solide",
+                        "salle": "A2"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "THERMO 2",
+                        "groupe": "G5",
+                        "salle": "TD8"
+                    },
+                    {
+                        "type": "COURS",
+                        "module": "Chimie Organique Générale",
+                        "salle": "A2"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ELECTROMA",
+                        "groupe": "G5",
+                        "salle": "TD8"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ELECTRO",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "MAT.P",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G4",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "CHI ORG",
+                        "groupe": "G5",
+                        "salle": "TD8"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Chimie (PC)/S3 - C3A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "CHI ORG",
+                        "groupe": "G1",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "C.ELEC",
+                        "groupe": "G1",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Chimie Organique Générale",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "C. descriptive I et Diagr de phases",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "Mathématiques pour la chimie",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "C.D.D.P",
+                        "groupe": "G1",
+                        "salle": "CH.S28"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Chimie des électrolytes",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Algorithmique et Progra. Python",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ALGOR PROG",
+                        "groupe": "G1",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "M.CHI",
+                        "groupe": "G1",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G1",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Electromagnetisme",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "ELECTRO",
+                        "groupe": "G1",
+                        "salle": "CH.S28"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun BIOLOGIE (BG)/S3 - B3A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Ecologie générale",
+                        "salle": "A1"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "Biostatistiques"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "BIOSTA",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "INFO.BIO",
+                        "groupe": "G2",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G3",
+                        "salle": "TD4"
+                    }
+                ]
+            },
+            "MA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Techniques d'analyse",
+                        "salle": "A6"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Microbiologie générale",
+                        "salle": "A6"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "INFO.BIO",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "THECH/MIC",
+                        "groupe": "G2",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "B.STR/E.G",
+                        "groupe": "G4",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIOSTA",
+                        "groupe": "G3",
+                        "salle": "TD9"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G4",
+                        "salle": "TD5"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Informatique pour la Biologie",
+                        "salle": "A7"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "_ Biochimie Structurale",
+                        "salle": "A7"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "THECH/MIC",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIOSTA",
+                        "groupe": "G2",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "B.STR/E.G",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    }
+                ]
+            },
+            "JE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "INFO.BIO",
+                        "groupe": "G4",
+                        "salle": "TD9"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "B.STR/E.G",
+                        "groupe": "G1",
+                        "salle": "TD12"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G1",
+                        "salle": "TD12"
+                    }
+                ]
+            },
+            "VE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G2",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "THECH/MIC",
+                        "groupe": "G3",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BIOSTA",
+                        "groupe": "G4",
+                        "salle": "TD15"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "B.STR/E.G",
+                        "groupe": "G2",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "INFO.BIO",
+                        "groupe": "G3",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "THECH/MIC",
+                        "groupe": "G4",
+                        "salle": "TD15"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Bioch.Structurale/Eco. générale",
+                        "salle": "A3"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Tech.d'analyse/Micr. générale",
+                        "salle": "A3"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Géologie (BG)/S3 - G3A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "HYDROGÉOLOGIE ET HYDROLOGIE",
+                        "salle": "TD8"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "HYD.HY",
+                        "salle": "TD20"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "salle": "TD4"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Tectonique Analytique",
+                        "salle": "TD20"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Tectonique Globale",
+                        "salle": "TD20"
+                    },
+                    {
+                        "type": "COURS",
+                        "module": "PETR.MA",
+                        "groupe": "G1",
+                        "salle": "TD20"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "PETRO SED",
+                        "salle": "TD20"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "PETROLOGIE MAGMATIQUE",
+                        "groupe": "G1",
+                        "salle": "TD19"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "AUTRE",
+                        "module": "Pétrographie Sédimentaire"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "TEC.AN",
+                        "groupe": "G1",
+                        "salle": "TD13"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "TEC.GLO",
+                        "salle": "TD12"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "PETROLOGIE METAMORPHIQUE",
+                        "salle": "TD14"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "PETRO ME",
+                        "groupe": "G1",
+                        "salle": "TD14"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "PETRO SED",
+                        "groupe": "G1",
+                        "salle": "TD12"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Mathématiques (MIP)/S3 - M3A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "ANALYSE 5",
+                        "salle": "TD15"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "ANALYSE 4",
+                        "salle": "TD15"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "AN4",
+                        "groupe": "G1",
+                        "salle": "TD7"
+                    }
+                ]
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "ALGEBRE 4",
+                        "groupe": "G1",
+                        "salle": "TD16"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "ALG4",
+                        "groupe": "G1",
+                        "salle": "TD16"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "MEC.S",
+                        "groupe": "G1",
+                        "salle": "TD15"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "PROBABILITÉS ET STATISTIQUES",
+                        "salle": "A2"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "AN5",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "INFORMATIQUE 3",
+                        "salle": "TD21"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "salle": "TD21"
+                    }
+                ]
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "INFO3",
+                        "groupe": "G1",
+                        "salle": "TD14"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "PROB.STAT",
+                        "groupe": "G1",
+                        "salle": "TD9"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "MECANIQUE DU SOLIDE",
+                        "salle": "TD4"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Tronc Commun Informatique (MIP)/S3 - I3A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "SYS.EXP",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PRO.W1",
+                        "groupe": "G2",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G4",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PROG.O.U",
+                        "groupe": "G3",
+                        "salle": "TD2"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PROG/L.C",
+                        "groupe": "G5",
+                        "salle": "TD21"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "SYSTEME D'EXPLOITATION 1",
+                        "salle": "A6"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "ARCHITECTURE DES ORDINATEURS",
+                        "salle": "A7"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "PRO.W1",
+                        "groupe": "G1",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PROG.O.U",
+                        "groupe": "G4",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PROG/L.C",
+                        "groupe": "G2",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ARCH.ORD",
+                        "groupe": "G3",
+                        "salle": "TD16"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "PROB.STAT",
+                        "groupe": "G2",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ARCH.ORD",
+                        "groupe": "G1",
+                        "salle": "TD20"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PROG/L.C",
+                        "groupe": "G3",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PRO.W1",
+                        "groupe": "G4",
+                        "salle": "TD5"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "PROB.STAT",
+                        "groupe": "G5",
+                        "salle": "TD6"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "PROG.O.U",
+                        "groupe": "G5",
+                        "salle": "TD7"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "PROBABILITÉS ET STATISTIQUES",
+                        "salle": "A2"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "PROGRAMMATION EN LANGAGE C",
+                        "salle": "A6"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "PROG.O.U",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "SYS.EXP",
+                        "groupe": "G2",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PROB.STAT",
+                        "groupe": "G3",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G5",
+                        "salle": "TD2"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "ARCH.ORD",
+                        "groupe": "G4",
+                        "salle": "TD8"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "PROGRAMMATION OBJET UML COURS",
+                        "module": "PROG.O.U",
+                        "groupe": "G1",
+                        "salle": "A6"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "PROGRAMMATION WEB 1",
+                        "salle": "A6"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "PROB.STAT",
+                        "groupe": "G1",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PROG/L.C",
+                        "groupe": "G4",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ARCH.ORD",
+                        "groupe": "G2",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "SYS.EXP",
+                        "groupe": "G3",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PRO.W1",
+                        "groupe": "G5",
+                        "salle": "TD22"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "SYS.EXP",
+                        "groupe": "G4",
+                        "salle": "TD10"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "PROB.STAT",
+                        "groupe": "G4",
+                        "salle": "TD1"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "PROG.O.U",
+                        "groupe": "G2",
+                        "salle": "TD19"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G3",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PROG/L.C",
+                        "groupe": "G1",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ARCH.ORD",
+                        "groupe": "G5",
+                        "salle": "TD21"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G2",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PRO.W1",
+                        "groupe": "G3",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G1",
+                        "salle": "TD7"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "SYS.EXP",
+                        "groupe": "G5",
+                        "salle": "TD9"
+                    }
+                ],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Informatique Appliquée (I.A)/S3 - IA3A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Recherche Opérati et Optimisation",
+                        "salle": "TD7"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Système d'Exploitation 1",
+                        "salle": "A6"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "SYST.EX",
+                        "groupe": "G1",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PROG.W1",
+                        "groupe": "G2",
+                        "salle": "TD20"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G1",
+                        "salle": "TD13"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Structure de Données en C",
+                        "salle": "TD19"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "SYST.EX",
+                        "groupe": "G2",
+                        "salle": "TD19"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "STR.DON",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "R.O.O",
+                        "groupe": "G2",
+                        "salle": "TD10"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "R.O.O",
+                        "groupe": "G1",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "STR.DON",
+                        "groupe": "G2",
+                        "salle": "TD13"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Probabilités et Statistiques",
+                        "salle": "A2"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "M.O.UTL",
+                        "groupe": "G2",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BROB.ST",
+                        "groupe": "G1",
+                        "salle": "TD21"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "M.O.UTL",
+                        "groupe": "G1",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "BROB.ST",
+                        "groupe": "G2",
+                        "salle": "TD21"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "LAN/FR",
+                        "groupe": "G2",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PROG.W1",
+                        "groupe": "G1",
+                        "salle": "TD7"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Modélisation Objet UML",
+                        "salle": "A6"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Programmation Web 1",
+                        "salle": "A6"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Physique/S5 - P5A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Telecom.Fonda.Syst.Digitaux",
+                        "salle": "A2"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Mécanique Analytique et Vibrations",
+                        "salle": "A5"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G2",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.MA",
+                        "groupe": "G4",
+                        "salle": "TD11"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "P.NUC",
+                        "groupe": "G3",
+                        "salle": "TD15"
+                    }
+                ]
+            },
+            "MA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G4",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.NUC",
+                        "groupe": "G1",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.STAT",
+                        "groupe": "G2",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "M.A.V",
+                        "groupe": "G3",
+                        "salle": "TD6"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Physique des Matériaux",
+                        "salle": "A1"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "P.STAT",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "P.MA",
+                        "groupe": "G3",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "T.F.S.D",
+                        "groupe": "G1",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "M.A.V",
+                        "groupe": "G2",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.STAT",
+                        "groupe": "G4",
+                        "salle": "TD7"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "T.F.S.D",
+                        "groupe": "G3",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "M.A.V",
+                        "groupe": "G1",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.MA",
+                        "groupe": "G2",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.NUC",
+                        "groupe": "G4",
+                        "salle": "TD8"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Physique Nucléaire",
+                        "salle": "A3"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Physique Statistique",
+                        "salle": "A3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.QUA",
+                        "groupe": "G1",
+                        "salle": "TD15"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Physique Quantique",
+                        "salle": "A3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.QUA",
+                        "groupe": "G3",
+                        "salle": "TD10"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G3",
+                        "salle": "TD11"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "T.F.S.D",
+                        "groupe": "G2",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.STAT",
+                        "groupe": "G3",
+                        "salle": "TD21"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.QUA",
+                        "groupe": "G4",
+                        "salle": "TD3"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "T.F.S.D",
+                        "groupe": "G4",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G1",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.NUC",
+                        "groupe": "G2",
+                        "salle": "TD16"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "P.MA",
+                        "groupe": "G1",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "P.QUA",
+                        "groupe": "G2",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "M.A.V",
+                        "groupe": "G4",
+                        "salle": "TD21"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "CHIMIE/S5 - C5A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Radiocristall et Cristallochimie II",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Chimie Théorique",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "CH.TH",
+                        "groupe": "G1",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Cinétique et Catalyse",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "CIN.CAT",
+                        "groupe": "G1",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "ANGALIS",
+                        "groupe": "G1",
+                        "salle": "CH.S27"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "Chimie Organique Fonctionnelle",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "C.O.F",
+                        "groupe": "G1",
+                        "salle": "CH.S27"
+                    }
+                ]
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "R.CR",
+                        "groupe": "G1",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "ELECT",
+                        "groupe": "G1",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Electrochimie",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Module Transversal",
+                        "groupe": "G1",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "M.TR",
+                        "groupe": "G1",
+                        "salle": "CH.S27"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Sciences Biomédicales Appliquées (S.B.A)/S5 - B5A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Immunologie",
+                        "salle": "A5"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "T.A.M/B.BS",
+                        "groupe": "G3",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PH.TOX/G.H.M",
+                        "groupe": "G2",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "A.P.H/IMM",
+                        "groupe": "G1",
+                        "salle": "TD19"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "PH.TOX/G.H.M",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "T.A.M/B.BS",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "A.P.H/IMM",
+                        "groupe": "G3",
+                        "salle": "TD13"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Pharmacologie / Toxicologie",
+                        "salle": "A5"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "BIOETHIQUE ET BIOSECURITE",
+                        "salle": "A5"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "COURS",
+                        "module": "Tech.d'Analy Médic/BIOETH ET BIOSEC",
+                        "salle": "A5"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Génétique Humaine et Moléculaire",
+                        "salle": "A5"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Anatomie et Phy. Humaine/IMM",
+                        "salle": "A5"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Pharm.Toxic/ Géné Hum et Moléc",
+                        "salle": "A5"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "A.P.H/IMM",
+                        "groupe": "G2",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G3",
+                        "salle": "TD21"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "T.A.M/B.BS",
+                        "groupe": "G1",
+                        "salle": "TD4"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G2",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PH.TOX/G.H.M",
+                        "salle": "TD21"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G1",
+                        "salle": "TD3"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Anatomie et Physiologie Humaine",
+                        "salle": "A5"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Techniques d'Analyses Médicales",
+                        "salle": "A5"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Biotechnologie et Production Végétale (B.P.V)/S5 - B5B",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Sci et Tech de Production Végétale",
+                        "salle": "B.S21"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "Sci des Sols Agricoles/Phyo et Ravag",
+                        "salle": "B.S21"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Croissance et Dével des Plantes",
+                        "salle": "B.S21"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "BIOETHIQUE ET BIOSECURITE",
+                        "salle": "A5"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "COURS",
+                        "module": "BIOETH ET BIOSEC/Sci Tech Produ Végé",
+                        "salle": "A5"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Écologie Terrestre",
+                        "salle": "B.S21"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "EC.TER/C.D.P",
+                        "groupe": "G1",
+                        "salle": "B.S21"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G1",
+                        "salle": "B.S21"
+                    }
+                ]
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Sciences des Sols Agricoles",
+                        "salle": "B.S21"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Phyopathologie et Ravageurs",
+                        "salle": "B.S21"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Éco Terrest/ Crois et Dével des Plantes",
+                        "salle": "B.S21"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "S.T.P.V/B.ET.SEC",
+                        "groupe": "G1",
+                        "salle": "B.S21"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "PH.RA/S.S.A",
+                        "groupe": "G1",
+                        "salle": "B.S21"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Biologie/S5 - B5C",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Ecologie des Ecosystemes Aquatiques",
+                        "salle": "B.S21"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Biogeographie et Dyna des Popu Nat",
+                        "salle": "B.S21"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Croissance et Dével des Plantes",
+                        "salle": "B.S21"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "BIOETHIQUE ET BIOSECURITE",
+                        "salle": "A5"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "COURS",
+                        "module": "Bioeth.Bioscu/Eco. Ecosys Aquatiques",
+                        "salle": "A5"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "B.ET.SEC/E.E.A",
+                        "groupe": "G1",
+                        "salle": "B.S21"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "EC.TER/B.D.P.N",
+                        "salle": "B.S21"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Écologie Terrestre",
+                        "salle": "B.S21"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Éco Terrest/ Crois et Dével des Plantes",
+                        "salle": "B.S21"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "SIG et Digitalisation Appliques à L'Envi",
+                        "salle": "B.S21"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "COURS",
+                        "module": "SIG Digit App Envi/Bioge Dyna.Popu",
+                        "salle": "B.S21"
+                    }
+                ]
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "SIG(D.A.E)/C.D.P",
+                        "groupe": "G1",
+                        "salle": "B.S21"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G1",
+                        "salle": "B.S21"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Géologie/S5 - G5A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Géologie du Maroc",
+                        "salle": "G.S10"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "SIG et Analyse Spatiale",
+                        "salle": "G.S10"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Géochimie Isotopique et Géochr",
+                        "salle": "G.S10"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Cartographie et Ecole de Terrain",
+                        "groupe": "G1",
+                        "salle": "G.S10"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "C.E.T",
+                        "groupe": "G1",
+                        "salle": "G.S10"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "Géophysique Appliquee",
+                        "groupe": "G1",
+                        "salle": "G.S10"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "G.AP",
+                        "groupe": "G1",
+                        "salle": "G.S10"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "G.AP",
+                        "salle": "G.S10"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "SIG (A.S)",
+                        "groupe": "G1G.S10"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "G.MA",
+                        "salle": "G.S10"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "salle": "G.S10"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "GEOINF",
+                        "groupe": "G1",
+                        "salle": "G.S10"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Géoinformatique",
+                        "salle": "G.S10"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Mathématiques/S5 - M5A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Python Avance"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Topologie Générale",
+                        "salle": "A7"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "TOP.G",
+                        "groupe": "G1",
+                        "salle": "TD10"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "Recherche Opérationnelle",
+                        "groupe": "G1",
+                        "salle": "TD11"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "R.OP",
+                        "salle": "TD21"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "AN.COM",
+                        "groupe": "G1",
+                        "salle": "TD14"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G1",
+                        "salle": "TD19"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Analyse Complexe",
+                        "salle": "TD21"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Théorie de la Mesure et Probabilité",
+                        "salle": "TD14"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Calcul différentiel",
+                        "salle": "TD11"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "C.DIFF",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "T.M.P",
+                        "groupe": "G1",
+                        "salle": "TD13"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "PY.A",
+                        "groupe": "G1",
+                        "salle": "TD11"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "Informatique/S5 - I5A",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "FOUILLE DE DONNÉES",
+                        "salle": "A4"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "GES(AG/CL)",
+                        "groupe": "G2",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "FO.DO",
+                        "groupe": "G1",
+                        "salle": "TD3"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "FO.DO",
+                        "groupe": "G2",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "GES(AG/CL)",
+                        "groupe": "G1",
+                        "salle": "TD6"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "JAVA",
+                        "salle": "A4"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "JAVA",
+                        "groupe": "G2",
+                        "salle": "TD15"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PRO.B.D",
+                        "groupe": "G3",
+                        "salle": "TD22"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "COM",
+                        "groupe": "G1",
+                        "salle": "TD8"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "JAVA",
+                        "groupe": "G3",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "JAVA",
+                        "groupe": "G1",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "COM",
+                        "groupe": "G2",
+                        "salle": "TD20"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "ME": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "RESEAUX INFORMATIQUES",
+                        "salle": "A4"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "COMPILATION",
+                        "salle": "A4"
+                    }
+                ],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "RES.INFO",
+                        "groupe": "G2",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "GES(AG/CL)",
+                        "groupe": "G3",
+                        "salle": "TD20"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PRO.B.D",
+                        "groupe": "G1",
+                        "salle": "TD9"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "RES.INFO",
+                        "groupe": "G1",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "PRO.B.D",
+                        "groupe": "G2",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "COM",
+                        "groupe": "G3",
+                        "salle": "TD20"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G1",
+                        "salle": "TD16"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G2",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "RES.INFO",
+                        "groupe": "G3",
+                        "salle": "TD22"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "PROGRAMMATION DES BASE",
+                        "salle": "A4"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "GEST.PROJ.METHODE",
+                        "salle": "A4"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G3",
+                        "salle": "TD20"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "FO.DO",
+                        "groupe": "G3",
+                        "salle": "TD20"
+                    }
+                ],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    },
+    {
+        "section": "EXCELLENCE/S5 - EXC5",
+        "emploi_du_temps": {
+            "LU": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "COURS",
+                        "module": "Traitement du Signal et de l'image",
+                        "salle": "A4"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "TD",
+                        "module": "T.S.I",
+                        "groupe": "G3",
+                        "salle": "TD11"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "B.D.R",
+                        "groupe": "G2",
+                        "salle": "TD12"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G1",
+                        "salle": "TD21"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G2",
+                        "salle": "TD19"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "B.D.R",
+                        "groupe": "G3",
+                        "salle": "TD14"
+                    }
+                ]
+            },
+            "MA": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "TRA",
+                        "groupe": "G1",
+                        "salle": "TD1"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "M.I.A",
+                        "groupe": "G2",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "ANGLAIS",
+                        "groupe": "G3",
+                        "salle": "TD4"
+                    }
+                ],
+                "13H45 / 15H15": [
+                    {
+                        "type": "COURS",
+                        "module": "Langage Pyt. L'intelligence",
+                        "salle": "A4"
+                    }
+                ],
+                "15H30 / 17H": [
+                    {
+                        "type": "TD",
+                        "module": "L.P.I",
+                        "groupe": "G3",
+                        "salle": "TD9"
+                    }
+                ]
+            },
+            "ME": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Analyse des données et classification",
+                        "salle": "A6"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "T.S.I",
+                        "groupe": "G1",
+                        "salle": "TD7"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "A.D.C",
+                        "groupe": "G2",
+                        "salle": "TD9"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "A.D.C",
+                        "groupe": "G1",
+                        "salle": "TD9"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "JE": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Bases de Données Relationnelles",
+                        "salle": "A5"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "TD",
+                        "module": "M.I.A",
+                        "groupe": "G1",
+                        "salle": "TD13"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "L.P.I",
+                        "groupe": "G2",
+                        "salle": "TD14"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TRA",
+                        "groupe": "G3",
+                        "salle": "TD5"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "M.I.A",
+                        "groupe": "G3",
+                        "salle": "TD20"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "TRA",
+                        "groupe": "G2",
+                        "salle": "TD21"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "L.P.I",
+                        "groupe": "G1",
+                        "salle": "TD9"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "VE": {
+                "8H30 / 10H": [],
+                "10H15 / 11H45": [],
+                "12H / 13H30": [],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            },
+            "SA": {
+                "8H30 / 10H": [
+                    {
+                        "type": "COURS",
+                        "module": "Maths de L'intelligence Artificielle",
+                        "salle": "A4"
+                    }
+                ],
+                "10H15 / 11H45": [
+                    {
+                        "type": "COURS",
+                        "module": "Transversal",
+                        "salle": "A5"
+                    }
+                ],
+                "12H / 13H30": [
+                    {
+                        "type": "TD",
+                        "module": "A.D.C",
+                        "groupe": "G3",
+                        "salle": "TD3"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "T.S.I",
+                        "groupe": "G2",
+                        "salle": "TD4"
+                    },
+                    {
+                        "type": "TD",
+                        "module": "B.D.R",
+                        "groupe": "G1",
+                        "salle": "TD5"
+                    }
+                ],
+                "13H45 / 15H15": [],
+                "15H30 / 17H": []
+            }
+        }
+    }
+]
