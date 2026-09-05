@@ -278,7 +278,7 @@ def get_chat_engine():
     )
 
     vectorstore = Chroma(
-        persist_directory="../data/vector_db",
+        persist_directory="./vectordb",
         embedding_function=embeddings,
     )
 

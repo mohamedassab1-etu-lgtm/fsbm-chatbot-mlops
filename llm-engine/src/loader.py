@@ -88,7 +88,7 @@ def parse_email_list(raw):
 
 
 def load_data_as_documents():
-    con = duckdb.connect('../data/duckdb/fsbm.duckdb') # Assure-toi que le chemin est correct selon l'emplacement du script
+    con = duckdb.connect('../dataops/data/duckdb/fsbm.duckdb') # Assure-toi que le chemin est correct selon l'emplacement du script
     documents = []
 
     # Fetch laboratoires first (before professeurs/formations) so we can

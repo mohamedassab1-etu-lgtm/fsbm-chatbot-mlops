@@ -45,7 +45,7 @@ def create_vector_store(batch_size: int = 32):
         },
     )
 
-    persist_path = "../data/vector_db"
+    persist_path = "./vectordb"
 
     print("Création de la base vectorielle (par lots, avec progression)...")
     vectorstore = None
