@@ -1,0 +1,1181 @@
+[
+    {
+        "title": "Laboratoire Analyse, Modélisation et Simulation",
+        "acronyme": "LAMS",
+        "description": "Laboratoire Analyse, Modélisation et Simulation",
+        "directeur": "MOULINE JAMAL",
+        "directeur_adjoint": "EL ADRAOUI ABDERRAHIM",
+        "equipes": [
+            {
+                "name": "Equipe de Systèmes Dynamiques",
+                "membres": [
+                    {
+                        "name": "EL BERRAI IMANE",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "LAHMIDI FOUAD",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "LAARABI HASSAN",
+                        "role": "MCH"
+                    },
+                    {
+                        "name": "LOTFI EL MEHDI",
+                        "role": "MCH - FSBM"
+                    },
+                    {
+                        "name": "AGMOUR IMANE",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BOUKHOUIMA ADNANE",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BOUYAGHROUMNI JAMAL",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Equipe Statistiques et Modélisation",
+                "membres": [
+                    {
+                        "name": "FERJOUCHA HANANE",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "ADNAOUI Khalid",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "ZAKARY OMAR",
+                        "role": "MCH - FSBM"
+                    },
+                    {
+                        "name": "BOUTAYEB HAMZA",
+                        "role": "MC"
+                    },
+                    {
+                        "name": "BIDAH SARA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BACHRAOUI MOUSSA",
+                        "role": "MC"
+                    },
+                    {
+                        "name": "SAADI SMAHANE",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Team of Algebra, Analysis and Geometry",
+                "membres": [
+                    {
+                        "name": "BASSOU ABDELHAFID",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "ABOUSSOROR ABDELMALEK",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL ADRAOUI ABDERRAHIM",
+                        "role": "Coordonnateur de filière"
+                    },
+                    {
+                        "name": "BASSOU ABDELHAFID",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL OUARRACHI MOUNIE",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL HAFFARI MOSTAFA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "AHARMIM BOUCHRA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BOUZKOURA KHADIJA",
+                        "role": "Coordonnateur de filière - MCH"
+                    },
+                    {
+                        "name": "BERGHOUT MOHAMED",
+                        "role": "MCH - FSBM"
+                    },
+                    {
+                        "name": "GUESSOUS MOHAMED",
+                        "role": "PES"
+                    },
+                    {
+                        "name": "BENKADDOUR SAID",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MOULINE JAMAL",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BENNANI SAMIA",
+                        "role": "Professeur"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Laboratoire Biologie et Santé",
+        "acronyme": "LBS",
+        "description": "Laboratoire Biologie et Santé",
+        "directeur": "SAILE RACHID",
+        "directeur_adjoint": "ECH CHERIF EL KETTANI Mohammed Anass",
+        "equipes": [
+            {
+                "name": "Applied Geology and Water Resources",
+                "membres": [
+                    {
+                        "name": "ECH CHERIF EL KETTANI Mohammed Anass",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "EL OUAHABI IMANE",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "SERGHAT SAMIRA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BOUZOUBAA HIND",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BENNANI HOUDA",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Dynamics, Stratigraphy and Valuation of Sedimentary Basins",
+                "membres": [
+                    {
+                        "name": "LEBRAZI HALIMA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "RAHIM SOUAD",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "TAKI HASSAN",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MOHTADI KARIMA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "KEHAILOU FATIMA ZAHRA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "SAILE RACHID",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Geomatics Applied to Geosciences and the Environment",
+                "membres": [
+                    {
+                        "name": "BORIKY DRISS",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "BELOUAFA SOUMIA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "NORDINE AICHA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "ABOURRICHE ABDELMJID",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Georesources and Environment",
+                "membres": [
+                    {
+                        "name": "ADNAOUI Khalid",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "EL HAMSAS EL YOUBI AMAL",
+                        "role": "MCH"
+                    },
+                    {
+                        "name": "AROUS SALIM",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "RADALLAH DRISS",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "SALIH-ALJ HANANE",
+                        "role": "Professeur"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Laboratoire de Chimie Analytique et Moléculaire",
+        "acronyme": "LCAM",
+        "description": "Laboratoire de Chimie Analytique et Moléculaire",
+        "directeur": "MOUNA LATIFA BOUAMRANI",
+        "directeur_adjoint": "CHTITA SAMIR",
+        "equipes": [
+            {
+                "name": "Catalyse et Environnement",
+                "membres": [
+                    {
+                        "name": "MOUNIR BAHIJA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "AMEGRISSI FATIHA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EDDAQAQ FATNA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "KENZ ABDELKEBIR",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Chimie Physique, Modélisation Moléculaire et Substances Naturelles",
+                "membres": [
+                    {
+                        "name": "CHTITA SAMIR",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "MOUMOU MOHAMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "RADID MOHAMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BORIKY DRISS",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL KOUALI MHAMMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL OUAHABI IMANE",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Matériaux, Analyse et Procédés",
+                "membres": [
+                    {
+                        "name": "BOURJA LAMIA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "YOUSFI SAMIA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MOUNA LATIFA BOUAMRANI",
+                        "role": "DIRECTEUR DE LABORATOIRE - PES - FSBM"
+                    },
+                    {
+                        "name": "BENNANI LAILA",
+                        "role": "Professeur"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Laboratoire de Chimie Physique des Matériaux Appliqués",
+        "acronyme": "LCPMA",
+        "description": "Laboratoire de Chimie Physique des Matériaux Appliqués",
+        "directeur": "EL BOUARI ABDESLAM",
+        "directeur_adjoint": "BELAAOUAD SAID",
+        "equipes": [
+            {
+                "name": "Functional materials and applications",
+                "membres": [
+                    {
+                        "name": "BENBIYI ASMAA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "MEHDAOUI BOUBKER",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BOUTOUIL AZIZ",
+                        "role": "MC"
+                    },
+                    {
+                        "name": "ABBOUD YOUNESS",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Géomatériaux, efficacité énergétique et environnement",
+                "membres": [
+                    {
+                        "name": "SADIK CHAOUKI",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "HSSAIDA TOURIA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EZZINE MOHAMMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "LAASRI LAILA",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Matériaux intelligents et transfert technologique",
+                "membres": [
+                    {
+                        "name": "TANANE OMAR",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "BENNISS MOHAMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL BOUARI ABDESLAM",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BOUMANCHAR IMANE",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Valorisation des matériaux et modélisation",
+                "membres": [
+                    {
+                        "name": "ZERRAF SOUFIANE",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "BELAAOUAD SAID",
+                        "role": "PES"
+                    },
+                    {
+                        "name": "BAKKALI SAID",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BELGHITI MOHAMMED",
+                        "role": "MCH"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Laboratoire d’Écologie et d’Environnement",
+        "acronyme": "LEE",
+        "description": "Laboratoire d’Écologie et d’Environnement",
+        "directeur": "BADRI WADI",
+        "directeur_adjoint": "NAHLI ABDELMOTTALIB",
+        "equipes": [
+            {
+                "name": "Ecologie et Ecophysiologie Végétales",
+                "membres": [
+                    {
+                        "name": "SAMIR KARIMA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "RACHDI BOUCHRA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "ELAOUOUAD HANAN",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL MOUKHTARI AHMED",
+                        "role": "Coordonnateur de filière"
+                    },
+                    {
+                        "name": "FOUGRACH HASSAN",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BADRI WADI",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "ECotoxicologie et Biomonitoring",
+                "membres": [
+                    {
+                        "name": "AIT HAMOU SANAA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "NAHLI ABDELMOTTALIB",
+                        "role": "Coordonnateur de filière - MCH"
+                    },
+                    {
+                        "name": "EL AMRANI SOUAD",
+                        "role": "PES"
+                    },
+                    {
+                        "name": "IOUNES NADIA",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Hydrobiologie, Ecologie et Ecophysiologie Animales",
+                "membres": [
+                    {
+                        "name": "EL HAMOUMI R’HIMOU",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "TABITE RABAB",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL KHASMI MOHAMMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "FARH MOHAMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "ROHI LATIFA",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Microbiologie Appliquée",
+                "membres": [
+                    {
+                        "name": "ZERDANI ILHAM",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "BELGHITI AYOUB",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MOUSLIM ASSIA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MOUSLIM JAMAL",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MENGGAD MOHAMMED",
+                        "role": "Professeur"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Laboratoire de Géosciences, Géomatique et Environnement",
+        "acronyme": "LGGE",
+        "description": "Laboratoire de Géosciences, Géomatique et Environnement",
+        "directeur": "OUKASSOU MOSTAFA",
+        "directeur_adjoint": "MOUFLIH MUSTAPHA",
+        "equipes": [
+            {
+                "name": "Applied Geology and Water Resources",
+                "membres": [
+                    {
+                        "name": "FEKRI AHMED",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "OUKASSOU MOSTAFA",
+                        "role": "Coordonnateur de filière - PES"
+                    },
+                    {
+                        "name": "EL HAMMOUMI OUAFA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MARRAKCHI CHAKIB",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "HAISSEN FAOUZIYA",
+                        "role": "CHEF D'EQUIPE - PES - FSBM"
+                    }
+                ]
+            },
+            {
+                "name": "Dynamics, Stratigraphy and Valuation of Sedimentary Basins",
+                "membres": [
+                    {
+                        "name": "BARHOUN NADIA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "EL OUARITI SALEM",
+                        "role": "MC"
+                    },
+                    {
+                        "name": "MOUFLIH MUSTAPHA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "ESSAMOUD RACHID",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BACHIRI TAOUFIQ NAIMA",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Geomatics Applied to Geosciences and the Environment",
+                "membres": [
+                    {
+                        "name": "MAIMOUNI Soufiane",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "LABRIKI ALLAL",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL MOUTAKI SAIDA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL HILALI MOHAMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "GHAFIRI ABDESSAMAD",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Georesources and Environment",
+                "membres": [
+                    {
+                        "name": "ALIKOUSS SAIDA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "MORSLI YOUSRA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "ZAHOUR GHALEM",
+                        "role": "PES"
+                    },
+                    {
+                        "name": "BAROUDI ZOUHIR",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "SAMIR MOHAMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "AADJOUR LALLA MALIKA",
+                        "role": "MCH - FSBM"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Laboratoire de Physique de la Matière Condensée",
+        "acronyme": "LPMC",
+        "description": "Laboratoire de Physique de la Matière Condensée",
+        "directeur": "MAZROUI M'HAMMED",
+        "directeur_adjoint": "BENNAI MOHAMED",
+        "equipes": [
+            {
+                "name": "Matériaux Innovants et Matière Condensée",
+                "membres": [
+                    {
+                        "name": "BENLATTAR MOURAD",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "ACHIK IMAD",
+                        "role": "Coordonnateur de filière - MCH"
+                    },
+                    {
+                        "name": "CHAHID MUSTAPHA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MAZROUI M’hammed",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EDDIAI Adil",
+                        "role": "Coordonnateur de filière - PES"
+                    }
+                ]
+            },
+            {
+                "name": "Mécanique, Ingénierie et Matériaux",
+                "membres": [
+                    {
+                        "name": "IDIRI MOHAMED",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "HAMDAOUI ABDELLAH",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "DAOUDI OTHMANE",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BRAIKAT BOUAZZA",
+                        "role": "PES"
+                    }
+                ]
+            },
+            {
+                "name": "Physique des nanosystèmes et nanocomposites",
+                "membres": [
+                    {
+                        "name": "OUASKIT SAID",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "MOULTIF RACHIDA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL HAITAMY OUAFAE",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "DEZAIRI AOUATIF",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Physique Quantique et Spintronique",
+                "membres": [
+                    {
+                        "name": "EL HAFIDI MOULAY YOUSSEF",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "SAID TAOUFIK",
+                        "role": "MCH"
+                    },
+                    {
+                        "name": "SAKHI ZOUBIDA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BENNAI MOHAMED",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Subatomique et Applications",
+                "membres": [
+                    {
+                        "name": "KHOUAJA ABDENBI",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "KARTOUNI ABDELKRIM",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MORSAD ABDELTIF",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BENZOUINE FATNA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL OUARDI BRAHIM",
+                        "role": "Professeur"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Laboratoire de Technologies de l'Information et Modélisation",
+        "acronyme": "LTIM",
+        "description": "Laboratoire de Technologies de l'Information et Modélisation",
+        "directeur": "Mohamed Azzouazi",
+        "directeur_adjoint": "El habib Benlahmar",
+        "equipes": [
+            {
+                "name": "Big Data et Ingénierie des Systèmes d’Information (BDISI)",
+                "membres": [
+                    {
+                        "name": "Soumaya OUNACER",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "Mohamed Azzouazi",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "Abderrahmane Daif",
+                        "role": "Coordonnateur de filière - MCH"
+                    },
+                    {
+                        "name": "Soufiane Ardchir",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Modélisation Dirigée par la Donnée (MDD)",
+                "membres": [
+                    {
+                        "name": "Mohamed GHAZOUANI",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "Omar Zahour",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "El habib Benlahmar",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "Mohssine Bentaib",
+                        "role": "Coordonnateur de filière - MCH - FSBM"
+                    }
+                ]
+            },
+            {
+                "name": "Systèmes Intelligents et IoT (S2IOT)",
+                "membres": [
+                    {
+                        "name": "Yman CHEMLAL",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "Abdelaziz Marzak",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "Mohamed Yassine El Ghoumari",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "Ichrak Benamri",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Technologies Cognitives et Applications (TCA)",
+                "membres": [
+                    {
+                        "name": "Said NOUH",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "Mounir Sadiq",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "Tarik Ahajjam",
+                        "role": "MC"
+                    },
+                    {
+                        "name": "Khalid Kandali",
+                        "role": "MC - FSBM"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Laboratoire de Traitement de l’Information",
+        "acronyme": "LTI",
+        "description": "Laboratoire de Traitement de l’Information",
+        "directeur": "TALEA MOHAMED",
+        "directeur_adjoint": "ATOUF ISSAM",
+        "equipes": [
+            {
+                "name": "Intelligence artificielle et Géo-informatique appliquées",
+                "membres": [
+                    {
+                        "name": "CHAFIQ TARIK",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "EDDAOUI AHMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "SEFRI YOUSSEF",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "YALID AMAL",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "TALEA MOHAMED",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Matériaux, Energies Renouvelables et Smart Technologies",
+                "membres": [
+                    {
+                        "name": "GUENNOUN ASMAE",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "DRIGHIL ASMAA",
+                        "role": "Coordonnateur de filière - MCH"
+                    },
+                    {
+                        "name": "TACE EL MOSTAFA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "NAIMI YOUSSEF",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Systèmes Électroniques Intelligents",
+                "membres": [
+                    {
+                        "name": "ZAARANE ABDELMOGHIT",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "ATOUF ISSAM",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "ALALI ABDELHAKIM",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL BAKALI KASSIMI AZIZA",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Télécommunications et Systèmes Automatiques",
+                "membres": [
+                    {
+                        "name": "BAHRI HICHAM",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "EL HABCHI MOURAD",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "CHAKLI ABDELHAK",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BOUR MOHAMED",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "SLIMANI ABDELLATIF",
+                        "role": "MC"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Laboratoire d’Ingénierie et Matériaux",
+        "acronyme": "LIM",
+        "description": "Laboratoire d’Ingénierie et Matériaux",
+        "directeur": "GMOUH SAID",
+        "directeur_adjoint": "MORDANE SOUMIA",
+        "equipes": [
+            {
+                "name": "Matériaux Innovants",
+                "membres": [
+                    {
+                        "name": "OUMAM MINA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "GMOUH SAID",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "HAJJI LATIFA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "SLASSI SIHAM",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Nanomatériaux et Couches Minces",
+                "membres": [
+                    {
+                        "name": "ADHIRI R'HMA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "ABDERRAFI KAMAL",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "LAHLOU SOUAD",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "LACHHAB TOURIA",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Sciences Mécanique et Matériaux",
+                "membres": [
+                    {
+                        "name": "MOUAKKIR LAILA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "EL AARABI LAILA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MOUAKKIR LAILA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "MOURABIT M BARKA",
+                        "role": "Coordonnateur de filière - MCH"
+                    },
+                    {
+                        "name": "BOUBEKRI ABDERRAZAK",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL ASSYRY ABDESLAM",
+                        "role": "MCH"
+                    },
+                    {
+                        "name": "AKOUIBAA ABDELILAH",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "ERRIFAIY MERIEM",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "NASSIF RACHID",
+                        "role": "Professeur"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Laboratoire d’Intelligence Artificielle et Systèmes",
+        "acronyme": "LIAS",
+        "description": "Le Laboratoire d’Intelligence Artificielle et Systèmes est dédié à la recherche en intelligence artificielle (IA) et en technologies émergentes au service de l’innovation dans les villes intelligentes. Il vise à développer des connaissances théoriques ainsi que des solutions technologiques durables pour relever les défis dans des secteurs tels que la santé, l’éducation, l’agriculture, les transports et la finance. En cohérence avec la stratégie nationale « Maroc Digital 2030 », les objectifs du laboratoire s’articulent autour des axes suivants :🎓Former des experts en intelligence artificielle et en technologies connexes.💡 Encourager l’innovation à travers des projets collaboratifs.🤖 Promouvoir l’adoption de l’intelligence artificielle dans les secteurs public et privé.🔐 Garantir une utilisation responsable et sécurisée des données.",
+        "directeur": "BENABBOU FAOUZIA",
+        "directeur_adjoint": "BELANGOUR Abdessamad",
+        "equipes": [
+            {
+                "name": "Ingénierie Logicielle Intelligente et Analyse Stochastique",
+                "membres": [
+                    {
+                        "name": "ETTAOUFIK ABDELAZIZ",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "BELANGOUR Abdessamad",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "SEKHARA YOUSSEF",
+                        "role": "MC"
+                    },
+                    {
+                        "name": "BOUGGAR DRISS",
+                        "role": "MC"
+                    }
+                ]
+            },
+            {
+                "name": "Innovation en Science des Données, Intelligence Artificielle et Cloud",
+                "membres": [
+                    {
+                        "name": "SAEL NAWAL",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "ZAOUCH AMAL",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BENABBOU FAOUZIA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "EL AZZABY FOUZIA",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Innovation en Science des Données, Intelligence Artificielle et Cloud Computing (ISDIAC)",
+                "membres": [
+                    {
+                        "name": "SAEL NAWAL",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "EL AZZABY FOUZIA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "ZAOUCH AMAL",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "BENABBOU FAOUZIA",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Sciences des Données, Technologies Intelligentes et Cybersécurité",
+                "membres": [
+                    {
+                        "name": "OUAHABI SARA",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "EL FILALI SANAA",
+                        "role": "VICE DOYEN - PES - FSBM"
+                    },
+                    {
+                        "name": "AIT ABDELOUAHID RACHIDA",
+                        "role": "Professeur"
+                    },
+                    {
+                        "name": "ACHTAICH NACEUR",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Systèmes Intelligents et Modélisation Avancée",
+                "membres": [
+                    {
+                        "name": "AIT DAOUD MOHAMMED",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "ACHTAICH KHADIJA",
+                        "role": "Coordonnateur de filière - MCH"
+                    },
+                    {
+                        "name": "HANOUNE MOSTAFA",
+                        "role": "CHEF D'EQUIPE"
+                    },
+                    {
+                        "name": "AHARRANE NABIL",
+                        "role": "Professeur"
+                    }
+                ]
+            },
+            {
+                "name": "Systèmes Intelligents et Modélisation Avancée (SIMA)",
+                "membres": [
+                    {
+                        "name": "AIT DAOUD MOHAMMED",
+                        "role": "Responsable"
+                    },
+                    {
+                        "name": "HANOUNE MOSTAFA",
+                        "role": "CHEF D'EQUIPE"
+                    },
+                    {
+                        "name": "ACHTAICH KHADIJA",
+                        "role": "Coordonnateur de filière - MCH"
+                    },
+                    {
+                        "name": "AHARRANE NABIL",
+                        "role": "Professeur"
+                    }
+                ]
+            }
+        ]
+    }
+]

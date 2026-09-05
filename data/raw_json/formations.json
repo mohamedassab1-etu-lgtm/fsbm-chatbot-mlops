@@ -1,0 +1,2264 @@
+[
+    {
+        "type": "Licence Fondamentale",
+        "departements": [
+            {
+                "departement": "Biologie",
+                "formations": [
+                    {
+                        "Filière": "GESTION DE L'ENVIRONNEMENT ET DES RESSOURCES NATURELLES",
+                        "COORDONNATEUR": "NAHLI ABDELMOTTALIB",
+                        "SPÉCIALITÉ": "Ecologie et Gestion de l'Environnement",
+                        "E.MAIL": "abdelmottalib.nahli@univh2c.ma",
+                        "OBJECTIFS": "La formation de Licence en Gestion de l'Environnement et des Ressources naturelles (GERN) propose un ruban de modules disciplinaires et interdisciplinaires qui visent à faire acquérir aux étudiants un ensemble de connaissances globales se rapportant à : La structure, l'organisation et le fonctionnement du monde vivant. Ecologie des écosystèmes naturels, hydrobiologie, biogéographie, gestion de la biodiversité et du patrimoine naturel et agricole. Outils d'évaluation des impacts anthropiques, mesures et solutions techniques de leur atténuation. Système de Management de l'Environnement et intégration du concept du Développement Durable au sein des activités humaines. Techniques globales d'analyses environnementales (eau, sol, déchets, etc.) et de traitements des données. Eléments fondamentaux de la législation et la réglementation régissant la gestion de l'environnement au Maroc.",
+                        "DÉBOUCHÉS": "Le titulaire de la Licence GERN est assimilé à un technicien supérieur. Cette formation prépare les étudiants à occuper divers postes dans les secteurs publics, privés ou associatifs liés à la gestion environnementale, notamment Laboratoires publics ou privés (LPEE, LNESP, SRM, etc.), bureaux d'études (BETs) et Assainissement (SRM, ONEE, OCP, etc.). Biologie et Hydrobiologie (INRA, INRH, agences de bassins, entreprises agricoles, etc.) et gestion des aires protégées/zones humides. Enseignement (public ou privé), métiers liés à la biologie, à la gestion de l'environnement et à la valorisation du patrimoine naturel et agricole. Les diplômés peuvent poursuivre en master en sciences de l'environnement, intégrer un cycle d'ingénieur ou se présenter aux concours de la fonction publique et des administrations centrales ou régionales.",
+                        "CIBLE": "L'accès à cette filière est ouvert aux titulaires d'un Baccalauréat en « Sciences Expérimentales » ou d'un diplôme équivalent. Des passerelles sont également prévues pour les étudiants ayant validé une formation de niveau Bac+1 ou Bac +2 sous réserve de la validation des prérequis nécessaires. Les formations concernées incluent notamment : Le tronc commun BG-Biologie de la Licence. Les filières d'ingénieurs des Facultés des Sciences et Techniques. La Licence en Education, spécialité Sciences de la Vie et de la Terre (SVT) des Écoles Normales Supérieures. Les filières d'ingénieurs en Environnement.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Biologie cellulaire",
+                                    "Histologie et notions d'Embryologie",
+                                    "Géologie Générale",
+                                    "Atomistique et liaison chimique",
+                                    "Thermodynamique/Mécanique",
+                                    "Mathématiques",
+                                    "Méthodologie du travail universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Biologie des organismes animaux",
+                                    "Biologie des organismes végétaux",
+                                    "Géodynamique interne",
+                                    "Geodynamique externe",
+                                    "Chimie des solutions / Chimie organique",
+                                    "Optique/Electricité",
+                                    "Digital skills & intelligence artificielle"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Ecologie Générale",
+                                    "Microbiologie Générale",
+                                    "Biochimie structurale",
+                                    "Techniques d'analyse",
+                                    "Biostatistiques",
+                                    "Informatique pour la biologie",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Systématique et biodiversité",
+                                    "Physiologie animale",
+                                    "Physiologie végétale",
+                                    "Enzymologie et biochimie métabolique",
+                                    "Génétique",
+                                    "Biologie moléculaire",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Ecologie des écosystèmes aquatiques",
+                                    "Ecologie terrestre",
+                                    "Croissance et développement des plantes",
+                                    "Biogéographie et dynamique des populations Naturelles",
+                                    "SIG et digitalisation appliquée à l'environnement",
+                                    "Bioéthique et biosécurité",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Gestion du patrimoine naturel et agricole",
+                                    "Gestion de la biodiversité",
+                                    "Gestion de leau et changement climatique",
+                                    "Management environnemental / Développement Durable",
+                                    "Contrôle et traitement des rejets de pollution",
+                                    "Culture entrepreneuriale",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Sciences Biomédicales Appliquées",
+                        "COORDONNATEUR": "FARH MOHAMED",
+                        "SPÉCIALITÉ": "Physiologie Animale - Pharmacologie",
+                        "E.MAIL": "mohamedfarh50gmail.com",
+                        "OBJECTIFS": "La filière Sciences Biomédicales appliquées a pour objectif l'acquisition de compétences fondamentales et méthodologiques solides dans les grands secteurs des Sciences de la santé que sont la Biologie cellulaire et Moléculaires, la pharmacologie, la toxicologie, la physiologie humaine, la microbiologie médicale, la génétique, la cytobiologie, la biochimie clinique, les techniques d'analyses et la sécurité en milieu hospitalier.",
+                        "DÉBOUCHÉS": "Débouchés dans les secteurs d'activités se rapportant à la biologie, la santé et l'industrie pharmaceutique : Délégation médicale. Ingénieur technico-commercial. Poursuivre les études supérieures (Masters et Doctorat).",
+                        "CIBLE": "Bac sciences de la Vie et de la Terre. Baccalauréat Sciences Physiques. Baccalauréat Sciences Mathématiques A.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Biologie cellulaire",
+                                    "Histologie et notions d'embryologie",
+                                    "Géologie générale",
+                                    "Mathématiques",
+                                    "Atomistique et liaison chimique",
+                                    "Physique 1 : Thermodynamique / mécanique",
+                                    "Méthodologie de travail universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Biologie des organismes animaux",
+                                    "Biologie des organismes végétaux",
+                                    "Géodynamique interne",
+                                    "Géodynamique externe",
+                                    "Chimie des solutions / chimie organique",
+                                    "Physique II : Optique électricité",
+                                    "Digital skills et intelligence artificielle"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Ecologie générale",
+                                    "Microbiologie générale",
+                                    "Biochimie structurale",
+                                    "Techniques d'analyses",
+                                    "Biostatistiques",
+                                    "Informatique pour la biologie",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Systématique et biodiversité",
+                                    "Physiologie animale",
+                                    "Physiologie végétale",
+                                    "Enzymologie et biochimie Métabolique",
+                                    "Génétique",
+                                    "Biologie moléculaire",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Anatomie et physiologie humaine",
+                                    "Immunologie",
+                                    "Pharmacologie/toxicologie",
+                                    "Génétique humaine et Moléculaire",
+                                    "Techniques d'analyses médicale",
+                                    "Bioéthique Biosécurité",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Human physiopathology",
+                                    "Biochimie clinique et nutrition humaine",
+                                    "Microbiologie médicale",
+                                    "Cytobiologie / Biologie interventionnelle",
+                                    "Culture entrepreneuriale",
+                                    "Management et sécurité en milieu hospitalier",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Biotechnologie et Production Végétale",
+                        "COORDONNATEUR": "EL MOUKHTARI AHMED",
+                        "SPÉCIALITÉ": "Ecophysiologie Végétale",
+                        "E.MAIL": "elmoukhtari.ahmed94@gmail.com",
+                        "OBJECTIFS": "Cette formation a pour objectifs de fournir aux étudiants les bases scientifiques et méthodologiques de même que les outils nécessaires à : Maitriser les techniques de conduite des productions végétales, de la sélection et de l'amélioration des plantes. Maîtriser les concepts de qualité et de traçabilité des produits agricoles. Promouvoir le développement et l'utilisation des biotechnologies, des semences aux produits. Réaliser le suivi du cycle de croissance et du développement végétal par imagerie satellitaires et modélisation.",
+                        "DÉBOUCHÉS": "Les diplômés de cette filière : Auront accès à différents types de master avec des perspectives de doctorat dans des domaines clés et d'actualité. Peuvent intégrer des fonctions et/ou exercer des métiers de Technicien supérieur dans différents domaines, aux laboratoires de recherches et d'analyses biologiques, biotechnologiques, agroalimentaire, agronomiques... Elaborer leurs propres projets dans les domaines de la valorisation de nos ressources végétales, produits Bio, nutrition... Peuvent réussir les concours de la fonction publique et du privé : enseignement, administrations centrales et régionales...",
+                        "CIBLE": "La filière s'adresse aux étudiants : Titulaires d'un baccalauréat série Sciences Expérimentales ou d'un diplôme équivalent. Intéressés par les sciences du vivant et les biotechnologies végétales. Souhaitant acquérir des compétences en biologie et physiologie végétale, agronomie et production végétale. Motivés par les applications des biotechnologies dans l'agriculture et l'amélioration des cultures.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Biologie cellulaire",
+                                    "Histologie et notions d'embryologie",
+                                    "Géologie générale",
+                                    "Atornistique et liaison chimique",
+                                    "Thermodynamique / mécanique",
+                                    "Mathématiques",
+                                    "Méthodologie de travail universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Biologie des organismes animaux",
+                                    "Biologie des organismes végétaux",
+                                    "Géodynamique interne",
+                                    "Géodynamique externe",
+                                    "Chimie des solutions / chimie organique",
+                                    "Optique électricité",
+                                    "Digital skills & intelligence artificielle"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Ecologie générale",
+                                    "Microbiologie générale",
+                                    "Biochimie structurale",
+                                    "Techniques d'analyse",
+                                    "Biostatistiques",
+                                    "Informatique pour la biologie",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Systématique et biodiversité",
+                                    "Physiologie animale",
+                                    "Physiologie végétale",
+                                    "Enzymologie et biochimie Métabolique",
+                                    "Génétique",
+                                    "Biologie moléculaire",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Sciences des sols agricoles",
+                                    "Croissance et développement des plantes",
+                                    "Sciences et techniques de production végétale",
+                                    "Phytopathologie et ravageurs",
+                                    "Ecologie Terrestre",
+                                    "Bioéthique et Biosécurité",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Microbiologie appliquée à la Biotechnologie et Production Végétale",
+                                    "Gestion de la Biodiversité",
+                                    "Valorisation des ressources Végétales",
+                                    "Amélioration Génétique et Biotechnologie des plantes",
+                                    "Biochimie végétale et nutrition humaine",
+                                    "Culture entrepreneuriale",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Chimie",
+                "formations": [
+                    {
+                        "Filière": "Génie des Matériaux",
+                        "COORDONNATEUR": "MEHDAOUI BOUBKER",
+                        "SPÉCIALITÉ": "Chimie- Matériaux",
+                        "E.MAIL": "boubker.mehdaoui@univh2c.ma",
+                        "OBJECTIFS": "La licence Génie des Matériaux est un cursus de trois ans dédiés aux sciences chimiques. Les deux premières années permettent d'acquérir les fondamentaux théoriques et pratiques de la chimie générale, avant une spécialisation en chimie des matériaux lors de la troisième année. Cette formation ambitionne de former des spécialistes dans le domaine de la chimie des matériaux capables de répondre aux défis du secteur. Au-delà des compétences techniques, l'accent est mis sur les compétences transversales (Français, Anglais, soft skills), piliers essentiels d'une insertion professionnelle réussie.",
+                        "DÉBOUCHÉS": "Techniciens Spécialisés ou Assistants Ingénieurs dans les secteurs de pointe : - Industries Chimiques & Formulation: Cosmétique, Pharmaceutique, Laboratoires d'analyse. - Industries des Matériaux: Métallurgie, Plasturgie, Phosphates, Polymères, Céramiques, Automobile, Verres, Textiles, Énergie, Biomatériaux. Poursuite d'Études Supérieures: Écoles d'ingénieurs et Master & Doctorat.",
+                        "CIBLE": "Admission en première année: Baccalauréat en sciences mathématiques, physique et chimie, ou technique. Admission directe en troisième année: Baccalauréat +2 en chimie et examen du dossier de candidature.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Atomistique",
+                                    "Thermochimie",
+                                    "Thermodynamique",
+                                    "Mécanique du point",
+                                    "Analyse 1",
+                                    "Algèbre 1",
+                                    "Méthodologie de travail universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Liaisons chimiques",
+                                    "Chimie en solution",
+                                    "Electricité",
+                                    "Optique géométrique",
+                                    "Analyse 2",
+                                    "Algèbre 2",
+                                    "Digital skills & intelligence artificielle"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Chimie descriptive I et Diagrammes de phases",
+                                    "Chimie Organique générale",
+                                    "Chimie des électrolytes",
+                                    "Electromagnétisme",
+                                    "Mathématiques pour la chimie",
+                                    "Algorithmique & programmation python",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Techniques d'analyse",
+                                    "Hydrocarbures et Fonctions Monovalentes",
+                                    "Thermodynamique chimique",
+                                    "Cristallographie géométrique et cristallochimie",
+                                    "Mécanique quantique",
+                                    "Probabilités et statistiques.",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Radiocristallographie et Cristallochimie II",
+                                    "Chimie Théorique",
+                                    "Chimie Organique Fonctionnelle",
+                                    "Electrochimie",
+                                    "Cinétique et Catalyse",
+                                    "Introduction Sciences Matériaux",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Chimie Descriptive Il et Chimie de Coordination",
+                                    "Chimie Organique et Organométallique",
+                                    "Formulation des Matériaux Fonctionnels et Innovants",
+                                    "Grandes Classes des Matériaux",
+                                    "Gestion Efficace des Ressources",
+                                    "Culture Entrepreneuriale",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Procédés Analytiques et Industriels",
+                        "COORDONNATEUR": "ERROUGUI ABDELKBIR",
+                        "SPÉCIALITÉ": "Chimie Physique",
+                        "E.MAIL": "Abdelkbir.errougui@univh2c.ma",
+                        "OBJECTIFS": "Cette formation vise à développer chez les étudiants les compétences suivantes : Concevoir, synthétiser et caractériser des molécules en vue de l'élaboration de produits aux propriétés définies;  Exploiter et interpréter les données issues des méthodes physico-chimiques d'analyse;  Concevoir, développer et optimiser des procédés d'analyse et de transformation;  S'intégrer dans un milieu professionnel.",
+                        "DÉBOUCHÉS": "Cette formation facilite l'insertion professionnelle des étudiants en leur ouvrant l'accès aux postes suivants :  Chargé d'étude en développement analytique ;  Chef de projet en développement de procédés;  Responsable de la transformation de la matière et de la production;  Responsable qualité dans différents secteurs et à différentes échelles.",
+                        "CIBLE": "L'accès à cette formation est ouvert aux bacheliers scientifiques ou par voie de passerelle, sur étude de dossier.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Atomistique",
+                                    "Thermochimie",
+                                    "Thermodynamique",
+                                    "Mécanique du point",
+                                    "Algèbre 1",
+                                    "Analyse 1",
+                                    "Méthodologie de Travail Universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Liaisons chimiques",
+                                    "Chimie en solution",
+                                    "Electricité",
+                                    "Optique géométrique",
+                                    "Analyse 2",
+                                    "Algèbre 2",
+                                    "Digital skills & Intelligence artificielle"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Chimie descriptive I et Diagrammes de phases",
+                                    "Chimie organique générale",
+                                    "Chimie des électrolytes",
+                                    "Electromagnetisme",
+                                    "Mathématiques pour la chimie",
+                                    "Algorithmique & programmation python",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Techniques d'analyse",
+                                    "Hydrocarbures et fonctions monovalentes",
+                                    "Thermodynamique chimique",
+                                    "Cristallographie géométrique et cristallochimie",
+                                    "Mécanique quantique",
+                                    "Probabilités et statistique",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Chimie théorique",
+                                    "Chimie organique fonctionnelle",
+                                    "Cinétique & Catalyse",
+                                    "Electrochimie",
+                                    "Radiocristallographie & Cristallographie II",
+                                    "Introduction à la science des matériaux: de la synthèse à l'étude des propriétés",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Génie des Procédés",
+                                    "Traitement des données expérimentales",
+                                    "Chimie computationnelle et applications analytiques",
+                                    "Méthodes de séparation",
+                                    "Production et formulation industrielles",
+                                    "Culture entrepreneuriale",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Géologie",
+                "formations": [
+                    {
+                        "Filière": "Géosciences & Géoressources",
+                        "COORDONNATEUR": "OUKASSOU MOSTAFA",
+                        "SPÉCIALITÉ": "Géologie structurale",
+                        "E.MAIL": "mostafa.oukassou@univh2c.ma",
+                        "OBJECTIFS": "Dispenser à l'étudiant les connaissances scientifiques nécessaires et élargir ses champs de compétences dans les disciplines des Géosciences fondamentales et appliquées. Inculquer à l’étudiant des méthodes de travail au laboratoire et sur terrain. Elargir ses compétences par des formations complémentaires notamment en informatique, communication et power skills.",
+                        "DÉBOUCHÉS": "Poursuite des études supérieures de Master et de Doctorat. Insertion dans la vie active notamment dans le domaine de la prospection et d’exploration minière et des énergies naturelles et renouvelables, de la gestion des ressources en eau, et dans le domaine du génie civil et de l’aménagement du territoire.",
+                        "CIBLE": "La filière Géosciences & Géoressources (GG) est ouverte aux titulaires d’un baccalauréat séries Sciences Experimentales, Sciences Mathématiques ou d’un diplôme reconnu équivalent",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Géologie générale",
+                                    "Biologie cellulaire",
+                                    "Histologie & notions d'embryologie",
+                                    "Atomistique et liaison chimique",
+                                    "Thermodynamique/Mécanique",
+                                    "Mathématiques",
+                                    "Méthodologie du travail universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Géodynamique interne",
+                                    "Géodynamique externe",
+                                    "Biologie des organismes animaux",
+                                    "Biologie des organismes végétaux",
+                                    "Chimie des solutions/Chimie organique",
+                                    "Optique/Electricité",
+                                    "Digital skills & intelligence artificielle"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Tectonique globale",
+                                    "Tectonique analytique",
+                                    "Pétrologie magmatique",
+                                    "Pétrologie métamorphique",
+                                    "Pétrographie sédimentaire",
+                                    "Hydrogéologie & hydrologie",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Ressources minérale",
+                                    "Géochimie",
+                                    "Sédimentologie & environnements sédimentaires",
+                                    "Stratigraphie & Paléontologie",
+                                    "Géomatique & Géostatistiques",
+                                    "Techniques d'exploration des substances utiles",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "SIG & Analyse spatiale",
+                                    "Géochimie isotopique & géochronologie",
+                                    "Géologie du Maroc",
+                                    "Géophysique appliquée",
+                                    "Cartographie & école de terrain",
+                                    "Géo-informatique",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Géotechnique & Génie Civil",
+                                    "Paléontologie appliquée & Stratigraphie séquentielle",
+                                    "Géologie des phosphates & du pétrole",
+                                    "Géoressources minérales",
+                                    "Risques naturels * (* Module enseigné en anglais)",
+                                    "Culture entrepreneuriale",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Mathématiques et informatique",
+                "formations": [
+                    {
+                        "Filière": "Statistiques",
+                        "COORDONNATEUR": "FERJOUCHA HANANE",
+                        "SPÉCIALITÉ": "Mathématiques",
+                        "E.MAIL": "ferjouchiahanane@gmail.com",
+                        "OBJECTIFS": "La filière Statistiques permet de : Comprendre des concepts statistiques fondamentaux. Maîtriser des méthodes Statistiques. Utiliser des outils Statistiques. Modéliser et résoudre des problèmes réels.",
+                        "DÉBOUCHÉS": "Statisticien. Analyste de données. Consultant en statistiques. Actuaire. Data scientist. Enseignement et recherche.",
+                        "CIBLE": "Baccalauréat Sciences Mathématiques A. Baccalauréat Sciences Mathématiques B. Baccalauréat Sciences Physiques (Sur étude de dossier).",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Tronc commun MIP"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Tronc commun MIP"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Analyse 3",
+                                    "Analyse 4",
+                                    "Algèbre 3",
+                                    "Probabilités et Statistiques",
+                                    "Informatique 3",
+                                    "Langues Étrangères : Anglais / Français",
+                                    "Culture and art skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Analyse 5",
+                                    "Algèbre 4",
+                                    "Algèbre 5",
+                                    "Analyse Numérique",
+                                    "Informatique 4",
+                                    "Langues Étrangères : Anglais / Français",
+                                    "Développement personnel"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Théorie de Mesure et Probabilité",
+                                    "Optimisation et Recherche Opérationnelle",
+                                    "Topologie",
+                                    "Analyse Numérique Avancée",
+                                    "Calcul Différentiel",
+                                    "Langues Étrangères : Anglais / Français",
+                                    "Digital Skills II"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Statistiques Avancées",
+                                    "Simulation Statistique",
+                                    "Processus Stochastiques",
+                                    "Mathématiques pour l'informatique",
+                                    "Outils Informatiques de Simulations",
+                                    "Langues Étrangères : Anglais / Français",
+                                    "Droit, Civisme Et Citoyenneté"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Analyse Mathématique",
+                        "COORDONNATEUR": "BOUZKOURA KHADIJA",
+                        "SPÉCIALITÉ": "MATHEMATIQUES",
+                        "E.MAIL": "kbouzkoura@gmail.com",
+                        "OBJECTIFS": "Maîtrise des concepts fondamentaux des mathématiques. Approfondissement des méthodes d'analyse. Capacité de modélisation. Préparation à la poursuite des études. Développement de l'autonomie et de l'esprit critique. Développement des compétences de communication et présentation.",
+                        "DÉBOUCHÉS": "Devenir enseignant en mathématiques dans les écoles primaires et secondaires ou formateur dans les centres de formation professionnelle. Poursuivre des études supérieures (Master et Doctorat). Poursuivre des études dans une école d'ingénieurs. Travailler dans la recherche opérationnelle pour résoudre des problèmes d'optimisation et de planification dans divers secteurs Concevoir et analyser des algorithmes. Travailler dans le domaine de la finance quantitative pour modéliser les marchés financiers, évaluer les produits financiers et gérer les risques.",
+                        "CIBLE": "Baccalauréat Sciences Mathématiques A. Baccalauréat Sciences Mathématiques B. Baccalauréat Sciences Physiques (Sur étude de dossier).",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Méthodologie du travail universitaire (MTU)",
+                                    "Algèbre 1",
+                                    "Algèbre 2",
+                                    "Analyse 1",
+                                    "Thermodynamique",
+                                    "Mécanique du point",
+                                    "Informatique 1"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Digital skills et intelligence artificielle",
+                                    "Analyse 2",
+                                    "Analyse 3",
+                                    "Algèbre 3",
+                                    "Optique géométrique",
+                                    "Electrostatique et magnétostatique",
+                                    "Algorithmique et programmation python 2"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Français",
+                                    "Analyse 4",
+                                    "Algèbre 4",
+                                    "Analyse 5",
+                                    "Probabilités et statistiques",
+                                    "Informatique 3",
+                                    "Mécanique du solide"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Français",
+                                    "Analyse 6",
+                                    "Algébre 5",
+                                    "Algèbre 6",
+                                    "Analyse numérique",
+                                    "Informatique 4 (Algo-str. Données)",
+                                    "Electromagnétisme"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Langues étrangères: Anglais",
+                                    "Théorie de la mesure et probabilité",
+                                    "Calcul différentiel",
+                                    "Analyse complexe",
+                                    "Topologie générale",
+                                    "Informatique 5 (Python avance)",
+                                    "Panier Recherche opérationnelle. Introduction au machine Learning, Cryptographie"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Langues étrangères: Anglais",
+                                    "Géométrie des courbes et surfaces",
+                                    "Analyse numérique avancée",
+                                    "Optimisation",
+                                    "Mathématiques pour l'informatique",
+                                    "En anglais: Analyse fonctionnelle",
+                                    "Culture entreprenariale"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Cybersécurité et administration des systèmes et réseaux",
+                        "COORDONNATEUR": "OUAHABI SARA",
+                        "SPÉCIALITÉ": "",
+                        "E.MAIL": "sara.ouahabi@univh2c.ma",
+                        "OBJECTIFS": "L'objectif principal de la filière \"Cybersécurité et Administration des Systèmes et Réseaux\" est de former des experts capables d'assurer la sécurité, l'administration, la stabilité et l'efficacité des infrastructures informatiques, dans un contexte de numérisation croissante et de cybermenaces en forte évolution.",
+                        "DÉBOUCHÉS": "Administrateur (trice) des systèmes et réseaux. Administrateur (trice) d'infrastructures. Administrateur (trice) cybersécurité. Responsable de la sécurité informatique de l'entreprise. Architecte et administrateur de réseaux. Consultant en sécurité, Consultant en cybersécurité. Consultant solutions réseaux. Chef de projet en déploiement réseaux. Responsables d'exploitation, Intégrateur systèmes et sécurité. Responsable maintenance logiciel/matériel en réseaux.",
+                        "CIBLE": "L'accés est ouvert sur étude du dossier à tous les titulaires d'un baccalauréat en : Sciences Mathématiques A & B. Sciences Physiques. Sciences Techniques.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Analyse 1",
+                                    "Algèbre 1",
+                                    "Électronique numérique",
+                                    "Algorithmique et Programmation C1",
+                                    "Programmation Python 1",
+                                    "Architecture et fonctionnement des ordinateurs",
+                                    "Méthodologie de Travail Universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Analyse 2",
+                                    "Algèbre 2",
+                                    "Traitement du signal",
+                                    "Algorithmique et programmation C 2",
+                                    "Programmation Web 1",
+                                    "Programmation Python 2",
+                                    "Digital skills & intelligence artificielle"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Programmation Web 2",
+                                    "Recherche opérationnelle et optimisation",
+                                    "Système d'exploitation 1",
+                                    "Structure de données en C",
+                                    "Modélisation objet UML",
+                                    "Probabilités et statistiques",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Bases de données relationnelles",
+                                    "Réseaux",
+                                    "Systèrne d'exploitation 2",
+                                    "Programmation orientée objet avec C++",
+                                    "Sécurité informatique",
+                                    "Analyse Numérique",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Administration Systèmes et Réseaux",
+                                    "Fouille de données",
+                                    "Sécurité applicative ou Génie logiciel et Méthodes Agiles (Scrum)",
+                                    "Programmation des BDD",
+                                    "Compilation",
+                                    "JAVA",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Culture entrepreneuriale",
+                                    "Réseaux avancés et virtualisation",
+                                    "Cybersécurité dès la conception",
+                                    "Cryptographie et blockchain",
+                                    "IT security governance",
+                                    "Projet de fin d'étude",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Développement Full Stack",
+                        "COORDONNATEUR": "MOHSSINE BENTAIB",
+                        "SPÉCIALITÉ": "INFORMATIQUE",
+                        "E.MAIL": "Mohssine.Bentaib@univh2c.ma",
+                        "OBJECTIFS": "Former des experts \"Full Stack\" capables de piloter l'intégralité d'un projet technique au sein d'environnements professionnels exigeants. Les piliers : Acquisition de compétences en programmation. Maîtrise des technologies de développement. Conception et développement de logiciels. Gestion de projets informatiques avec des méthodologies Agile.",
+                        "DÉBOUCHÉS": "Cette filière prépare à des carrières polyvalentes dans l'ingénierie logicielle. Les débouchés principaux incluent les métiers de : Développeur de logiciels. Analyste-programmeur. Chef de projet informatique. Administrateur de Bases de données. Analyste-Concepteur.",
+                        "CIBLE": "Cette formation est accessible, sur étude de dossier, aux candidats justifiant d'un baccalauréat en : Sciences Mathématiques (A & B). Sciences Physiques. Sciences de la Vie et de la Terre. Sciences Techniques.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Analyse 1",
+                                    "Algèbre 1",
+                                    "Électronique numérique",
+                                    "Algorithmique et Programmation C1",
+                                    "Programmation Python 1",
+                                    "Architecture et fonctionnement des ordinateurs",
+                                    "Méthodologie de Travail Universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Analyse 2",
+                                    "Algèbre 2",
+                                    "Traitement du signal",
+                                    "Algorithmique et programmation C 2",
+                                    "Programmation Web 1",
+                                    "Programmation Python 2",
+                                    "Digital skills & intelligence artificielle"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Programmation Web 2",
+                                    "Recherche opérationnelle et optimisation",
+                                    "Systèrne d'exploitation I",
+                                    "Structure de données en C",
+                                    "Modélisation objet UML",
+                                    "Probabilités et statistiques",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Bases de données relationnelles",
+                                    "Réseaux",
+                                    "Système d'exploitation 2",
+                                    "Programmation orientée objet avec C++",
+                                    "Sécurité informatique",
+                                    "Analyse Numérique",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Programmation des BDD",
+                                    "JAVA",
+                                    "Compilation",
+                                    "Fouille de données",
+                                    "Administration Systèmes et Réseaux",
+                                    "Panier: 1 Sécurité applicative / 2 Génie logiciel et méthodes Agiles (SCRUM)",
+                                    "Langues Étrangères: Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Administration des bases de données",
+                                    "Architecture microservice/J2EE",
+                                    "Programmation web et mobile full stack",
+                                    "Système d'information des entreprises, ERP",
+                                    "Culture entrepreneuriale",
+                                    "Langues Étrangères: Anglais",
+                                    "Projet de Fin d'Etude (PFE)"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Administration Réseau et Système",
+                        "COORDONNATEUR": "ACHTAICH KHADIJA",
+                        "SPÉCIALITÉ": "Informatique",
+                        "E.MAIL": "khadija.achtaich@univh2c.ma",
+                        "OBJECTIFS": "La filière Administration Réseaux et Systèmes permet de : Préparer l'étudiant au métier d'administrateur réseaux et systèmes; Développer les compétences nécessaires à la conception, à l'installation, à la configuration et à la gestion des infrastructures réseaux et des systèmes informatiques; Maîtriser les compétences en matière de sécurité informatique;",
+                        "DÉBOUCHÉS": "Gestionnaire de parc informatique. Administrateur base de données. Administrateur réseaux. Administrateur systèmes. Spécialiste en sécurité des systèmes et réseaux. Architecte réseaux.",
+                        "CIBLE": "Baccalauréat Sciences Mathématiques A. Baccalauréat Sciences Mathématiques B. Baccalauréat Sciences Physiques (Sur étude de dossier).",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Méthodologie de travail universitaire",
+                                    "Algèbre I",
+                                    "Algèbre 2",
+                                    "Analyse 1",
+                                    "Thermodynamique",
+                                    "Mécanique du point",
+                                    "Informatique 1"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Digital Skills & Intelligence Artificielle",
+                                    "Analyse 2",
+                                    "Analyse 3",
+                                    "Algèbre 3",
+                                    "Optique géométrique",
+                                    "Électrostatique et magnétostatique",
+                                    "Algorithmique & programmation Python 2"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Français",
+                                    "Programmation Objet UML",
+                                    "Programmation Web 1",
+                                    "Programmation en langage C",
+                                    "Système d'exploitation 1",
+                                    "Architecture des ordinateurs",
+                                    "Probabilités et statistiques"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Français",
+                                    "Analyse numérique.",
+                                    "Structures de données",
+                                    "Programmation Web 2: langage JavaScript",
+                                    "Système d'exploitation 2",
+                                    "Programmation orientée objet avec C++",
+                                    "Algèbre relationnelle & langage SQL"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Anglais",
+                                    "Réseaux informatiques",
+                                    "Programmation des bases de données",
+                                    "Fouille de données",
+                                    "Compilation",
+                                    "Java",
+                                    "Panier: Gestion de projet / Méthodes agiles"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Langues étrangères: Anglais",
+                                    "Administration Système sous linux",
+                                    "Administration des bases de données",
+                                    "Réseaux avancés",
+                                    "Sécurité des réseaux",
+                                    "Culture entrepreneuriale",
+                                    "PFE"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Développement Informatique",
+                        "COORDONNATEUR": "SAEL NAWAL",
+                        "SPÉCIALITÉ": "Informatique",
+                        "E.MAIL": "nawal.sael@univh2c.ma",
+                        "OBJECTIFS": "La filière Développement Informatique vise à faciliter la réalisation des objectifs clés : Maîtriser les langages de programmation modernes. Acquérir une solide compréhension de l'architecture logicielle. Développer les compétences nécessaires pour concevoir, programmer, et déployer des applications. Développer des projets Pratiques et apprendre les meilleures pratiques du développement Agile.",
+                        "DÉBOUCHÉS": "Développeur Logiciels. Développeur Web Full-Stack. Développeur d'applications Mobiles. Consultant en tests et validation.",
+                        "CIBLE": "Baccalauréat Sciences Mathématiques A. Baccalauréat Sciences Mathématiques B. Baccalauréat Sciences Physiques (Sur étude de dossier).",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Méthodologie de travail universitaire (MTU)",
+                                    "Algèbre I",
+                                    "Algèbre 2",
+                                    "Analyse 1",
+                                    "Thermodynamique",
+                                    "Mécanique du point",
+                                    "Informatique i"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Digital Skills & Intelligence Artificielle",
+                                    "Analyse 2",
+                                    "Analyse 3",
+                                    "Algèbre 3",
+                                    "Optique géométrique",
+                                    "Électrostatique et magnétostatique",
+                                    "Algorithmique & programmation Python 2"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Français",
+                                    "Programmation Objet UML",
+                                    "Programmation Web 1",
+                                    "Programmation en langage C",
+                                    "Système d'exploitation 1",
+                                    "Architecture des ordinateurs",
+                                    "Probabilités et statistiques"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Français",
+                                    "Analyse numérique",
+                                    "Structures de données",
+                                    "Programmation Web 2: langage JavaScript",
+                                    "Système d'exploitation 2",
+                                    "Programmation orientée objet avec C++",
+                                    "Algèbre relationnelle & langage SQL"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Langues étrangères Anglais",
+                                    "Réseaux",
+                                    "Programmation des bases de données",
+                                    "Fouille de données",
+                                    "Compilation",
+                                    "Java",
+                                    "Panier: Gestion de projet / Méthodes agiles"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Langues étrangères: Anglais",
+                                    "Programmation Web et Mobile Full-Stack",
+                                    "Administration des bases de données (anglais)",
+                                    "Architecture Microservices et J2EE",
+                                    "Cybersécurité",
+                                    "Panier: Culture entrepreneuriale",
+                                    "PFE"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Physique",
+                "formations": [
+                    {
+                        "Filière": "Physique Appliquée",
+                        "COORDONNATEUR": "SAID TAOUFIK",
+                        "SPÉCIALITÉ": "Physique et technologies de l'information quantique",
+                        "E.MAIL": "taoufik.said@univh2c.ma",
+                        "OBJECTIFS": "Fournir aux étudiants une formation solide et diverse en physique fondamentale et appliquée. Permettre aux étudiants d'avoir des compétences fortes dans certaines spécialités modernes telles que: Optique instrumentale, physique informatique et énergie renouvelable...  Développer la maîtrise des outils numériques: programmation scientifique, simulation et traitement de données. Renforcer la démarche expérimentale: savoir concevoir, réaliser et analyser des expériences avec des instruments de mesure. Permettre aux étudiants un accès facile soit en formation master, soit en formation ingénierie en relation avec les nouvelles technologies.",
+                        "DÉBOUCHÉS": "Les diplômés de la filière physique appliquée : pourront poursuivre leurs études en master, puis éventuellement en doctorat, dans des domaines actuels . auront les compétences nécessaires pour réussir les concours de la fonction publique (enseignement, administrations centrales ou régionales, etc.) comme ceux du secteur privé, notamment dans l'industrie des énergies renouvelables, du photovoltaïque, de l'optique instrumentale, et autres domaines connexes.",
+                        "CIBLE": "L'accès à cette formation est ouvert aux titulaires d'un Baccalauréat Scientifiques ou technique et également accessible aux étudiants ayant obtenu un Diplôme d'Études Universitaires Générales (Bac+2) dans le Tronc Commun PC.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Thermodynamique",
+                                    "Mécanique du point",
+                                    "Atomistique",
+                                    "Thermochimie",
+                                    "Analysel",
+                                    "Algèbre 1",
+                                    "Méthodologie de travail universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Électricité",
+                                    "Optique géométrique",
+                                    "Liaison chimique",
+                                    "Chimie en solution",
+                                    "Analyse 2",
+                                    "Algèbre 2",
+                                    "Digital Skills/ Intelligence artificiel IA"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Mathématiques pour la Physique",
+                                    "Mécanique du solide",
+                                    "Thermodynamique 2",
+                                    "Circuits électriques",
+                                    "Electromagnétisme",
+                                    "Chimie Organique générale",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Optique ondulatoire",
+                                    "Electronique numérique",
+                                    "Electronique analogique",
+                                    "Mécanique quantique",
+                                    "Cristallographie géométrique",
+                                    "Analyse numérique: Algo & prog Python",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Physique quantique",
+                                    "Physique des matériaux",
+                                    "Physique statistique",
+                                    "Mécanique analytique et vibrations",
+                                    "Physique nucléaire",
+                                    "Télécommunication fondamentale et systèmes digitaux",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Modélisation et Simulation des Systèmes Physiques",
+                                    "Matériaux Magnétiques et Spintronique (en anglais)",
+                                    "Techniques nucléaires et ses applications",
+                                    "Optique des Milieux Anisotropes et Non Linéaires",
+                                    "Optique Instrumentale",
+                                    "Culture Entrepreneuriat",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Electronique, Systémes Embarqués & Télécommunication",
+                        "COORDONNATEUR": "EL BAKALI KASSIMI AZIZA",
+                        "SPÉCIALITÉ": "ELECTRONIQUE",
+                        "E.MAIL": "aziza.elbakali@etu.univh2c.ma",
+                        "OBJECTIFS": "La filière \"Electronique, Systèmes embarqués & Télécommunication vise à offrir aux étudiants : Une base fondamentale en électronique, accompagnée d'une compréhension approfondie des systèmes embarqués et des réseaux de télécommunication. Les compétences pratiques essentielles pour concevoir, développer et mettre en œuvre des systèmes électroniques et de communication de pointe. Un encadrement adapté pour explorer le domaine de l'innovation technologique et contribuer à façonner notre avenir numérique.",
+                        "DÉBOUCHÉS": "Etudes en Masters et Masters spécialisés. Etudes Doctorales. Intégration de carrières d'enseignement et de recherche. Perspectives vers des carrières dans des secteurs de pointe tels que l'industrie électronique, les télécommunications, l'Internet des objets (IoT), la robotique, la domotique, et bien d'autres encore.....",
+                        "CIBLE": "Etudiants titulaires d'un Baccalauréat Scientifique ou Diplôme équivalant. Etudiants titulaires d'un Bac+ 2(TC-P) ou Diplôme équivalant sur étude de dossier.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Thermodynamique",
+                                    "Mécanique du point",
+                                    "Atomistique",
+                                    "Thermochimie",
+                                    "Analysel",
+                                    "Algèbre 1",
+                                    "Méthodologie de travail universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Électricité",
+                                    "Optique géométrique",
+                                    "Liaison chimique",
+                                    "Chimie en solution",
+                                    "Analyse 2",
+                                    "Algèbre 2",
+                                    "Digital Skills/ Intelligence artificiel IA"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Mathématiques pour la Physique",
+                                    "Mécanique du solide",
+                                    "Thermodynamique 2",
+                                    "Circuits électriques",
+                                    "Electromagnétisme",
+                                    "Chimie Organique générale",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Optique ondulatoire",
+                                    "Electronique numérique",
+                                    "Electronique analogique",
+                                    "Mécanique quantique",
+                                    "Cristallographie géométrique",
+                                    "Analyse numérique: Algo & prog Python",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Télécommunication fondamentale et systèmes digitaux",
+                                    "Physique statistique",
+                                    "Mécanique analytique et vibrations",
+                                    "Physique nucléaire",
+                                    "Physique des matériaux",
+                                    "Physique quantique",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Réseaux informatiques et IOT",
+                                    "Composants logiques programmable(VHDL)",
+                                    "Automates programmables industriels",
+                                    "Machine Electriques",
+                                    "Antennes et lignes de transmission",
+                                    "Culture Entrepreneuriale",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "MÉCANIQUE ÉNERGÉTIQUE",
+                        "COORDONNATEUR": "MOURABIT M'BARKA",
+                        "SPÉCIALITÉ": "MÉCANIQUE ÉNERGÉTIQUE",
+                        "E.MAIL": "mobaraka.mourabit@gmail.com",
+                        "OBJECTIFS": "La filière Mécanique Énergétique a comme objectif de former des étudiants avec des compétences et connaissances avancées en mécanique des fluides, en transfert thermique, en matériaux et en mécanique des solides ...",
+                        "DÉBOUCHÉS": "Recherche scientifique (Master et doctorat). Insertion professionnelle. Assistant ingénieur dans le domaine de la mécanique. Secteur d'activité de l'énergie, des transports...",
+                        "CIBLE": "La filière Mécanique énergétique est généralement ouvertes aux titulaires d'un Baccalauréat Scientifique ou technique.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Analyse 1",
+                                    "Algèbre 1",
+                                    "Thermodynamique",
+                                    "Mécanique du point",
+                                    "Atomistique",
+                                    "Thermochimie",
+                                    "Méthodologie de travail universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Electricité",
+                                    "Optique géométrique",
+                                    "Liaison chimique",
+                                    "Chimie en solution",
+                                    "Analyse 2",
+                                    "Algèbre 2",
+                                    "Digital Skills Intelligence artificiel IA"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Mathématiques-physique",
+                                    "Mécanique du solide",
+                                    "Thermodynamique 2",
+                                    "Circuits électriques",
+                                    "Electromagnétisme",
+                                    "Chimie organique générale",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Optique ondulatoire",
+                                    "Electronique numérique",
+                                    "Electronique analogique",
+                                    "Mécanique quantique",
+                                    "Cristallographie géométrique",
+                                    "Analyse numérique Algo & prog Python",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Mécanique analytique et vibrations",
+                                    "Physique statistique",
+                                    "Physique nucléaire",
+                                    "Physique des matériaux",
+                                    "Télécommunication fondamentale et systèmes digitaux",
+                                    "Physique quantique",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Méthodes numériques",
+                                    "Introduction à la mécanique des milieux continus",
+                                    "Elasticité et résistance des matériaux",
+                                    "Mécanique des fluides",
+                                    "Transferts thermiques Conduction rayonnement (en anglais)",
+                                    "Culture entrepreneuriale",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Physique & Ingénierie des Matériaux",
+                        "COORDONNATEUR": "ABDERRAFI KAMAL",
+                        "SPÉCIALITÉ": "Physique des nanomatériaux",
+                        "E.MAIL": "kamal.abderrafi@univh2c.ma",
+                        "OBJECTIFS": "L'approche théorique et pratique de la formation permet aux étudiants d'acquérir des compétences de base en physique-chimie et une ébauche de formation en direction de l'ingénierie des matériaux (structure, élaboration et caractérisations, technique nucléaire, CND, Métallurgie, capteur et instrumentation acquisition des données).",
+                        "DÉBOUCHÉS": "Poursuivre des études plus avancées dans le cadre de Masters, Rejoindre les écoles d'ingénieurs. Une ouverture pratique pour les étudiants et assurer leur adaptation aux marchés de l'emploi dans de nombreuses industries, telles que l'automobile, l'aéronautique, le ferroviaire, le nucléaire,",
+                        "CIBLE": "Baccalauréat Sciences Mathématiques. Baccalauréat Sciences Physiques. Baccalauréat Sciences SVT. Baccalauréat Technique.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Thermodynamique",
+                                    "Mécanique du point",
+                                    "Atomistique",
+                                    "Thermochimie",
+                                    "Analysel",
+                                    "Algèbre 1",
+                                    "Méthodologie de travail universitaire (MTU)"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Électricité",
+                                    "Optique géométrique",
+                                    "Liaison chimique",
+                                    "Chimie en solution",
+                                    "Analyse 2",
+                                    "Algèbre 2",
+                                    "Digital Skills/ Intelligence artificiel IA"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Mathématiques pour la Physique",
+                                    "Mécanique du solide",
+                                    "Thermodynamique 2",
+                                    "Circuits électriques",
+                                    "Electromagnétisme",
+                                    "Chimie Organique générale",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Optique ondulatoire",
+                                    "Electronique numérique",
+                                    "Electronique analogique",
+                                    "Mécanique quantique",
+                                    "Cristallographie géométrique",
+                                    "Analyse numérique Algo & prog Python",
+                                    "Français"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 5,
+                                "modules": [
+                                    "Physique des matériaux",
+                                    "Physique statistique",
+                                    "Mécanique analytique et vibrations",
+                                    "Physique nucléaire",
+                                    "Télécommunication fondamentale et systèmes digitaux",
+                                    "Physique quantique",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 3,
+                                "semestre": 6,
+                                "modules": [
+                                    "Physique de la matière condensée",
+                                    "Experimental physics and characterization techniques",
+                                    "Ingénierie métallurgique et CND",
+                                    "Ingénierie des matériaux: transfert, conversion, stockage",
+                                    "Techniques nucléaires et ses applications",
+                                    "Culture entrepreneuriale",
+                                    "Anglais"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Sciences de la communication et Humanités",
+                "formations": []
+            }
+        ]
+    },
+    {
+        "type": "Master",
+        "departements": [
+            {
+                "departement": "Biologie",
+                "formations": [
+                    {
+                        "Filière": "Biotechnologie & Qualité",
+                        "COORDONNATEUR": "ECH CHERIF EL KETTANI MOHAMMED ANASS",
+                        "SPÉCIALITÉ": "Biotechnologie et Démarche Qualité",
+                        "E.MAIL": "KETTANIANASS@yahoo.fr",
+                        "OBJECTIFS": "Acquérir une formation solide en biologie appliquée, nutrition humaine, biotechnologie et pharmacologie pour innover dans les entreprises associées. Développer une expertise en gestion de la qualité et sécurité selon les normes ISO ainsi que les normes environnementales et de développement durable. Maîtriser les outils statistiques et les méthodologies Lean Six Sigma afin d'optimiser les performances et la compétitivité des industries agroalimentaires, pharmaceutiques et cosmétiques.",
+                        "DÉBOUCHÉS": "Ce master en biotechnologie et assurance qualité prépare les diplômés à exceller dans les secteurs Agroalimentaire, pharmaceutique et cosmétique. Ils acquièrent des compétences avancées en analyse biologique et chimique, ainsi que des aptitudes essentielles en management. Ils pourront conseiller sur la conformité aux normes ISO, innover en biotechnologie, garantir la sécurité des produits et piloter des projets d'innovation et de propriété intellectuelle.",
+                        "CIBLE": "Licence en sciences de la vie, biotechnologie ou diplôme équivalent.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Bonnes Pratiques de Fabrication et Bonnes Pratiques d'Hygiène",
+                                    "Biochimie appliquée 1",
+                                    "Biochimie appliquée 2",
+                                    "Outil qualité résolution des problèmes et maitres statistiques des procédés",
+                                    "Nutrition Humaine et Santé",
+                                    "Langues étrangères I - Français - Anglais",
+                                    "Soft skills"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Sécurité et Normes des Laboratoires",
+                                    "Lean Six Sigma",
+                                    "Biotechnologie Agro-alimentaire",
+                                    "Management et Sécurité Alimentaire",
+                                    "Pharmacologie",
+                                    "Langues étrangères II",
+                                    "Digital skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Développement Durable et Changement climatique",
+                                    "Industrie Cosmétique et ISO 22716",
+                                    "Mycotoxines et sécurité alimentaire",
+                                    "Toxicologie",
+                                    "Innovation & propriété Intellectuelle",
+                                    "Langues étrangères III",
+                                    "Cultures & Art skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Stage en entreprise 4 mois",
+                                    "Employment skills"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Gestion de l'environnement et Développement Durable (GEDD)",
+                        "COORDONNATEUR": "EL HAJJOUJI HOUDA",
+                        "SPÉCIALITÉ": "Environnement et Développement Durable",
+                        "E.MAIL": "mastergedd.2023@gmail.com",
+                        "OBJECTIFS": "Former des cadres compétents capables de gérer l'environnement et les ressources biologiques tout en intégrant les principes du développement durable face aux changements globaux. Répondre aux besoins socio-économiques en formant des professionnels pour des entreprises, bureaux d'études, organismes publics, ONG, etc. Maîtriser les aspects scientifiques, techniques et législatifs liés à la gestion de l'environnement, incluant le management, la biodiversité, les ressources naturelles, ainsi que la gestion des rejets et des déchets. Développer des solutions pratiques et efficaces pour répondre aux problèmes environnementaux.",
+                        "DÉBOUCHÉS": "Gestionnaire de projets environnementaux dans des entreprises ou organisations publiques et privées. Consultant en environnement ou dans la gestion des ressources naturelles. Spécialiste en biodiversité et conservation pour des ONG ou bureaux d'études. Chargé de mission en développement durable dans des institutions publiques ou entreprises. Chercheur ou expert en technologies propres, gestion des rejets et traitement des déchets. Responsable qualité, sécurité et environnement (QSE).",
+                        "CIBLE": "Titulaires d'une licence en sciences de l'environnement, biologie, ou diplôme équivalent.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Les Hydrosystèmes Marins et Continentaux",
+                                    "Diversité des Ecosystèmes Terrestres",
+                                    "Ecophysiologie et Adaptations des Organismes",
+                                    "Biodiversité et Classification du Monde Vivant",
+                                    "Biostatistiques et Système d'Information Géographique (SIG)",
+                                    "Langues étrangères 1 (Français - Anglais)",
+                                    "Soft skills"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Traitement et Valorisation des Rejets et des Déchets",
+                                    "Microbiologie et Parasitologie Environnementales",
+                                    "Ecotoxicologie et Biomonitoring",
+                                    "Changement Climatique et Résilience",
+                                    "Gestion des Ressources Forestières",
+                                    "Langues étrangères 2 (Français - Anglais)",
+                                    "Culture Digitale"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Biologie de la Conservation et Restauration des Milieux Naturels",
+                                    "Lois et Outils d'Évaluation Environnementale",
+                                    "Management Environnemental et Développement Durable",
+                                    "Gestion de l'Eau et des Zones Humides",
+                                    "Gestion des Agroécosystèmes et Agroécologie",
+                                    "Langues étrangères 3 (Français - Anglais)",
+                                    "Culture and Art skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Employment skills",
+                                    "Projet de fin d'études"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Biologie et Santé",
+                        "COORDONNATEUR": "BOUSFIHA AMAL",
+                        "SPÉCIALITÉ": "Biologie Humaine et Santé",
+                        "E.MAIL": "amalebousfiha@hotmail.fr",
+                        "OBJECTIFS": "Offrir une base solide en biologie humaine, alliant aspects fondamentaux et cliniques. Former des experts capables de mener des recherches fondamentales et appliquées en santé. Maîtriser les outils méthodologiques et statistiques pour analyser les problématiques de biologie et de santé.",
+                        "DÉBOUCHÉS": "Recherche et développement: Accès aux laboratoires de recherche publics ou privés. Industrie de la santé : Opportunités dans l'industrie pharmaceutique, biomédicale, et biotechnologique. Enseignement supérieur et académique: Préparation d'une thèse de doctorat et carrière universitaire. Secteur public et privé: Postes dans les institutions de santé, laboratoires d'analyses médicales, ou centres de recherche.",
+                        "CIBLE": "Titulaires d'une licence en sciences de la vie, biologie, ou diplôme équivalent.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Physiologie et Physiopathologie Humaine",
+                                    "Nutrition humaine et santé",
+                                    "Biochimie",
+                                    "Microbiologie Médicale Virologie",
+                                    "Biostatistiques/Epidémiologie",
+                                    "Langues étrangères S1",
+                                    "Soft skills"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Génétique et Biologie moléculaire",
+                                    "Communication cellulaire et voies de signalisations",
+                                    "Bioinformatique et Modélisation moléculaire",
+                                    "Pharmacologie et biologie des plantes médicinales",
+                                    "Biochimie clinique",
+                                    "Langues étrangères S2",
+                                    "Digital skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Cancérologie et biothérapie anti-cancéreuse",
+                                    "Parasitologie et Mycologie Médicale",
+                                    "Toxicologie",
+                                    "Immunologie",
+                                    "Module d'initiation à la recherche",
+                                    "Langues étrangères S3",
+                                    "Culture et Art skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Employment skills",
+                                    "Stage de recherche"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Sciences de la Santé",
+                        "COORDONNATEUR": "TAKI HASSAN",
+                        "SPÉCIALITÉ": "Biologie Appliquée à la Santé",
+                        "E.MAIL": "hassantaki308@yahoo.fr",
+                        "OBJECTIFS": "Former des étudiants euroméditerranéens dans des domaines prioritaires avec un même niveau de connaissance moyennant une double-diplomation avec l'Université d'Aix-Marseille. Assurer pendant 2 années aux étudiants: Une formation approfondie et de qualité dispensée par des spécialistes nationaux et internationaux en biologie appliquée à la santé.",
+                        "DÉBOUCHÉS": "Ce master méditerranéen en sciences de la santé prépare les diplômés à exceller dans les secteurs de la biologie appliquée à la santé, la recherche fondamentale et le monde médical. Les étudiants peuvent effectuer des stages de recherche dans des universités partenaires comme la Faculté de Médecine de Marseille, ou encore dans d'autres laboratoires de France, d'Europe, Canada, États-Unis...",
+                        "CIBLE": "Licence en sciences de la vie, biologie, ou diplôme équivalent.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Bases de la génétique médicale et moléculaire",
+                                    "Microbiologie générale",
+                                    "Bases de l'immunologie",
+                                    "Bases moléculaires des Immunothérapies",
+                                    "Physiologie et physiopathologie humaine",
+                                    "Langues étrangères I- Français-Anglais",
+                                    "Soft skills"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Pathologies thrombotiques",
+                                    "Métabolisme et nutrition",
+                                    "Physiopathologies des maladies infectieuses",
+                                    "Biochimie clinique",
+                                    "Pharmacologie et biologie des plantes médicinales",
+                                    "Langues étrangères II",
+                                    "Soft skills (Compétences numériques et informatiques)"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Réponse de l'hôte",
+                                    "Nutrition et Santé",
+                                    "Analyse bibliographique",
+                                    "Toxicologie",
+                                    "Initiation à la recherche",
+                                    "Langues étrangères III",
+                                    "Cultures & Art skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Stage de recherche / Projet de fin d'études"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Chimie",
+                "formations": [
+                    {
+                        "Filière": "Génie des Matériaux et Energie (MGME)",
+                        "COORDONNATEUR": "SADIK CHAOUKI",
+                        "SPÉCIALITÉ": "Chimie des Matériaux et Énergie",
+                        "E.MAIL": "CHAOUKI.SADIK@univh2c.ma",
+                        "OBJECTIFS": "Le Master Génie des Matériaux et Energie (MGME) allie théorie et pratique. Il ambitionne de former des cadres spécialistes, possédant une formation multidisciplinaire, capables d'apporter au laboratoire ou à une entreprise, des compétences scientifiques dans le domaine des matériaux et de l'énergie. Grâce à la proximité des enseignants avec le monde industriel, les étudiants sont en mesure de trouver des solutions novatrices à un problème donné, en concevant le matériau adéquat pour des applications spécifiques dans les différentes branches de chimie, industrie ou énergie.",
+                        "DÉBOUCHÉS": "Monde de l'entreprise : Cadres production de matériaux, R&D dans l'industrie de chimie, matériaux et énergie, cadres technico-commerciaux. Formation doctorale: Etude doctorale toute discipline de la chimie des matériaux, Laboratoires industriels et laboratoires universitaires.",
+                        "CIBLE": "Ce master est ouvert aux étudiants titulaires d'une licence fondamentale ou professionnelle en Chimie, en Physique, ou diplôme équivalent. Bonnes connaissances en chimie des matériaux et efficacité énergétique.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Stratégie de synthèse et étude structurale des matériaux inorganiques",
+                                    "Techniques de caractérisation des matériaux",
+                                    "Minéralogie et géomateriaux",
+                                    "Maîtrise statistique des procédés",
+                                    "Normes, qualité et analyse de cycle de vie des matériaux",
+                                    "Langues et Soft skills"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Propriétés physiques des matériaux",
+                                    "Transfert de chaleur et de matière",
+                                    "Dégradation et traitement de surface des matériaux",
+                                    "Chemoinformatique",
+                                    "Matériaux et Applications",
+                                    "Langues",
+                                    "Culture digitale et Soft skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Option 1: Matériaux innovants pour le stockage et la conversion d'énergie / Option 2: Energie renouvelable et procédés propres",
+                                    "Efficacité énergétique (bâtiment et industrie) / Energie renouvelable",
+                                    "Conversion et stockage de l'énergie / Dessalement et traitement des eaux",
+                                    "Production, Stockage et Applications de l'hydrogène / Management de la sécurité et environnement",
+                                    "Management de projet et entreprenariat",
+                                    "Culture digitale et Langues / Culture and Art skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "PFE et Power skills"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Instrumentation, Procédés, Analyse et Qualité",
+                        "COORDONNATEUR": "MOUMOU MOHAMED",
+                        "SPÉCIALITÉ": "Procédés et Qualité",
+                        "E.MAIL": "moumoumohamed216@gmail.com",
+                        "OBJECTIFS": "Former des cadres capables de mettre en place, gérer et faire évoluer le système qualité d'une entreprise. Maîtriser les méthodes de contrôle et d'analyse physicochimiques. Maîtriser les méthodes et les procédés analytiques avancés.",
+                        "DÉBOUCHÉS": "Une bonne maîtrise de la fiabilité et la qualité des méthodes analytiques. Permettre à l'étudiant la maitrise des fondements théoriques et pratiques de la formulation. Réaliser les principales opérations unitaires du génie des procédés chimiques à l'échelle industrielle. Acquisition des meilleures stratégies d'approche des problèmes d'analyse et un sens critique des résultats.",
+                        "CIBLE": "Le master IPAQ s'adresse à des chimistes désireux de compléter leur formation dans le milieu industriel et de la recherche.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Techniques d'analyse I",
+                                    "Normes et qualité",
+                                    "Chimiométrie et Validation de Méthodes Analytiques",
+                                    "Heat and mass transfer",
+                                    "Innovation et intelligence artificielle",
+                                    "Techniques d'analyse II",
+                                    "Anglais"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Molecular modeling",
+                                    "Méthodologie de la recherche scientifique",
+                                    "Matériaux Organiques et Inorganiques Avancés",
+                                    "Thermodynamique et Applications",
+                                    "Chimie Industrielle",
+                                    "Chimie Organique Avancée",
+                                    "Culture entrepreneuriale et techniques de communication"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "TP Techniques Avancées en Procédés",
+                                    "Développement et optimisation des procédés industriels",
+                                    "Chimie des méthodes analytiques",
+                                    "Formulation Engineering",
+                                    "Qualité, management outils et gestions",
+                                    "Produits Industriels (Pharmaceutiques, Cosmétiques, agroalimentaires...)",
+                                    "Procédés de transformation"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Projet de fin d'études"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Géologie",
+                "formations": [
+                    {
+                        "Filière": "Géologie Appliquée à la Prospection Des Ressources Naturelles (GAPRN)",
+                        "COORDONNATEUR": "ALIKOUSS SAIDA",
+                        "SPÉCIALITÉ": "Géologie Appliquée",
+                        "E.MAIL": "SAIDA.ALIKOUSS@univh2c.ma",
+                        "OBJECTIFS": "Formation en géologie appliquée et professionnelle: Assurer une base solide en géologie fondamentale, complétée par des compétences en informatique, communication, et aptitudes générales. Technologies modernes: Inculquer une maîtrise des systèmes d'information géographique (SIG), traitement d'images, et analyses spatiales. Introduction à la recherche scientifique. Intégration socio-économique: Former des cadres aptes à travailler dans l'exploration, l'exploitation, et la gestion des ressources naturelles.",
+                        "DÉBOUCHÉS": "Accéder à des carrières dans l'exploration et l'exploitation des ressources naturelles, la gestion environnementale des mines et carrières, ainsi que l'évaluation des réserves et ressources. Poursuivre des études doctorales dans le domaine des géosciences ou intégrer des secteurs liés au génie civil et à la prévention des risques naturels.",
+                        "CIBLE": "Titulaires d'une licence en géosciences ou diplôme équivalent.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Cartographie Numérique",
+                                    "Environnement et Géorisques",
+                                    "Système d'information Géographique",
+                                    "Géophysique Appliquée",
+                                    "Micropaléontologie Appliquée",
+                                    "Langues étrangères S1",
+                                    "Soft skills"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Techniques de Terrain et de Laboratoire (TTL)",
+                                    "Quantification & Stratigraphie des bassins sédimentaires",
+                                    "Géologie structurale",
+                                    "Pétrologie magmatique et métamorphique",
+                                    "Palynologie appliquée",
+                                    "Langues étrangères S2",
+                                    "Digital skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Géologie des phosphates sédimentaires",
+                                    "Géologie des hydrocarbures conventionnels et non conventionnels",
+                                    "Géoressources Minières",
+                                    "Géochimie Appliquée",
+                                    "Géotechnique",
+                                    "Langues étrangères S3",
+                                    "Culture et Art skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Employement Skills",
+                                    "Stage de recherche"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Géomatique Appliquée aux Géosciences et Environnement (GAGE)",
+                        "COORDONNATEUR": "MAIMOUNI SOUFIANE",
+                        "SPÉCIALITÉ": "Géomatique et Géosciences",
+                        "E.MAIL": "soufiane.maimouni@univh2c.ma",
+                        "OBJECTIFS": "Former des lauréats disposant d'une excellente maîtrise des outils et méthodes géomatiques appliqués aux géosciences et à l'environnement. Ces lauréats seront capables de saisir et de poser clairement et suivant une démarche scientifique, les enjeux liés à la gestion des ressources, des risques naturelles et des espaces géographiques et à la préservation de l'environnement.",
+                        "DÉBOUCHÉS": "Poursuite des études supérieures de Doctorat ou l'integration dans la vie active comme des responsables et des administrateurs géomaticiens à double compétence SIG et thématique (organismes gouvernementaux, collectivités locales, agences urbaines, bureaux d'étude, entreprises, etc.).",
+                        "CIBLE": "Ouvert aux titulaires d'une licence en géosciences, environnement et informatique ou diplôme équivalent.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Système d'Information Géographique (SIG)",
+                                    "Télédétection",
+                                    "Géodésie et technologies de positionnement",
+                                    "Programmation python",
+                                    "Cartographie numérique",
+                                    "Langues étrangères",
+                                    "Soft skills"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "SIG 2",
+                                    "Traitement d'images",
+                                    "Géostatistiques",
+                                    "Bases de données spatiales",
+                                    "SIG appliqué à la géologie",
+                                    "Langues étrangères",
+                                    "Culture digitale"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Programmation webmapping",
+                                    "Programmation SIG",
+                                    "Géomatique et ressources naturelles",
+                                    "Environnement et géorisques",
+                                    "Ateliers professionnels",
+                                    "Langues étrangères",
+                                    "Culture and Art skills",
+                                    "Employment skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Projet de fin d'études"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Mathématiques et informatique",
+                "formations": [
+                    {
+                        "Filière": "Big Data & Data science",
+                        "COORDONNATEUR": "BELANGOUR ABDESSAMAD",
+                        "SPÉCIALITÉ": "Data Science",
+                        "E.MAIL": "abdessamad.belangour@etu.univh2c.ma",
+                        "OBJECTIFS": "Former des experts en gestion et analyse de grandes quantités de données (Big Data). Développer des compétences avancées en intelligence artificielle, machine learning et deep learning. Préparer les étudiants à concevoir des solutions innovantes pour le traitement des données massives, leur stockage et leur visualisation. Initier les étudiants aux technologies et plateformes modernes telles que Hadoop, Spark, et les services Cloud.",
+                        "DÉBOUCHÉS": "Data Scientist: Analyse et modélisation prédictive des données. Data Engineer: Conception et gestion des infrastructures de données. Architecte Big Data: Mise en place d'écosystèmes Big Data. Consultant en Data Analytics: Aide à la prise de décision basée sur les données. Chef de Projet Data: Gestion de projets liés à la collecte et au traitement des données.",
+                        "CIBLE": "Titulaires d'une licence en informatique, mathématiques, ou diplôme équivalent.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Statistiques Avancées et Analyse multidimensionnelle",
+                                    "JEE & Frameworks",
+                                    "Big Data et Hadoop",
+                                    "Cloud Computing & DevOps",
+                                    "Python pour Data Science",
+                                    "Langues étrangères S1",
+                                    "Soft Skills"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Algorithmes d'Optimisation",
+                                    "Architecture Orientée MicroServices",
+                                    "Machine Learning",
+                                    "Data Engineering",
+                                    "Sécurité des données et blockchain",
+                                    "Langues étrangères S2",
+                                    "Culture digitale",
+                                    "Employment skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Deep Learning (Data Science)",
+                                    "TALN (Traitement Automatique du Langage Naturel) (Data Science)",
+                                    "IA générative (Data Science)",
+                                    "Architectures de données avancées (Big Data)",
+                                    "IoT et Big Data (Big Data)",
+                                    "Traitement de données en temps réel (Big Data)",
+                                    "Data Visualization (Commun)",
+                                    "إبستيمولوجيا علم المعطيات والبيانات الضخمة (Commun)",
+                                    "Langues étrangères S3 (Commun)",
+                                    "Culture and Art Skills (Commun)"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Projet de fin d'études"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Physique",
+                "formations": [
+                    {
+                        "Filière": "Electronique et traitement de l'Information",
+                        "COORDONNATEUR": "ATOUF ISSAM",
+                        "SPÉCIALITÉ": "Électronique",
+                        "E.MAIL": "issamatouf@gmail.com",
+                        "OBJECTIFS": "Apprendre aux étudiants comment développer des applications avancées dans les domaines de l'électronique, des systèmes embarqués, de l'électrotechnique, des réseaux, et des télécommunications. Développer des compétences pratiques en programmation, en particulier en Python, pour la résolution de problèmes complexes dans ces domaines. Préparer les étudiants à innover et à mener des recherches dans le secteur des technologies de l'information et de la communication (TIC). Cultiver une approche multidisciplinaire pour concevoir, analyser, et optimiser des systèmes complexes.",
+                        "DÉBOUCHÉS": "Conception et mise au point de systèmes électriques, électrotechniques et électroniques. Maintenance, conception et supervision. Antennes et radio fréquences. Réseaux et internet des objets. Développement des systèmes embarqués.",
+                        "CIBLE": "Titulaires d'une licence en physique, électronique, ou diplôme équivalent.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Intelligence Artificielle (IA) et Machine Learning",
+                                    "Mathématiques pour la Physique",
+                                    "PROGRAMMATION EN PYTHON ET ANALYSE DE DONNEES",
+                                    "ARCHITECTURE DES SYSTEMES EMBARQUES",
+                                    "CONCEPTION STRUCTUREE DES SYSTEMES NUMERIQUES",
+                                    "Soft Skills",
+                                    "Langues Etrangères 1"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "TRANSMISSION ANALOGIQUE ET NUMERIQUE",
+                                    "INTRODUCTION AUX MICROPROCESSEURS",
+                                    "RESEAUX INFORMATIQUES & IOT",
+                                    "VERIFICATION ET CONTROLE DES SYSTEMES EMBARQUES",
+                                    "AUTOMATIQUE",
+                                    "Culture digitale",
+                                    "Langues Etrangères 2"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "TRAITEMENT D'IMAGE ET APPLICATIONS",
+                                    "CIRCUITS ET SYSTEMES DE COMMUNICATION RADIOFREQUENCES",
+                                    "SYSTEMES TEMPS REELS EMBARQUES",
+                                    "ELECTRONIQUE DE PUISSANCE",
+                                    "INTERFACES ET ACQUISITION DES DONNEES",
+                                    "Culture and Art skills",
+                                    "Langues Etrangères 3"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Employment Skills",
+                                    "Projet de fin d'études / Stage de recherche"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Sciences Mécaniques (SM)",
+                        "COORDONNATEUR": "HAMDAOUI ABDELLAH",
+                        "SPÉCIALITÉ": "Mécanique",
+                        "E.MAIL": "abdellah.hamdaoui@univh2c.ma",
+                        "OBJECTIFS": "La formation prépare les étudiants à devenir des spécialistes en mécanique, avec un accent sur : La modélisation et simulation numérique des défis industriels. La Recherche et Développement en ingénierie mécanique pour des projets innovants. La communication technique et la gestion de projets. Les compétences transversales en informatique, gestion de projets et soft skills.",
+                        "DÉBOUCHÉS": "Travailler comme Ingénieur Mécanicien Supérieur dans les secteurs de la mécanique, de l'énergétique et de l'industrie. Poursuivre des études doctorales en recherche et développement. S'intégrer rapidement dans la vie professionnelle en tant que spécialiste opérationnel. Contribuer à l'innovation dans le domaine de l'ingénierie.",
+                        "CIBLE": "Titulaires d'une licence en physique, mécanique, ou diplôme équivalent.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Mathématiques pour la physique",
+                                    "Algorithmique et Programmation pour la Physique",
+                                    "Méthodes Numériques",
+                                    "Mécanique des Milieux Continus",
+                                    "Mécanique des fluides approfondi",
+                                    "Langues Etrangères (Anglais /Français)",
+                                    "Compétences générales"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Calcul des Structures",
+                                    "Rhéologie des fluides",
+                                    "Machines Thermiques",
+                                    "Caractérisation et contrôle des matériaux",
+                                    "Transferts thermiques avancés",
+                                    "Langues Etrangères (Anglais /Français)",
+                                    "Culture digitale"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Calcul non linéaire des Structures",
+                                    "Instabilité et bifurcation des structures",
+                                    "Energie Solaire",
+                                    "Métrologie et métallurgie avancée",
+                                    "Hydrodynamique Avancée",
+                                    "Langues Etrangères (Anglais /Français)",
+                                    "Compétences culturelles et artistiques"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Projet de fin d'étude",
+                                    "Compétences emploi"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Filière": "Matériaux Intelligents et Systèmes Energétiques",
+                        "COORDONNATEUR": "EDDIAI Adil",
+                        "SPÉCIALITÉ": "Matériaux et Systèmes énergétiques",
+                        "E.MAIL": "adil.eddiai@univh2c.ma",
+                        "OBJECTIFS": "Acquérir une connaissance approfondie des technologies émergentes dans le domaine des matériaux et des systèmes énergétiques. Analyser et évaluer les performances des différents matériaux utilisés dans les systèmes énergétiques. Développer des compétences pratiques dans la conception, la modélisation et la mise en œuvre de systèmes énergétiques utilisant des matériaux intelligents.",
+                        "DÉBOUCHÉS": "Chercheur ou Scientifique: Travailler dans des instituts de recherche, des universités, ou des centres de R&D industriels. Responsable de Projets : Gérer des projets liés à l'innovation en matériaux ou à l'amélioration des infrastructures énergétiques. Enseignant-chercheur: Enseigner dans des universités ou des écoles d'ingénieurs. Ingénieur de Recherche et Développement: Travailler sur le développement de nouveaux matériaux et technologies énergétiques dans des laboratoires ou des entreprises.",
+                        "CIBLE": "Licence en physique, matériaux, ou diplôme équivalent.",
+                        "CONTENU": [
+                            {
+                                "annee": 1,
+                                "semestre": 1,
+                                "modules": [
+                                    "Physique Moderne et Applications",
+                                    "Techniques de Conversion et Stockage d'Energie",
+                                    "Optique Appliquée",
+                                    "Couche Minces et Fabrication des Systèmes Nano Structures",
+                                    "Physique Subatomique & Instrumentation Nucléaire et Ses Applications",
+                                    "Langues Etrangères (Anglais/Français)",
+                                    "Soft Skills"
+                                ]
+                            },
+                            {
+                                "annee": 1,
+                                "semestre": 2,
+                                "modules": [
+                                    "Physique de la Matière Condensée Avancée et Applications",
+                                    "Matériaux Intelligents et Capteurs",
+                                    "Nano Physique et Applications",
+                                    "Matériaux Semiconducteurs/Matériaux Diélectriques",
+                                    "Caractérisation et Contrôle des Matériaux Avance",
+                                    "Culture Digitale",
+                                    "Langues Etrangères (Anglais/Français)"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 3,
+                                "modules": [
+                                    "Métrologie et Métallurgie Avancée",
+                                    "Mathématiques pour la Physique",
+                                    "Energie Solaire",
+                                    "Systèmes Energétiques",
+                                    "Physique des Surfaces et Magnétisme",
+                                    "Langues Etrangères (Anglais/Français)",
+                                    "Culture and Art Skills"
+                                ]
+                            },
+                            {
+                                "annee": 2,
+                                "semestre": 4,
+                                "modules": [
+                                    "Projet de fin d'études / Stage de recherche"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Sciences de la communication et Humanités",
+                "formations": []
+            }
+        ]
+    },
+    {
+        "type": "Doctorat",
+        "departements": [
+            {
+                "departement": "Biologie",
+                "formations": [
+                    {
+                        "Filière": "Sciences de la santé",
+                        "DOMAINE": "Biologie, Santé et Environnement",
+                        "DESCRIPTION": "La formation en Sciences de la santé vise à préparer des chercheurs aptes à relever les défis de la recherche biomédicale, de la santé publique et de la protection de l'environnement. Cette formation pluridisciplinaire s'appuie sur des compétences solides en biologie, biotechnologie, chimie et santé, offrant ainsi une approche intégrée des problématiques sanitaires et environnementales contemporaines. Elle permet aux doctorants de développer une expertise dans l'analyse, la prévention et l'innovation thérapeutique, tout en favorisant les interactions entre recherche fondamentale, appliquée et clinique. Grâce à la richesse de ses axes, cette formation contribue activement à la production de connaissances et au développement de solutions innovantes dans les domaines de la santé et de l'environnement.",
+                        "AXES_DE_RECHERCHE": [
+                            "Biologie médicale et biotechnologie",
+                            "Santé publique et analyses biomédicales",
+                            "Microbiologie, biochimie et pharmacologie",
+                            "Sciences de l'environnement et toxicologie"
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Chimie",
+                "formations": [
+                    {
+                        "Filière": "Sciences et Techniques",
+                        "DOMAINE": "Sciences et Techniques",
+                        "DESCRIPTION": "La formation en Sciences et Techniques vise à former des chercheurs polyvalents capables de répondre aux défis scientifiques et technologiques contemporains. Elle se distingue par une approche interdisciplinaire, couvrant des axes variés tels que la physique appliquée, la chimie des matériaux, les mathématiques appliquées ainsi que l'informatique, les réseaux et les systèmes intelligents. Grâce à ces domaines complémentaires, les étudiants sont préparés à contribuer activement au développement de solutions innovantes adaptées aux besoins de la recherche scientifique.",
+                        "AXES_DE_RECHERCHE": [
+                            "Physique appliquée",
+                            "Chimie des matériaux",
+                            "Mathématiques appliquées",
+                            "Informatique, réseaux et systèmes intelligents"
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Géologie",
+                "formations": []
+            },
+            {
+                "departement": "Mathématiques et informatique",
+                "formations": [
+                    {
+                        "Filière": "Sciences et Techniques",
+                        "DOMAINE": "Sciences et Techniques",
+                        "DESCRIPTION": "La formation en Sciences et Techniques vise à former des chercheurs polyvalents capables de répondre aux défis scientifiques et technologiques contemporains. Elle se distingue par une approche interdisciplinaire, couvrant des axes variés tels que la physique appliquée, la chimie des matériaux, les mathématiques appliquées ainsi que l'informatique, les réseaux et les systèmes intelligents. Grâce à ces domaines complémentaires, les étudiants sont préparés à contribuer activement au développement de solutions innovantes adaptées aux besoins de la recherche scientifique.",
+                        "AXES_DE_RECHERCHE": [
+                            "Physique appliquée",
+                            "Chimie des matériaux",
+                            "Mathématiques appliquées",
+                            "Informatique, réseaux et systèmes intelligents"
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Physique",
+                "formations": [
+                    {
+                        "Filière": "Sciences de l'ingénieur",
+                        "DOMAINE": "Sciences et Techniques de l'Ingénieur",
+                        "DESCRIPTION": "La formation en Sciences de l'Ingénieur vise à former des chercheurs hautement qualifiés capables d'innover dans des domaines technologiques de pointe. Elle repose sur une approche intégrée alliant rigueur scientifique, expérimentation et ingénierie appliquée pour répondre aux enjeux industriels et sociétaux contemporains. Elle permet aux doctorants de développer des compétences avancées en modélisation, conception, prototypage, intelligence computationnelle et optimisation des systèmes complexes, tout en intégrant les exigences de durabilité, d'efficacité énergétique et d'adaptabilité numérique. Grâce à l'implication des laboratoires de recherche de la FSBM, cette formation ouvre des perspectives concrètes pour les carrières en R&D, dans l'industrie, les bureaux d'études ou l'innovation technologique.",
+                        "AXES_DE_RECHERCHE": [
+                            "Électronique, télécommunications et systèmes embarqués",
+                            "Mécanique, énergétique et matériaux",
+                            "Génie industriel et procédés",
+                            "Informatique appliquée et systèmes intelligents"
+                        ]
+                    }
+                ]
+            },
+            {
+                "departement": "Sciences de la communication et Humanités",
+                "formations": [
+                    {
+                        "Filière": "Sciences de l'éducation",
+                        "DOMAINE": "Sciences Humaines et Sociales - Éducation",
+                        "DESCRIPTION": "La formation en Sciences Humaines et Sociales - Éducation propose une spécialisation avancée axée sur l'amélioration des pratiques pédagogiques et éducatives. Elle s'articule autour de plusieurs axes clés tels que l'ingénierie pédagogique et l'innovation didactique, les technologies éducatives et numérique, les pratiques d'enseignement et évaluation ainsi que la formation et le développement professionnel des enseignants. Grâce à ces domaines complémentaires, les étudiants sont préparés à innover dans les pratiques éducatives et à répondre efficacement aux besoins actuels du secteur de l'éducation et de la formation.",
+                        "AXES_DE_RECHERCHE": [
+                            "Ingénierie pédagogique et innovation didactique",
+                            "Technologies éducatives et numérique",
+                            "Pratiques d'enseignement et évaluation",
+                            "Formation et développement professionnel des enseignants"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
