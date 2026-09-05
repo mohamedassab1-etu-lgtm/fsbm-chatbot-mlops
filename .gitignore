@@ -4,5 +4,3 @@
 
 .vscode/
 .idea/
-
-data/duckdb/*
