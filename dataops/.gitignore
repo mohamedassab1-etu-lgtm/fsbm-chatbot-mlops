@@ -1,0 +1,9 @@
+./_pycache_/
+
+dbt_packages/
+logs/
+target/
+dagster_home/
+.DS_Store
+
+venv/
