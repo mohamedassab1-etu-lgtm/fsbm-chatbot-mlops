@@ -1,0 +1,39 @@
+{
+  "faculte": {
+    "nom_officiel": "Faculté des Sciences Ben M'Sik",
+    "acronyme": "FSBM",
+    "universite_de_rattachement": "Université Hassan II de Casablanca",
+    "annee_de_creation": 1984,
+    "doyen": "Pr. Talbi Mohammed",
+    "vice_doyen": "Pr. El Filali Sanaa",
+    "description": "La Faculté des Sciences Ben M'Sik (FSBM) est un établissement d'enseignement supérieur et de recherche scientifique. Elle offre des formations diversifiées en sciences exactes et expérimentales pour les cycles de Licence, Master et Doctorat. Elle s'engage activement dans la recherche scientifique, l'innovation technologique et l'insertion professionnelle de ses étudiants.",
+    "contact": {
+      "adresse": "Avenue Cdt Driss El Harti, B.P. 7955, Sidi Othmane, Casablanca, Maroc",
+      "telephone": [
+        "+212 5 22 70 46 71",
+        "+212 6 61 44 24 27"
+      ],
+      "fax": "+212 5 22 70 46 75",
+      "emails": {
+        "principal": "fsbm.contact@univh2c.ma",
+        "scolarite": "reclamation.fsb@univh2c.ma",
+        "laboratoire_intelligence_artificielle": "lias.fsbm@gmail.com"
+      },
+      "site_web": "http://www.fsb.univh2c.ma"
+    },
+    "localisation": {
+      "ville": "Casablanca",
+      "pays": "Maroc",
+      "region": "Casablanca-Settat",
+      "quartier": "Sidi Othmane / Ben M'Sik"
+    },
+    "departements_inclus": [
+      "Biologie",
+      "Chimie",
+      "Géologie",
+      "Mathématiques et informatique",
+      "Physique",
+      "Sciences de la communication et Humanités"
+    ]
+  }
+}
