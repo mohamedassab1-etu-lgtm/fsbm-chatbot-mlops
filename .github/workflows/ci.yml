@@ -50,8 +50,9 @@ jobs:
 
       - name: Verify Backend Health
         run: |
-          echo "Waiting for FastAPI to initialize..."
-          sleep 15
+          echo "Waiting for FastAPI to download models and initialize..."
+          timeout 300 bash -c 'while ! docker compose logs backend | grep -q "Chat engine successfully loaded and ready"; do sleep 5; done'
+          echo "Initialization log detected! Pinging health endpoint..."
           curl --fail http://localhost:8000/api/health || exit 1
 
       - name: Verify Frontend Health
