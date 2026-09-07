@@ -1,4 +1,6 @@
 import ast
+import json
+import os
 import re
 
 import duckdb
@@ -88,7 +90,8 @@ def parse_email_list(raw):
 
 
 def load_data_as_documents():
-    con = duckdb.connect('../dataops/data/duckdb/fsbm.duckdb') # Assure-toi que le chemin est correct selon l'emplacement du script
+    db_path = os.getenv("DUCKDB_PATH", "/app/data/duckdb/fsbm.duckdb")
+    con = duckdb.connect(db_path, read_only=True)
     documents = []
 
     # Fetch laboratoires first (before professeurs/formations) so we can

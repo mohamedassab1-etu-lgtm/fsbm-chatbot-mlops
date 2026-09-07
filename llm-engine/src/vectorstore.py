@@ -1,3 +1,4 @@
+import os
 import time
 
 from langchain_chroma import Chroma
@@ -22,6 +23,19 @@ def get_device() -> str:
 
 
 def create_vector_store(batch_size: int = 32):
+    duckdb_path = os.getenv("DUCKDB_PATH", "/app/data/duckdb/fsbm.duckdb")
+    persist_path = os.getenv("VECTORSTORE_PATH", "/app/vectorstore")
+
+    # 1. Skip if already built
+    if os.path.exists(os.path.join(persist_path, "chroma.sqlite3")):
+        print("[INFO] Vectorstore already exists. Skipping build.")
+        return None
+
+    # 2. Wait for DataOps to finish
+    print("[INFO] Waiting for DataOps to generate DuckDB...")
+    while not os.path.exists(duckdb_path):
+        time.sleep(5)
+
     print("Chargement des données depuis DuckDB...")
     docs = load_data_as_documents()
     print(f"-> {len(docs)} documents chargés au total.")
@@ -44,8 +58,6 @@ def create_vector_store(batch_size: int = 32):
             "normalize_embeddings": True,  # recommended for e5 models (cosine similarity)
         },
     )
-
-    persist_path = "./vectordb"
 
     print("Création de la base vectorielle (par lots, avec progression)...")
     vectorstore = None

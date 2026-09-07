@@ -12,4 +12,4 @@ COPY . .
 EXPOSE 8000
 
 # Execute the FastAPI server
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["bash", "-c", "python -m src.vectorstore && uvicorn main:app --host 0.0.0.0 --port 8000"]

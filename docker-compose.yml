@@ -29,12 +29,25 @@ services:
       - ollama
     environment:
       - OLLAMA_HOST=ollama:11434
+    entrypoint: /bin/sh
     command: >
       sh -c "echo 'Waiting for Ollama to boot...' &&
              sleep 10 &&
              echo 'Pulling Qwen2.5:3b...' &&
              ollama pull qwen2.5:3b &&
              echo 'Model pulled successfully!'"
+
+  dagster:
+    build:
+      context: ./dataops
+      dockerfile: Dockerfile
+    container_name: fsbm-dagster
+    ports:
+      - "3001:3000"
+    volumes:
+      # Mount the data folder so generated DuckDB files persist and can be shared
+      - shared_pipeline_data:/app/data
+    restart: unless-stopped
 
   backend:
     build:
@@ -45,11 +58,16 @@ services:
     environment:
       - OLLAMA_BASE_URL=http://ollama:11434
       - HF_HOME=/root/.cache/huggingface
+      - DUCKDB_PATH=/app/data/duckdb/fsbm.duckdb
+      - VECTORSTORE_PATH=/app/vectorstore
     depends_on:
       - db
       - ollama
+      - dagster
     volumes:
       - huggingface_cache:/root/.cache/huggingface
+      - shared_pipeline_data:/app/data
+      - vectorstore_cache:/app/vectorstore
 
   frontend:
     build:
@@ -70,3 +88,5 @@ volumes:
   mariadb_data:
   ollama_models:
   huggingface_cache:
+  shared_pipeline_data:
+  vectorstore_cache:
