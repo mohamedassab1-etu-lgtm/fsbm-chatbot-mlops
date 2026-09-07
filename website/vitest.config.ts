@@ -23,6 +23,6 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./vitest.setup.mts'],
-    include: ['../tests/web/**/*.test.{ts,tsx}']
+    include: ['../tests/web/**/*.{test,spec}.{ts,tsx}', 'src/**/*.{test,spec}.{ts,tsx}']
   }
 })

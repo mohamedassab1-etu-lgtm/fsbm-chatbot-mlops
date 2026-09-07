@@ -7,30 +7,75 @@ on:
     branches: [ "main", "dev" ]
 
 jobs:
-  # 1. Pre-Docker Tests (e.g., Code linting, isolated unit tests)
-  pre-docker-tests:
+  # ========================================================================
+  # 1. PRE-DOCKER TESTS
+  # ========================================================================
+  pre-docker-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./website
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: website/package-lock.json
+
+      - name: Install Dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Generate Prisma Client
+        run: npx prisma generate
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Run Web Tests
+        run: npm test -- --run
+
+  pre-docker-backend-dataops:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          
-      - name: Run Isolated Unit Tests (Placeholder)
-        run: echo "Run tests that don't need databases here (e.g., pytest on tests/dataops/)"
+          cache: 'pip'
 
-  # 2. Docker Orchestration (Requires pre-docker-tests to pass)
+      - name: Install Test Requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-asyncio duckdb fastapi httpx pydantic
+
+      - name: Run DataOps Tests
+        run: |
+          pytest tests/dataops/ -v
+
+      - name: Run LLM Unit Tests
+        env:
+          PYTHONPATH: ./llm-engine
+        run: |
+          pytest tests/llm/ -v
+
+  # ========================================================================
+  # 2. DOCKER INTEGRATION
+  # ========================================================================
   docker-integration:
-    needs: pre-docker-tests
+    needs: [pre-docker-frontend, pre-docker-backend-dataops]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Generate .env.local from GitHub Secrets
+      - name: Generate .env.local from Secrets
         run: |
           echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> website/.env.local
           echo "GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}" >> website/.env.local
@@ -42,7 +87,6 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build Docker Compose Stack
-        # USERPROFILE=$HOME maps the Windows cache path to the Linux runner's home path
         run: USERPROFILE=$HOME docker compose build
 
       - name: Start Services
@@ -50,9 +94,8 @@ jobs:
 
       - name: Verify Backend Health
         run: |
-          echo "Waiting for FastAPI to download models and initialize..."
+          echo "Waiting for FastAPI to initialize..."
           timeout 300 bash -c 'while ! docker compose logs backend | grep -q "Chat engine successfully loaded and ready"; do sleep 5; done'
-          echo "Initialization log detected! Pinging health endpoint..."
           curl --fail http://localhost:8000/api/health || exit 1
 
       - name: Verify Frontend Health
@@ -63,10 +106,12 @@ jobs:
         if: always()
         run: USERPROFILE=$HOME docker compose down
 
-  # 3. Post-Docker Tests (Requires docker-integration to pass)
+  # ========================================================================
+  # 3. POST-DOCKER TESTS
+  # ========================================================================
   post-docker-tests:
     needs: docker-integration
     runs-on: ubuntu-latest
     steps:
-      - name: Run E2E or Deployment Triggers (Placeholder)
-        run: echo "Run tests that require the full stack here, or trigger deployment scripts."
+      - name: Summary Check
+        run: echo "All pre-tests and docker integration checks passed successfully."
