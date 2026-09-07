@@ -1,50 +1,72 @@
+version: '3.8'
+
 services:
   db:
     image: mariadb:lts
+    container_name: fsbm-mariadb
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: "Assab4002@"
-      MYSQL_DATABASE: "fsbm_assistant"
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: fsbm_assistant
     ports:
-      # Expose on 3307 so it doesn't conflict with your local Windows database
-      - "3307:3306"
+      - "3306:3306"
     volumes:
-      - db_data:/var/lib/mysql
+      - mariadb_data:/var/lib/mysql
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: fsbm-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+    restart: unless-stopped
+
+  ollama-init:
+    image: ollama/ollama:latest
+    container_name: fsbm-ollama-init
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_HOST=ollama:11434
+    command: >
+      sh -c "echo 'Waiting for Ollama to boot...' &&
+             sleep 10 &&
+             echo 'Pulling Qwen2.5:3b...' &&
+             ollama pull qwen2.5:3b &&
+             echo 'Model pulled successfully!'"
+
+  backend:
+    build:
+      context: ./llm-engine
+    container_name: fsbm-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - HF_HOME=/root/.cache/huggingface
+    depends_on:
+      - db
+      - ollama
+    volumes:
+      - huggingface_cache:/root/.cache/huggingface
 
   frontend:
     build:
       context: ./website
+    container_name: fsbm-frontend
     ports:
       - "3000:3000"
     environment:
-      # Next.js connects to the database using Docker's internal network name ('db')
-      - DATABASE_URL=mariadb://root:Assab4002%40@db:3306/fsbm_assistant
-      # For Next.js server-side API routes / server actions calling FastAPI:
+      - DATABASE_URL=mysql://root:Assab4002%40@db:3306/fsbm_assistant
       - BACKEND_URL=http://backend:8000
-      - FASTAPI_URL=http://backend:8000
     env_file:
       - website/.env.local
     depends_on:
       - db
       - backend
 
-  backend:
-    build:
-      context: ./llm-engine
-    ports:
-      - "8000:8000"
-    volumes:
-      # Mounts the mock DuckDB data we created earlier into the container
-      - ./tests/dataops/data:/app/dataops/data
-      # Reuses models already cached on your Windows machine
-      - ${USERPROFILE}/.cache/huggingface:/root/.cache/huggingface
-    environment:
-      # Forces Python to print logs immediately
-      - PYTHONUNBUFFERED=1
-      # Routes Ollama traffic out of the container to Windows
-      - OLLAMA_BASE_URL=http://host.docker.internal:11434
-      - HF_HUB_ENABLE_HF_TRANSFER=0
-    depends_on:
-      - db
-
 volumes:
-  db_data:
+  mariadb_data:
+  ollama_models:
+  huggingface_cache:
