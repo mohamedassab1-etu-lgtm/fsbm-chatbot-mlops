@@ -1,4 +1,4 @@
-name: FSBM Assistant CI
+name: FSBM Chatbot CI
 
 on:
   push:
@@ -7,21 +7,46 @@ on:
     branches: [ "main", "dev" ]
 
 jobs:
-  build-and-test:
+  # 1. Pre-Docker Tests (e.g., Code linting, isolated unit tests)
+  pre-docker-tests:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          
+      - name: Run Isolated Unit Tests (Placeholder)
+        run: echo "Run tests that don't need databases here (e.g., pytest on tests/dataops/)"
+
+  # 2. Docker Orchestration (Requires pre-docker-tests to pass)
+  docker-integration:
+    needs: pre-docker-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Generate .env.local from GitHub Secrets
+        run: |
+          echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> website/.env.local
+          echo "GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}" >> website/.env.local
+          echo "NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}" >> website/.env.local
+          echo "NEXTAUTH_URL=http://localhost:3000" >> website/.env.local
+          echo "BACKEND_URL=http://backend:8000" >> website/.env.local
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
       - name: Build Docker Compose Stack
-        run: docker compose build
+        # USERPROFILE=$HOME maps the Windows cache path to the Linux runner's home path
+        run: USERPROFILE=$HOME docker compose build
 
       - name: Start Services
-        run: docker compose up -d
+        run: USERPROFILE=$HOME docker compose up -d
 
       - name: Verify Backend Health
         run: |
@@ -35,4 +60,12 @@ jobs:
 
       - name: Shut Down Stack
         if: always()
-        run: docker compose down
+        run: USERPROFILE=$HOME docker compose down
+
+  # 3. Post-Docker Tests (Requires docker-integration to pass)
+  post-docker-tests:
+    needs: docker-integration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run E2E or Deployment Triggers (Placeholder)
+        run: echo "Run tests that require the full stack here, or trigger deployment scripts."
