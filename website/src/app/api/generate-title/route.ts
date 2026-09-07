@@ -4,7 +4,9 @@ export async function POST(req: Request) {
     try {
         const body = await req.json();
 
-        const response = await fetch('http://localhost:8000/generate-title', {
+        const backendUrl = process.env.BACKEND_URL || 'http://localhost:8000';
+
+        const response = await fetch(`${backendUrl}/generate-title`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

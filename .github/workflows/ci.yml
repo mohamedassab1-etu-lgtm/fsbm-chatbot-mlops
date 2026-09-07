@@ -1,0 +1,38 @@
+name: FSBM Assistant CI
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main", "dev" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker Compose Stack
+        run: docker compose build
+
+      - name: Start Services
+        run: docker compose up -d
+
+      - name: Verify Backend Health
+        run: |
+          echo "Waiting for FastAPI to initialize..."
+          sleep 15
+          curl --fail http://localhost:8000/api/health || exit 1
+
+      - name: Verify Frontend Health
+        run: |
+          curl --fail http://localhost:3000 || exit 1
+
+      - name: Shut Down Stack
+        if: always()
+        run: docker compose down

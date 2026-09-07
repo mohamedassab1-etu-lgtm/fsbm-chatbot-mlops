@@ -1,12 +1,26 @@
 import json
+import logging
+import sys
+
+# Configure structured logging to flush immediately to stdout
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    handlers=[logging.StreamHandler(sys.stdout)]
+)
+logger = logging.getLogger("fsbm-backend")
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
+
+logger.info("Importing chat engine modules...")
 from src.chat_engine import get_chat_engine, ground_emails_in_answer
 from src.generate_title import generate_conversation_title
 
+
+logger.info("Initializing FastAPI application...")
 app = FastAPI(
     title="API Chatbot FSBM",
     description="API RAG pour interroger les données de la Faculté des Sciences Ben M'Sik",
@@ -22,9 +36,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-print("Chargement du modèle et de la base vectorielle...")
+# print("Chargement du modèle et de la base vectorielle...")
+logger.info("Building chat engine and connecting to vector store...")
 chat_engine = get_chat_engine()
-print("Moteur IA prêt !")
+logger.info("Chat engine successfully loaded and ready.")
+# print("Moteur IA prêt !")
 
 
 class ChatRequest(BaseModel):

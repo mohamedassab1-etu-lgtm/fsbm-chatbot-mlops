@@ -7,7 +7,9 @@ export async function POST(request: Request) {
 
     // Talks to the streaming endpoint now, not the JSON one - this is
     // what makes live word-by-word typing possible.
-    const pythonResponse = await fetch('http://localhost:8000/api/chat', {
+    const backendUrl = process.env.BACKEND_URL || 'http://localhost:8000';
+
+    const pythonResponse = await fetch(`${backendUrl}/api/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ question }),

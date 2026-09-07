@@ -1,0 +1,50 @@
+services:
+  db:
+    image: mariadb:lts
+    environment:
+      MYSQL_ROOT_PASSWORD: "Assab4002@"
+      MYSQL_DATABASE: "fsbm_assistant"
+    ports:
+      # Expose on 3307 so it doesn't conflict with your local Windows database
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  frontend:
+    build:
+      context: ./website
+    ports:
+      - "3000:3000"
+    environment:
+      # Next.js connects to the database using Docker's internal network name ('db')
+      - DATABASE_URL=mariadb://root:Assab4002%40@db:3306/fsbm_assistant
+      # For Next.js server-side API routes / server actions calling FastAPI:
+      - BACKEND_URL=http://backend:8000
+      - FASTAPI_URL=http://backend:8000
+    env_file:
+      - website/.env.local
+    depends_on:
+      - db
+      - backend
+
+  backend:
+    build:
+      context: ./llm-engine
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mounts the mock DuckDB data we created earlier into the container
+      - ./tests/dataops/data:/app/dataops/data
+      # Reuses models already cached on your Windows machine
+      - ${USERPROFILE}/.cache/huggingface:/root/.cache/huggingface
+    environment:
+      # Forces Python to print logs immediately
+      - PYTHONUNBUFFERED=1
+      # Routes Ollama traffic out of the container to Windows
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - HF_HUB_ENABLE_HF_TRANSFER=0
+    depends_on:
+      - db
+
+volumes:
+  db_data:

@@ -1,3 +1,8 @@
+import logging
+logger = logging.getLogger("fsbm-backend.chat_engine")
+
+import os
+
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_ollama import ChatOllama
@@ -273,17 +278,24 @@ def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, i
 # 3. Chat engine assembly
 # ---------------------------------------------------------------------------
 def get_chat_engine():
+    logger.info("Step 1/3: Loading Hugging Face embedding model...")
     embeddings = HuggingFaceEmbeddings(
         model_name="intfloat/multilingual-e5-large"
     )
+    logger.info("Hugging Face embedding model loaded successfully.")
 
+    logger.info("Step 2/3: Connecting to vector store / DuckDB...")
     vectorstore = Chroma(
         persist_directory="./vectordb",
         embedding_function=embeddings,
     )
+    logger.info("Vector store loaded successfully.")
 
-    # llm = ChatOllama(model="llama3.2:1b", temperature=0.3)
-    llm = ChatOllama(model="qwen2.5:3b", temperature=0.0)
+    logger.info("Step 3/3: Initializing Ollama client...")
+    ollama_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+
+    llm = ChatOllama(model="qwen2.5:3b", base_url=ollama_url, temperature=0.0)
+    logger.info("Ollama client initialized.")
 
     # Built once at startup (small dataset, cheap) - see build_identifier_index
     # for why acronyms/section codes need this exact-match override.
