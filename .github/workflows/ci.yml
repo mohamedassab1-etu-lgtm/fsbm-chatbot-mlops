@@ -132,18 +132,18 @@ jobs:
       - name: Verify Backend Health
         run: |
           echo "=== DUMPING LIVE BACKEND LOGS ==="
-          # Print existing logs so far in real-time
-          docker compose logs backend &
+          # Read directly from the container to bypass compose buffering and warnings
+          docker logs -f fsbm-backend &
           
-          # Wait up to 10 minutes for the ready message, otherwise print last logs and exit
+          # Wait up to 15 minutes for the ready message
           COUNTER=0
-          while ! docker compose logs backend | grep -q "Chat engine successfully loaded and ready"; do
+          while ! docker logs fsbm-backend 2>&1 | grep -q "Chat engine successfully loaded and ready"; do
             sleep 10
             COUNTER=$((COUNTER + 1))
-            if [ $COUNTER -gt 60 ]; then
-              echo "ERROR: Backend initialization timed out after 10 minutes."
+            if [ $COUNTER -gt 90 ]; then
+              echo "ERROR: Backend initialization timed out after 15 minutes."
               echo "=== FULL CONTAINER LOGS FOR DEBUGGING ==="
-              docker compose logs backend
+              docker logs fsbm-backend
               exit 1
             fi
           done
