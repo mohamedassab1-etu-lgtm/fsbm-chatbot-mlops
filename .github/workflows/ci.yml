@@ -134,8 +134,7 @@ jobs:
           echo "Waiting for Dagster to be ready..."
           sleep 10
           echo "Triggering data pipeline to build DuckDB..."
-          # Replace 'your_pipeline_job_name' with the actual job name from your Dagster code
-          docker exec fsbm-dagster dagster job execute -j your_pipeline_job_name
+          docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select "*"
 
       - name: Verify Backend Health
         run: |
