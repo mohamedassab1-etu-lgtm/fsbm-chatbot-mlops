@@ -165,7 +165,7 @@ export function ChatInput({
                     onKeyDown={handleKeyDown}
                     onBlur={cancelSelection}
                     onClick={(e) => { e.stopPropagation(); cancelSelection(); }}
-                    placeholder={historyIndex !== -1 ? '' : 'Ask FSBM Assistant'}
+                    placeholder={historyIndex !== -1 ? '' : 'Ask FSBM ChatBot'}
                     rows={1}
                     className={`w-full bg-transparent text-gray-900 dark:text-[#e3e3e3] placeholder-gray-500 dark:placeholder-[#8e918f] text-[16px] resize-none focus:outline-none focus:ring-0 pl-2 pr-[56px] leading-relaxed overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-[#424446] [&::-webkit-scrollbar-thumb]:rounded-full z-10 ${isFullscreen ? 'flex-1' : ''}`}
                     style={{ maxHeight: isFullscreen ? 'none' : '246px' }}
