@@ -123,7 +123,7 @@ jobs:
             sleep 3
           done
           echo "Ollama is online! Pulling qwen2.5:3b model..."
-          docker exec -it fsbm-ollama ollama pull qwen2.5:3b
+          docker exec fsbm-ollama ollama pull qwen2.5:3b
           echo "Model downloaded successfully."
 
       - name: Start Remaining Stack (Backend, Dagster, Frontend)
