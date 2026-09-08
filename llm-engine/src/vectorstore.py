@@ -32,8 +32,19 @@ def create_vector_store(batch_size: int = 32):
         return None
 
     # 2. Wait for DataOps to finish
-    print("[INFO] Waiting for DataOps to generate DuckDB...")
-    while not os.path.exists(duckdb_path):
+    print("[INFO] Waiting for DataOps to generate DuckDB and run dbt...")
+    import duckdb
+    while True:
+        if os.path.exists(duckdb_path):
+            try:
+                # Test if dbt has actually created the final views
+                con = duckdb.connect(duckdb_path, read_only=True)
+                con.execute("SELECT 1 FROM clean_data.stg_laboratoires LIMIT 1")
+                con.close()
+                break # Success! The schema and tables exist.
+            except Exception:
+                # File exists, but dbt is still running. Keep waiting.
+                pass
         time.sleep(5)
 
     print("Chargement des données depuis DuckDB...")
