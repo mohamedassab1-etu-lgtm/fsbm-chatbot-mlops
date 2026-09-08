@@ -126,27 +126,26 @@ jobs:
           docker exec fsbm-ollama ollama pull qwen2.5:3b
           echo "Model downloaded successfully."
 
-      - name: Start Remaining Stack (Backend, Dagster, Frontend)
-        run: USERPROFILE=$HOME docker compose up -d
+      - name: Start Dagster Service
+        run: USERPROFILE=$HOME docker compose up -d dagster
 
       - name: Run DataOps Pipeline (Generate DuckDB)
         run: |
           echo "Waiting for Dagster to be ready..."
           sleep 10
-          
           echo "Creating empty directories for the database..."
           docker exec fsbm-dagster mkdir -p /app/data/duckdb
-          
           echo "Triggering data pipeline to build DuckDB..."
           docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select "*"
+
+      - name: Start Backend and Frontend Services
+        run: USERPROFILE=$HOME docker compose up -d backend frontend
 
       - name: Verify Backend Health
         run: |
           echo "=== DUMPING LIVE BACKEND LOGS ==="
-          # Read directly from the container to bypass compose buffering and warnings
           docker logs -f fsbm-backend &
           
-          # Wait up to 15 minutes for the ready message
           COUNTER=0
           while ! docker logs fsbm-backend 2>&1 | grep -q "Chat engine successfully loaded and ready"; do
             sleep 10
