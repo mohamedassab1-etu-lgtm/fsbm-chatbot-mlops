@@ -131,8 +131,24 @@ jobs:
 
       - name: Verify Backend Health
         run: |
-          echo "Waiting for FastAPI and vectorstore initialization..."
-          timeout 600 bash -c 'while ! docker compose logs backend | grep -q "Chat engine successfully loaded and ready"; do sleep 5; done'
+          echo "=== DUMPING LIVE BACKEND LOGS ==="
+          # Print existing logs so far in real-time
+          docker compose logs backend &
+          
+          # Wait up to 10 minutes for the ready message, otherwise print last logs and exit
+          COUNTER=0
+          while ! docker compose logs backend | grep -q "Chat engine successfully loaded and ready"; do
+            sleep 10
+            COUNTER=$((COUNTER + 1))
+            if [ $COUNTER -gt 60 ]; then
+              echo "ERROR: Backend initialization timed out after 10 minutes."
+              echo "=== FULL CONTAINER LOGS FOR DEBUGGING ==="
+              docker compose logs backend
+              exit 1
+            fi
+          done
+          
+          echo "Backend is ready! Checking health endpoint..."
           curl --fail http://localhost:8000/api/health || exit 1
 
       - name: Verify Frontend Health
