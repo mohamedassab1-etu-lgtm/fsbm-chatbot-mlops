@@ -133,6 +133,10 @@ jobs:
         run: |
           echo "Waiting for Dagster to be ready..."
           sleep 10
+          
+          echo "Creating empty directories for the database..."
+          docker exec fsbm-dagster mkdir -p /app/data/duckdb
+          
           echo "Triggering data pipeline to build DuckDB..."
           docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select "*"
 
