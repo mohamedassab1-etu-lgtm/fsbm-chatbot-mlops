@@ -49,7 +49,7 @@ def get_formations_data():
 @dlt.resource(name="emplois", write_disposition="replace")
 def get_emplois_data():
     """Extracts the schedule and serializes complex arrays to prevent dlt sub-tables"""
-    data = load_json("emplois_final.json")
+    data = load_json("emplois.json")
     
     day_map = {'LU': 'lu', 'MA': 'ma', 'ME': 'me', 'JE': 'je', 'VE': 've', 'SA': 'sa'}
     hour_map = {
