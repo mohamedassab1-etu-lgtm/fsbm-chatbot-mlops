@@ -113,13 +113,26 @@ jobs:
       - name: Build Docker Compose Stack
         run: USERPROFILE=$HOME docker compose build
 
-      - name: Start Services
+      - name: Start Database and Ollama Services
+        run: USERPROFILE=$HOME docker compose up -d db ollama
+
+      - name: Wait for Ollama and Pull Qwen Model Synchronously
+        run: |
+          echo "Waiting for Ollama service to boot..."
+          until docker exec fsbm-ollama ollama list > /dev/null 2>&1; do
+            sleep 3
+          done
+          echo "Ollama is online! Pulling qwen2.5:3b model..."
+          docker exec -it fsbm-ollama ollama pull qwen2.5:3b
+          echo "Model downloaded successfully."
+
+      - name: Start Remaining Stack (Backend, Dagster, Frontend)
         run: USERPROFILE=$HOME docker compose up -d
 
       - name: Verify Backend Health
         run: |
-          echo "Waiting for FastAPI to initialize..."
-          timeout 900 bash -c 'while ! docker compose logs backend | grep -q "Chat engine successfully loaded and ready"; do sleep 5; done'
+          echo "Waiting for FastAPI and vectorstore initialization..."
+          timeout 600 bash -c 'while ! docker compose logs backend | grep -q "Chat engine successfully loaded and ready"; do sleep 5; done'
           curl --fail http://localhost:8000/api/health || exit 1
 
       - name: Verify Frontend Health
