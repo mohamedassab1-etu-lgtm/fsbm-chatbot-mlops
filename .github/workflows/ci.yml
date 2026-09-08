@@ -129,6 +129,14 @@ jobs:
       - name: Start Remaining Stack (Backend, Dagster, Frontend)
         run: USERPROFILE=$HOME docker compose up -d
 
+      - name: Run DataOps Pipeline (Generate DuckDB)
+        run: |
+          echo "Waiting for Dagster to be ready..."
+          sleep 10
+          echo "Triggering data pipeline to build DuckDB..."
+          # Replace 'your_pipeline_job_name' with the actual job name from your Dagster code
+          docker exec fsbm-dagster dagster job execute -j your_pipeline_job_name
+
       - name: Verify Backend Health
         run: |
           echo "=== DUMPING LIVE BACKEND LOGS ==="

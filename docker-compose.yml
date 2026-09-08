@@ -40,6 +40,7 @@ services:
     ports:
       - "8000:8000"
     environment:
+      - PYTHONUNBUFFERED=1
       - OLLAMA_BASE_URL=http://ollama:11434
       - HF_HOME=/root/.cache/huggingface
       - DUCKDB_PATH=/app/data/duckdb/fsbm.duckdb
