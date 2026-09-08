@@ -28,6 +28,9 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
+COPY --chown=nextjs:nodejs prisma ./prisma
+COPY --chown=nextjs:nodejs prisma.config.js ./
+
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
@@ -36,4 +39,6 @@ USER nextjs
 EXPOSE 3000
 ENV PORT=3000
 
-CMD ["node", "server.js"]
+# CMD ["sh", "-c", "npx -y prisma db push && node server.js"]
+# CMD ["sh", "-c", "echo '=== CONFIG CONTENTS ===' && cat prisma.config.js && echo '=== DOTENV CHECK ===' && npm ls dotenv || true && echo '=== STARTING PRISMA ===' && npx -y prisma db push && node server.js"]
+CMD ["sh", "-c", "npx -y prisma db push && node server.js"]

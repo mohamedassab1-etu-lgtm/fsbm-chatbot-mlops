@@ -255,14 +255,10 @@ def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, i
 
         docs = []
         if intent:
-            # On prend les meilleurs documents de la catégorie détectée
             docs = vectorstore.similarity_search(question, k=k, filter={"type": intent})
 
-        # NOUVEAUTÉ : On ajoute TOUJOURS des documents généraux (sans filtre) 
-        # pour croiser les données (par exemple si la question parle d'une formation ET d'un labo)
         general_docs = vectorstore.similarity_search(question, k=fallback_k)
 
-        # On fusionne tout en supprimant les doublons
         seen = set()
         merged = []
         for d in forced_docs + docs + general_docs:
@@ -270,6 +266,8 @@ def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, i
             if key not in seen:
                 seen.add(key)
                 merged.append(d)
+
+        logger.info(f"[RAG Retrieval] Intent: '{intent}' | Forced docs: {len(forced_docs)} | Total context docs: {len(merged)}")
         return merged
 
     return RunnableLambda(retrieve)
@@ -280,13 +278,15 @@ def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, i
 def get_chat_engine():
     logger.info("Step 1/3: Loading Hugging Face embedding model...")
     embeddings = HuggingFaceEmbeddings(
-        model_name="intfloat/multilingual-e5-large"
+        model_name="intfloat/multilingual-e5-large",
+        encode_kwargs={"normalize_embeddings": True},
     )
     logger.info("Hugging Face embedding model loaded successfully.")
 
     logger.info("Step 2/3: Connecting to vector store / DuckDB...")
+    persist_path = os.getenv("VECTORSTORE_PATH", "/app/vectorstore")
     vectorstore = Chroma(
-        persist_directory="./vectordb",
+        persist_directory=persist_path,
         embedding_function=embeddings,
     )
     logger.info("Vector store loaded successfully.")

@@ -31,7 +31,7 @@ services:
       - OLLAMA_HOST=ollama:11434
     entrypoint: /bin/sh
     command: >
-      sh -c "echo 'Waiting for Ollama to boot...' &&
+      -c "echo 'Waiting for Ollama to boot...' &&
              sleep 10 &&
              echo 'Pulling Qwen2.5:3b...' &&
              ollama pull qwen2.5:3b &&
@@ -76,7 +76,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_URL=mysql://root:Assab4002%40@db:3306/fsbm_assistant
+      - DATABASE_URL=mysql://root:root@db:3306/fsbm_assistant
       - BACKEND_URL=http://backend:8000
     env_file:
       - website/.env.local
