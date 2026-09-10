@@ -1,0 +1,32 @@
+groups:
+  - name: fsbm_chatbot_alerts
+    rules:
+      - alert: BackendDown
+        expr: up{job="fastapi-backend"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "FastAPI Backend is down"
+          error_message: "The backend container has stopped responding to health checks. The API is offline."
+          resolved_message: "The backend container has successfully restarted and is accepting traffic."
+
+      - alert: HighRAGLatency
+        expr: histogram_quantile(0.95, sum(rate(rag_retrieval_duration_seconds_bucket[5m])) by (le, intent)) > 8
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High RAG Retrieval Latency"
+          error_message: "Vector search latency for intent '{{ $labels.intent }}' exceeded 8 seconds."
+          resolved_message: "Vector search latency has stabilized below the 8-second threshold."
+
+      - alert: HighErrorRate
+        expr: (sum(rate(http_requests_total{status=~"5.."}[5m])) / sum(rate(http_requests_total[5m]))) * 100 > 5
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High HTTP 5xx Error Rate"
+          error_message: "Over 5% of API requests are failing. Check the application logs."
+          resolved_message: "The API error rate has dropped back to normal operational levels."

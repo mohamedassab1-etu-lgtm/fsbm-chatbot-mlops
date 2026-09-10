@@ -1,0 +1,13 @@
+apiVersion: 1
+datasources:
+  - name: Tempo
+    type: tempo
+    access: proxy
+    url: http://tempo:3200
+    isDefault: false
+    uid: tempo
+    jsonData:
+      tracesToLogsV2:
+        datasourceUid: 'loki'
+        customQuery: true
+        query: '{container="fsbm-backend"} |= "${__trace.traceId}"'

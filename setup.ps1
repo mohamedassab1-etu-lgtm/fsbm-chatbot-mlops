@@ -1,8 +1,10 @@
 Write-Host "`n=== 1. Wiping old environment ===" -ForegroundColor Cyan
-docker compose down -v
+# docker compose down -v
+docker compose down
 
 Write-Host "`n=== 2. Building fresh images ===" -ForegroundColor Cyan
-docker compose build --no-cache
+# docker compose build --no-cache
+docker compose build
 
 Write-Host "`n=== 3. Starting Database and Ollama ===" -ForegroundColor Cyan
 docker compose up -d db ollama
@@ -25,8 +27,8 @@ Write-Host "`n=== 6. Generating DuckDB Database ===" -ForegroundColor Cyan
 docker exec fsbm-dagster mkdir -p /app/data/duckdb
 docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select "*"
 
-Write-Host "`n=== 7. Starting Backend and Frontend ===" -ForegroundColor Cyan
-docker compose up -d backend frontend
+Write-Host "`n=== 7. Starting Backend, Frontend, and Observability Stack ===" -ForegroundColor Cyan
+docker compose up -d
 
 Write-Host "`n=== 8. Streaming Backend Logs (Ctrl+C to exit logs) ===" -ForegroundColor Green
 docker logs -f fsbm-backend

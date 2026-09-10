@@ -7,9 +7,6 @@ on:
     branches: [ "main", "dev" ]
 
 jobs:
-  # ========================================================================
-  # 1. FRONTEND TESTS
-  # ========================================================================
   pre-docker-frontend:
     runs-on: ubuntu-latest
     defaults:
@@ -18,86 +15,69 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
           cache-dependency-path: website/package-lock.json
-
       - name: Install Dependencies
         run: npm ci --legacy-peer-deps
-
       - name: Generate Prisma Client
         run: npx prisma generate
-
       - name: Lint (Non-Blocking)
         continue-on-error: true
         run: npm run lint
-
       - name: Run Web Tests
         run: npm test -- --run
 
-  # ========================================================================
-  # 2. BACKEND API TESTS
-  # ========================================================================
   pre-docker-backend:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
-
       - name: Install Backend Test Requirements
         run: |
           python -m pip install --upgrade pip
           pip install pytest pytest-asyncio fastapi httpx pydantic langchain-ollama lingua-language-detector
-
       - name: Run LLM Unit Tests
         env:
           PYTHONPATH: ./llm-engine
-        run: |
-          pytest tests/llm/ -v
+        run: pytest tests/llm/ -v
 
-  # ========================================================================
-  # 3. DATAOPS TESTS
-  # ========================================================================
   pre-docker-dataops:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
-
       - name: Install DataOps Test Requirements
         run: |
           python -m pip install --upgrade pip
           pip install pytest duckdb
-
       - name: Run DataOps Tests
-        run: |
-          pytest tests/dataops/ -v
+        run: pytest tests/dataops/ -v
 
-  # ========================================================================
-  # 4. DOCKER INTEGRATION
-  # ========================================================================
   docker-integration:
     needs: [pre-docker-frontend, pre-docker-backend, pre-docker-dataops]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Allocate Swap Space to Prevent OOM
+        uses: pierotofy/set-swap-space@master
+        with:
+          swap-size-gb: 10
 
       - name: Generate .env.local from Secrets
         run: |
@@ -111,10 +91,10 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build Docker Compose Stack
-        run: USERPROFILE=$HOME docker compose build
+        run: docker compose build
 
       - name: Start Database and Ollama Services
-        run: USERPROFILE=$HOME docker compose up -d db ollama
+        run: docker compose up -d db ollama
 
       - name: Wait for Ollama and Pull Qwen Model Synchronously
         run: |
@@ -127,7 +107,7 @@ jobs:
           echo "Model downloaded successfully."
 
       - name: Start Dagster Service
-        run: USERPROFILE=$HOME docker compose up -d dagster
+        run: docker compose up -d dagster
 
       - name: Run DataOps Pipeline (Generate DuckDB)
         run: |
@@ -138,10 +118,12 @@ jobs:
           echo "Triggering data pipeline to build DuckDB..."
           docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select "*"
 
-      - name: Start Backend and Frontend Services
-        run: USERPROFILE=$HOME docker compose up -d backend frontend
+      - name: Start Full Stack (Backend, Frontend, Observability)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: docker compose up -d
 
-      - name: Verify Backend Health
+      - name: Verify Backend Initialization
         run: |
           echo "=== DUMPING LIVE BACKEND LOGS ==="
           docker logs -f fsbm-backend &
@@ -151,30 +133,33 @@ jobs:
             sleep 10
             COUNTER=$((COUNTER + 1))
             if [ $COUNTER -gt 90 ]; then
-              echo "ERROR: Backend initialization timed out after 15 minutes."
-              echo "=== FULL CONTAINER LOGS FOR DEBUGGING ==="
+              echo "ERROR: Backend initialization timed out."
               docker logs fsbm-backend
               exit 1
             fi
           done
-          
-          echo "Backend is ready! Checking health endpoint..."
-          curl --fail http://localhost:8000/api/health || exit 1
+          echo "Backend is ready!"
 
-      - name: Verify Frontend Health
+      - name: Run Post-Docker E2E Tests
         run: |
-          curl --fail http://localhost:3000 || exit 1
+          echo "Checking Frontend..."
+          curl --fail http://localhost:3000
+          
+          echo "Checking Loki Readiness..."
+          curl --fail http://localhost:3100/ready
+          
+          echo "Checking Tempo Readiness..."
+          curl --fail http://localhost:3200/ready
+
+          echo "Checking Prometheus Custom Metric Exposure..."
+          curl --fail -s http://localhost:8000/metrics | grep "llm_tokens_generated_total"
+          
+          echo "Simulating E2E Chat Stream..."
+          curl -X POST http://localhost:8000/api/chat/stream \
+            -H "Content-Type: application/json" \
+            -d '{"question": "Quels sont les départements de la FSBM ?"}' \
+            --fail
 
       - name: Shut Down Stack
         if: always()
-        run: USERPROFILE=$HOME docker compose down
-
-  # ========================================================================
-  # 5. POST-DOCKER TESTS
-  # ========================================================================
-  post-docker-tests:
-    needs: docker-integration
-    runs-on: ubuntu-latest
-    steps:
-      - name: Summary Check
-        run: echo "All parallel pre-tests and docker integration checks passed successfully."
+        run: docker compose down

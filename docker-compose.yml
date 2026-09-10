@@ -39,12 +39,19 @@ services:
     container_name: fsbm-backend
     ports:
       - "8000:8000"
+    tty: true
+    stdin_open: true
     environment:
+      - HF_TOKEN=${HF_TOKEN}
+      - HF_HUB_DISABLE_PROGRESS_BARS=0
+      - ENABLE_METRICS=true
       - PYTHONUNBUFFERED=1
       - OLLAMA_BASE_URL=http://ollama:11434
       - HF_HOME=/root/.cache/huggingface
       - DUCKDB_PATH=/app/data/duckdb/fsbm.duckdb
       - VECTORSTORE_PATH=/app/vectorstore
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4317
+      - OTEL_SERVICE_NAME=fsbm-fastapi-backend
     depends_on:
       - db
       - ollama
@@ -69,9 +76,95 @@ services:
       - db
       - backend
 
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: fsbm-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./monitoring/prometheus_rules.yml:/etc/prometheus/prometheus_rules.yml:ro
+      - prometheus_data:/prometheus
+    restart: unless-stopped
+    depends_on:
+      - backend
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: fsbm-grafana
+    ports:
+      - "3005:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+      - ./monitoring/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.49.1
+    container_name: fsbm-cadvisor
+    privileged: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    restart: unless-stopped
+
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: fsbm-alertmanager
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+    restart: unless-stopped
+
+  loki:
+    image: grafana/loki:latest
+    container_name: fsbm-loki
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./monitoring/loki-config.yml:/etc/loki/local-config.yaml:ro
+    command: -config.file=/etc/loki/local-config.yaml
+    restart: unless-stopped
+
+  promtail:
+    image: grafana/promtail:latest
+    container_name: fsbm-promtail
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./monitoring/promtail-config.yml:/etc/promtail/promtail-config.yaml:ro
+    command: -config.file=/etc/promtail/promtail-config.yaml
+    restart: unless-stopped
+    depends_on:
+      - loki
+
+  tempo:
+    image: grafana/tempo:latest
+    container_name: fsbm-tempo
+    command: ["-config.file=/etc/tempo.yaml"]
+    volumes:
+      - ./monitoring/tempo-config.yml:/etc/tempo.yaml:ro
+    ports:
+      - "3200:3200"
+      - "4317:4317"
+    restart: unless-stopped
+
 volumes:
   mariadb_data:
   ollama_models:
   huggingface_cache:
   shared_pipeline_data:
   vectorstore_cache:
+  prometheus_data:
+  grafana_data:

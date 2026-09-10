@@ -1,6 +1,4 @@
 import logging
-logger = logging.getLogger("fsbm-backend.chat_engine")
-
 import os
 
 from langchain_chroma import Chroma
@@ -16,6 +14,23 @@ import json
 import re
 from pathlib import Path
 
+import time
+from prometheus_client import Histogram, Summary
+
+# Define custom AI metrics
+RAG_RETRIEVAL_LATENCY = Histogram(
+    "rag_retrieval_duration_seconds",
+    "Time taken to retrieve documents from vectorstore",
+    ["intent"]
+)
+
+RAG_DOCS_RETRIEVED = Summary(
+    "rag_retrieved_documents_count",
+    "Number of documents retrieved per query",
+    ["intent"]
+)
+
+logger = logging.getLogger("fsbm-backend.chat_engine")
 
 # ---------------------------------------------------------------------------
 # 0. Fact grounding - correct exact strings (emails) the LLM may have
@@ -249,6 +264,8 @@ def classify_intent(question: str, llm) -> str | None:
 
 def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, identifier_indexes: tuple = ()):
     def retrieve(inputs):
+        start_time = time.time()
+        
         question = inputs["input"] if isinstance(inputs, dict) else inputs
         forced_docs = find_forced_docs(question, *identifier_indexes)
         intent = classify_intent(question, llm)
@@ -266,6 +283,10 @@ def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, i
             if key not in seen:
                 seen.add(key)
                 merged.append(d)
+
+        intent_label = intent if intent else "unknown"
+        RAG_RETRIEVAL_LATENCY.labels(intent=intent_label).observe(time.time() - start_time)
+        RAG_DOCS_RETRIEVED.labels(intent=intent_label).observe(len(merged))
 
         logger.info(f"[RAG Retrieval] Intent: '{intent}' | Forced docs: {len(forced_docs)} | Total context docs: {len(merged)}")
         return merged
