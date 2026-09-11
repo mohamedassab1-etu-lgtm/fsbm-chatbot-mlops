@@ -44,7 +44,7 @@ jobs:
       - name: Install Backend Test Requirements
         run: |
           python -m pip install --upgrade pip
-          pip install pytest pytest-asyncio fastapi httpx pydantic langchain-ollama lingua-language-detector
+          pip install pytest pytest-asyncio fastapi httpx pydantic langchain-ollama lingua-language-detector prometheus-fastapi-instrumentator prometheus-client opentelemetry-api opentelemetry-sdk opentelemetry-exporter-otlp-proto-grpc opentelemetry-instrumentation-fastapi opentelemetry-instrumentation-logging
       - name: Run LLM Unit Tests
         env:
           PYTHONPATH: ./llm-engine
