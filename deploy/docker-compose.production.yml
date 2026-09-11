@@ -1,0 +1,164 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:lts
+    container_name: assistant_conversationnel_universitaire-mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: fsbm_assistant
+    ports:
+      - "4806:3306"
+    volumes:
+      - assistant_conversationnel_universitaire-mariadb_data:/var/lib/mysql
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: assistant_conversationnel_universitaire-ollama
+    ports:
+      - "4814:11434"
+    volumes:
+      - assistant_conversationnel_universitaire-ollama_models:/root/.ollama
+    restart: unless-stopped
+
+  dagster:
+    image: ${DOCKERHUB_USERNAME}/fsbm-dagster:latest
+    container_name: assistant_conversationnel_universitaire-dagster
+    ports:
+      - "4802:3000"
+    volumes:
+      - assistant_conversationnel_universitaire-shared_pipeline_data:/app/data
+    restart: unless-stopped
+
+  backend:
+    image: ${DOCKERHUB_USERNAME}/fsbm-backend:latest
+    container_name: assistant_conversationnel_universitaire-backend
+    ports:
+      - "4801:8000"
+    environment:
+      - HF_TOKEN=${HF_TOKEN}
+      - HF_HUB_DISABLE_PROGRESS_BARS=0
+      - ENABLE_METRICS=true
+      - PYTHONUNBUFFERED=1
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - HF_HOME=/root/.cache/huggingface
+      - DUCKDB_PATH=/app/data/duckdb/fsbm.duckdb
+      - VECTORSTORE_PATH=/app/vectorstore
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://tempo:4317
+      - OTEL_SERVICE_NAME=fsbm-fastapi-backend
+    depends_on:
+      - db
+      - ollama
+      - dagster
+    volumes:
+      - assistant_conversationnel_universitaire-huggingface_cache:/root/.cache/huggingface
+      - assistant_conversationnel_universitaire-shared_pipeline_data:/app/data
+      - assistant_conversationnel_universitaire-vectorstore_cache:/app/vectorstore
+    restart: unless-stopped
+
+  frontend:
+    image: ${DOCKERHUB_USERNAME}/fsbm-frontend:latest
+    container_name: assistant_conversationnel_universitaire-frontend
+    ports:
+      - "4800:3000"
+    environment:
+      - DATABASE_URL=mysql://root:root@db:3306/fsbm_assistant
+      - BACKEND_URL=http://backend:8000
+    depends_on:
+      - db
+      - backend
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: assistant_conversationnel_universitaire-prometheus
+    ports:
+      - "4890:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./monitoring/prometheus_rules.yml:/etc/prometheus/prometheus_rules.yml:ro
+      - assistant_conversationnel_universitaire-prometheus_data:/prometheus
+    restart: unless-stopped
+    depends_on:
+      - backend
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: assistant_conversationnel_universitaire-grafana
+    ports:
+      - "4805:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - assistant_conversationnel_universitaire-grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+      - ./monitoring/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    restart: unless-stopped
+    depends_on:
+      - prometheus
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.49.1
+    container_name: assistant_conversationnel_universitaire-cadvisor
+    privileged: true
+    ports:
+      - "4880:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    restart: unless-stopped
+
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: assistant_conversationnel_universitaire-alertmanager
+    ports:
+      - "4893:9093"
+    volumes:
+      - ./monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+    restart: unless-stopped
+
+  loki:
+    image: grafana/loki:latest
+    container_name: assistant_conversationnel_universitaire-loki
+    ports:
+      - "4810:3100"
+    volumes:
+      - ./monitoring/loki-config.yml:/etc/loki/local-config.yaml:ro
+    command: -config.file=/etc/loki/local-config.yaml
+    restart: unless-stopped
+
+  promtail:
+    image: grafana/promtail:latest
+    container_name: assistant_conversationnel_universitaire-promtail
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./monitoring/promtail-config.yml:/etc/promtail/promtail-config.yaml:ro
+    command: -config.file=/etc/promtail/promtail-config.yaml
+    restart: unless-stopped
+    depends_on:
+      - loki
+
+  tempo:
+    image: grafana/tempo:latest
+    container_name: assistant_conversationnel_universitaire-tempo
+    command: ["-config.file=/etc/tempo.yaml"]
+    volumes:
+      - ./monitoring/tempo-config.yml:/etc/tempo.yaml:ro
+    ports:
+      - "4820:3200"
+      - "4817:4317"
+    restart: unless-stopped
+
+volumes:
+  assistant_conversationnel_universitaire-mariadb_data:
+  assistant_conversationnel_universitaire-ollama_models:
+  assistant_conversationnel_universitaire-huggingface_cache:
+  assistant_conversationnel_universitaire-shared_pipeline_data:
+  assistant_conversationnel_universitaire-vectorstore_cache:
+  assistant_conversationnel_universitaire-prometheus_data:
+  assistant_conversationnel_universitaire-grafana_data:
