@@ -3,6 +3,15 @@ name = "assistant_conversationnel_universitaire"
 
 [stack.config]
 server = "vh3"
+project_name = "assistant_conversationnel_universitaire"
+auto_update = true
+auto_update_all_services = true
 repo = "mohamedassab1-etu-lgtm/fsbm-chatbot-mlops"
-branch = "main"
-file_paths = ["deploy/docker-compose.production.yml"]
+reclone = false
+file_paths = [
+  "deploy/docker-compose.production.yml"
+]
+environment = """
+DOCKERHUB_USERNAME=mohamedassab
+HF_TOKEN=${KOMODO_SECRET_HF_TOKEN}
+"""

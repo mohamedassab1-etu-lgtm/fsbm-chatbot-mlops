@@ -190,6 +190,10 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Komodo Deployment Webhook
+      - name: Trigger Komodo API Deployment
         run: |
-          curl -X POST "${{ secrets.KOMODO_WEBHOOK_URL }}" --fail
+          curl -X POST "https://komodo.s3.fsbm.ma/api/execute/DeployStack" \
+            -u "${{ secrets.KOMODO_API_KEY }}:${{ secrets.KOMODO_API_SECRET }}" \
+            -H "Content-Type: application/json" \
+            -d '{"stack": "assistant_conversationnel_universitaire"}' \
+            --fail
