@@ -140,25 +140,8 @@ jobs:
           done
           echo "Backend is ready!"
 
-      - name: Run Post-Docker E2E Tests
-        run: |
-          echo "Checking Frontend..."
-          curl --fail http://localhost:3000
-          
-          echo "Checking Loki Readiness..."
-          curl --fail http://localhost:3100/ready
-          
-          echo "Checking Tempo Readiness..."
-          curl --fail http://localhost:3200/ready
-
-          echo "Checking Prometheus Custom Metric Exposure..."
-          curl --fail -s http://localhost:8000/metrics | grep "llm_tokens_generated_total"
-          
-          echo "Simulating E2E Chat Stream..."
-          curl -X POST http://localhost:8000/api/chat/stream \
-            -H "Content-Type: application/json" \
-            -d '{"question": "Quels sont les départements de la FSBM ?"}' \
-            --fail
+      - name: Run Post-Docker E2E Integration Tests
+        run: bash tests/e2e_integration.sh
 
       - name: Shut Down Stack
         if: always()
