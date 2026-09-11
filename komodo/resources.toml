@@ -1,0 +1,8 @@
+[[stack]]
+name = "assistant_conversationnel_universitaire"
+
+[stack.config]
+server = "vh3"
+repo = "mohamedassab1-etu-lgtm/fsbm-chatbot-mlops"
+branch = "main"
+file_paths = ["deploy/docker-compose.production.yml"]

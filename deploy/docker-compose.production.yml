@@ -76,8 +76,8 @@ services:
     ports:
       - "4890:9090"
     volumes:
-      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
-      - ./monitoring/prometheus_rules.yml:/etc/prometheus/prometheus_rules.yml:ro
+      - ../monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ../monitoring/prometheus_rules.yml:/etc/prometheus/prometheus_rules.yml:ro
       - assistant_conversationnel_universitaire-prometheus_data:/prometheus
     restart: unless-stopped
     depends_on:
@@ -92,9 +92,9 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin
     volumes:
       - assistant_conversationnel_universitaire-grafana_data:/var/lib/grafana
-      - ./monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
-      - ./monitoring/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
-      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - ../monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
+      - ../monitoring/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ../monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
     restart: unless-stopped
     depends_on:
       - prometheus
@@ -119,7 +119,7 @@ services:
     ports:
       - "4893:9093"
     volumes:
-      - ./monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+      - ../monitoring/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
     restart: unless-stopped
 
   loki:
@@ -128,7 +128,7 @@ services:
     ports:
       - "4810:3100"
     volumes:
-      - ./monitoring/loki-config.yml:/etc/loki/local-config.yaml:ro
+      - ../monitoring/loki-config.yml:/etc/loki/local-config.yaml:ro
     command: -config.file=/etc/loki/local-config.yaml
     restart: unless-stopped
 
@@ -137,7 +137,7 @@ services:
     container_name: assistant_conversationnel_universitaire-promtail
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./monitoring/promtail-config.yml:/etc/promtail/promtail-config.yaml:ro
+      - ../monitoring/promtail-config.yml:/etc/promtail/promtail-config.yaml:ro
     command: -config.file=/etc/promtail/promtail-config.yaml
     restart: unless-stopped
     depends_on:
@@ -148,7 +148,7 @@ services:
     container_name: assistant_conversationnel_universitaire-tempo
     command: ["-config.file=/etc/tempo.yaml"]
     volumes:
-      - ./monitoring/tempo-config.yml:/etc/tempo.yaml:ro
+      - ../monitoring/tempo-config.yml:/etc/tempo.yaml:ro
     ports:
       - "4820:3200"
       - "4817:4317"

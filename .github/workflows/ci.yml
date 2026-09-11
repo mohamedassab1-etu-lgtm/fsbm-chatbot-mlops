@@ -184,3 +184,12 @@ jobs:
           context: ./dataops
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/fsbm-dagster:latest
+  
+  komodo-deploy:
+    needs: docker-push
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Komodo Deployment Webhook
+        run: |
+          curl -X POST "${{ secrets.KOMODO_WEBHOOK_URL }}" --fail
