@@ -1,3 +1,5 @@
+import os
+
 from langchain_ollama import ChatOllama
 from langchain_core.prompts import ChatPromptTemplate
 import asyncio
@@ -9,8 +11,11 @@ detector = LanguageDetectorBuilder.from_languages(
     Language.FRENCH
 ).build()
 
+ollama_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+
 title_llm = ChatOllama(
     model="qwen2.5:3b",
+    base_url=ollama_url,
     temperature=0,
     cache=False,
     num_predict=50
@@ -18,6 +23,7 @@ title_llm = ChatOllama(
 
 retry_title_llm = ChatOllama(
     model="qwen2.5:3b",
+    base_url=ollama_url,
     temperature=0.4,
     cache=False,
     num_predict=50

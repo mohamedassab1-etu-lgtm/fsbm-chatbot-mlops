@@ -1,0 +1,26 @@
+global:
+  resolve_timeout: 1m
+
+route:
+  group_by: ['alertname', 'severity']
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 1h
+  receiver: 'discord-notifications'
+
+receivers:
+  - name: 'discord-notifications'
+    discord_configs:
+      - webhook_url: 'https://discord.com/api/webhooks/1547299089090347008/ZtQzcRzw9JznpjfyvlEbpv0yxyRmN1DqRG8iBMSaVEUlP2CwQWlYlOKerJ0hvgqWryEM'
+        send_resolved: true
+        title: '[{{ .Status | toUpper }}] {{ .CommonAnnotations.summary }}'
+        message: |-
+          {{ if eq .Status "firing" -}}
+          **Alert:** {{ .CommonAnnotations.summary }}
+          **Severity:** `{{ .CommonLabels.severity }}`
+          **Details:** {{ .CommonAnnotations.error_message }}
+          {{- else -}}
+          **Status:** System Recovered
+          **Service:** `{{ .CommonLabels.job }}`
+          **Details:** {{ .CommonAnnotations.resolved_message }}
+          {{- end }}

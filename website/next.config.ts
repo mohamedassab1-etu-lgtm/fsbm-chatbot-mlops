@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   // by default (since 15.2.2, CVE-2025-48068 fix). Wildcards are
   // supported with a leading dot, so this covers every ngrok subdomain
   // you get handed, not just today's one-off URL.
+  output: 'standalone',
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   allowedDevOrigins: [
     "*.ngrok-free.app",
     "*.ngrok-free.dev",

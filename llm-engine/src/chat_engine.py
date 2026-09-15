@@ -1,3 +1,6 @@
+import logging
+import os
+
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_ollama import ChatOllama
@@ -11,6 +14,23 @@ import json
 import re
 from pathlib import Path
 
+import time
+from prometheus_client import Histogram, Summary
+
+# Define custom AI metrics
+RAG_RETRIEVAL_LATENCY = Histogram(
+    "rag_retrieval_duration_seconds",
+    "Time taken to retrieve documents from vectorstore",
+    ["intent"]
+)
+
+RAG_DOCS_RETRIEVED = Summary(
+    "rag_retrieved_documents_count",
+    "Number of documents retrieved per query",
+    ["intent"]
+)
+
+logger = logging.getLogger("fsbm-backend.chat_engine")
 
 # ---------------------------------------------------------------------------
 # 0. Fact grounding - correct exact strings (emails) the LLM may have
@@ -244,20 +264,18 @@ def classify_intent(question: str, llm) -> str | None:
 
 def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, identifier_indexes: tuple = ()):
     def retrieve(inputs):
+        start_time = time.time()
+        
         question = inputs["input"] if isinstance(inputs, dict) else inputs
         forced_docs = find_forced_docs(question, *identifier_indexes)
         intent = classify_intent(question, llm)
 
         docs = []
         if intent:
-            # On prend les meilleurs documents de la catégorie détectée
             docs = vectorstore.similarity_search(question, k=k, filter={"type": intent})
 
-        # NOUVEAUTÉ : On ajoute TOUJOURS des documents généraux (sans filtre) 
-        # pour croiser les données (par exemple si la question parle d'une formation ET d'un labo)
         general_docs = vectorstore.similarity_search(question, k=fallback_k)
 
-        # On fusionne tout en supprimant les doublons
         seen = set()
         merged = []
         for d in forced_docs + docs + general_docs:
@@ -265,6 +283,12 @@ def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, i
             if key not in seen:
                 seen.add(key)
                 merged.append(d)
+
+        intent_label = intent if intent else "unknown"
+        RAG_RETRIEVAL_LATENCY.labels(intent=intent_label).observe(time.time() - start_time)
+        RAG_DOCS_RETRIEVED.labels(intent=intent_label).observe(len(merged))
+
+        logger.info(f"[RAG Retrieval] Intent: '{intent}' | Forced docs: {len(forced_docs)} | Total context docs: {len(merged)}")
         return merged
 
     return RunnableLambda(retrieve)
@@ -273,17 +297,26 @@ def make_filtered_retriever(vectorstore, llm, k: int = 6, fallback_k: int = 5, i
 # 3. Chat engine assembly
 # ---------------------------------------------------------------------------
 def get_chat_engine():
+    logger.info("Step 1/3: Loading Hugging Face embedding model...")
     embeddings = HuggingFaceEmbeddings(
-        model_name="intfloat/multilingual-e5-large"
+        model_name="intfloat/multilingual-e5-large",
+        encode_kwargs={"normalize_embeddings": True},
     )
+    logger.info("Hugging Face embedding model loaded successfully.")
 
+    logger.info("Step 2/3: Connecting to vector store / DuckDB...")
+    persist_path = os.getenv("VECTORSTORE_PATH", "/app/vectorstore")
     vectorstore = Chroma(
-        persist_directory="./vectordb",
+        persist_directory=persist_path,
         embedding_function=embeddings,
     )
+    logger.info("Vector store loaded successfully.")
 
-    # llm = ChatOllama(model="llama3.2:1b", temperature=0.3)
-    llm = ChatOllama(model="qwen2.5:3b", temperature=0.0)
+    logger.info("Step 3/3: Initializing Ollama client...")
+    ollama_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+
+    llm = ChatOllama(model="qwen2.5:3b", base_url=ollama_url, temperature=0.0)
+    logger.info("Ollama client initialized.")
 
     # Built once at startup (small dataset, cheap) - see build_identifier_index
     # for why acronyms/section codes need this exact-match override.
