@@ -32,8 +32,19 @@ def create_vector_store(batch_size: int = 32):
         return None
 
     # 2. Wait for DataOps to finish
-    print("[INFO] Waiting for DataOps to generate DuckDB...")
-    while not os.path.exists(duckdb_path):
+    print("[INFO] Waiting for DataOps to generate DuckDB and run dbt...")
+    import duckdb
+    while True:
+        if os.path.exists(duckdb_path):
+            try:
+                # Test if dbt has actually created the final views
+                con = duckdb.connect(duckdb_path, read_only=True)
+                con.execute("SELECT 1 FROM clean_data.stg_laboratoires LIMIT 1")
+                con.close()
+                break # Success! The schema and tables exist.
+            except Exception:
+                # File exists, but dbt is still running. Keep waiting.
+                pass
         time.sleep(5)
 
     print("Chargement des données depuis DuckDB...")
@@ -48,7 +59,9 @@ def create_vector_store(batch_size: int = 32):
         print(f"   - {source}: {n} documents")
 
     device = get_device()
-    print(f"Device utilisé pour l'embedding : {device}")
+    print(f"Device utilisé pour l'embedding : {device}", flush=True)
+
+    print("[INFO] Téléchargement / chargement du modèle intfloat/multilingual-e5-large (~2.2 GB en cours)...", flush=True)
 
     embeddings = HuggingFaceEmbeddings(
         model_name="intfloat/multilingual-e5-large",
@@ -59,15 +72,20 @@ def create_vector_store(batch_size: int = 32):
         },
     )
 
-    print("Création de la base vectorielle (par lots, avec progression)...")
+    print("[INFO] Modèle d'embedding chargé avec succès !", flush=True)
+    print("Création de la base vectorielle (par lots, avec progression)...", flush=True)
     vectorstore = None
     start = time.time()
 
-    for i in tqdm(range(0, len(docs), batch_size), desc="Embedding + indexation", unit="batch"):
+    total_batches = (len(docs) + batch_size - 1) // batch_size
+
+    for i in range(0, len(docs), batch_size):
+        batch_num = (i // batch_size) + 1
+        print(f"-> Embedding & Indexation : Lot {batch_num}/{total_batches} en cours...", flush=True)
+        
         batch = docs[i:i + batch_size]
 
         if vectorstore is None:
-            # First batch creates the collection
             vectorstore = Chroma.from_documents(
                 documents=batch,
                 embedding=embeddings,
