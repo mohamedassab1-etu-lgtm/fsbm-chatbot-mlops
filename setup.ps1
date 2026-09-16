@@ -1,10 +1,10 @@
 Write-Host "`n=== 1. Wiping old environment ===" -ForegroundColor Cyan
-# docker compose down -v
-docker compose down
+docker compose down -v
+# docker compose down
 
 Write-Host "`n=== 2. Building fresh images ===" -ForegroundColor Cyan
-# docker compose build --no-cache
-docker compose build
+docker compose build --no-cache
+# docker compose build
 
 Write-Host "`n=== 3. Starting Database and Ollama ===" -ForegroundColor Cyan
 docker compose up -d db ollama

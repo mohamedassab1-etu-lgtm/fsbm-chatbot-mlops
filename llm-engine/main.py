@@ -104,8 +104,10 @@ def generate_chat_stream(question: str):
     full_answer = ""
     context_docs = None
     try:
-        with tracer.start_as_current_span("rag_and_llm_generation") as span:
-            span.set_attribute("chat.question", question)
+        # 1. RAG and LLM Generation Span (Manual control)
+        span = tracer.start_span("rag_and_llm_generation")
+        span.set_attribute("chat.question", question)
+        try:
             logger.info(f"Starting RAG generation for question: {question}")
             for chunk in chat_engine.stream({"input": question}):
                 if "context" in chunk:
@@ -116,10 +118,16 @@ def generate_chat_stream(question: str):
                     full_answer += piece
                     LLM_TOKENS.labels(model="qwen2.5:3b").inc(1)
                     yield sse_event({"type": "delta", "text": piece})
+        finally:
+            span.end()
 
-        with tracer.start_as_current_span("ground_emails_postprocess"):
+        # 2. Post-processing Span (Manual control)
+        grounding_span = tracer.start_span("ground_emails_postprocess")
+        try:
             grounded_answer = ground_emails_in_answer(full_answer, context_docs, question)
             yield sse_event({"type": "done", "text": grounded_answer})
+        finally:
+            grounding_span.end()
 
     except Exception as e:
         yield sse_event({"type": "error", "text": str(e)})
@@ -177,8 +185,10 @@ def _stream_answer(question: str):
     context_docs = None
 
     try:
-        with tracer.start_as_current_span("rag_and_llm_generation") as span:
-            span.set_attribute("chat.question", question)
+        # 1. RAG and LLM Generation Span (Manual control)
+        span = tracer.start_span("rag_and_llm_generation")
+        span.set_attribute("chat.question", question)
+        try:
             logger.info(f"Starting RAG generation for question: {question}")
             for chunk in chat_engine.stream({"input": question}):
                 if "context" in chunk and context_docs is None:
@@ -187,12 +197,21 @@ def _stream_answer(question: str):
                     accumulated_answer += chunk["answer"]
                     LLM_TOKENS.labels(model="qwen2.5:3b").inc(1)  # <-- Add this line
                     yield _sse_event("delta", chunk["answer"])
+        finally:
+            # Safely close the first span
+            span.end()
 
-        with tracer.start_as_current_span("ground_emails_postprocess"):
+        # 2. Post-processing Span (Manual control)
+        grounding_span = tracer.start_span("ground_emails_postprocess")
+        try:
             final_answer = ground_emails_in_answer(accumulated_answer, context_docs, question)
             yield _sse_event("done", final_answer)
+        finally:
+            # Safely close the second span
+            grounding_span.end()
 
     except Exception as e:
+        # Your original error handling remains intact
         yield _sse_event("error", str(e))
 
 

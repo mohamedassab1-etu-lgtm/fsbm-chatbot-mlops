@@ -42,7 +42,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efxqvopi2w934f"
+                        "name": "prometheus"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -125,7 +125,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efxqvopi2w934f"
+                        "name": "prometheus"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -239,7 +239,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efxqvopi2w934f"
+                        "name": "prometheus"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -334,7 +334,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "efxqvopi2w934f"
+                        "name": "prometheus"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -448,7 +448,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "P8E80F9AEF21F6940"
+                        "name": "loki"
                       },
                       "group": "loki",
                       "kind": "DataQuery",
@@ -512,7 +512,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "P8E80F9AEF21F6940"
+                        "name": "loki"
                       },
                       "group": "loki",
                       "kind": "DataQuery",
@@ -576,7 +576,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "P214B5B846CF3925F"
+                        "name": "tempo"
                       },
                       "group": "tempo",
                       "kind": "DataQuery",

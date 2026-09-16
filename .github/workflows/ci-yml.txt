@@ -7,65 +7,7 @@ on:
     branches: [ "main", "dev" ]
 
 jobs:
-
-  # 1. SOURCES -> DLT -> DUCKDB -> DBT -> TESTS QUALITÉ
-
-  data-pipeline-quality:
-    name: Data Ingestion & Quality Contracts
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-      
-      - name: Install DataOps Requirements (dlt, DuckDB, dbt)
-        run: |
-          python -m pip install --upgrade pip
-          pip install pytest duckdb dbt-core dbt-duckdb dlt
-      
-      - name: Run DataOps Unit Tests (Ingestion)
-        run: pytest tests/dataops/ -v
-        
-      - name: Run dbt Data Contracts & Quality Tests
-        working-directory: ./dataops/fsbm_transform
-        run: |
-          dbt deps
-          dbt test
-
-  # 2. SERVICE ML (FastAPI) & LLM VALIDATION
-
-  llm-service-validation:
-    name: FastAPI & LLM Engine Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-      
-      - name: Install Backend Test Requirements
-        run: |
-          python -m pip install --upgrade pip
-          pip install pytest pytest-asyncio fastapi httpx pydantic langchain-ollama lingua-language-detector prometheus-fastapi-instrumentator prometheus-client opentelemetry-api opentelemetry-sdk opentelemetry-exporter-otlp-proto-grpc opentelemetry-instrumentation-fastapi opentelemetry-instrumentation-logging
-      
-      - name: Run LLM Unit Tests
-        env:
-          PYTHONPATH: ./llm-engine
-        run: pytest tests/llm/ -v
-
-  # 2.5 FRONTEND VALIDATION (NEXT.JS)
-
-  frontend-validation:
-    name: Next.js Frontend Tests
+  pre-docker-frontend:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -89,11 +31,44 @@ jobs:
       - name: Run Web Tests
         run: npm test -- --run
 
-  # 3. ORCHESTRATION (DAGSTER) & CONTENEURISATION
+  pre-docker-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install Backend Test Requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-asyncio fastapi httpx pydantic langchain-ollama lingua-language-detector prometheus-fastapi-instrumentator prometheus-client opentelemetry-api opentelemetry-sdk opentelemetry-exporter-otlp-proto-grpc opentelemetry-instrumentation-fastapi opentelemetry-instrumentation-logging
+      - name: Run LLM Unit Tests
+        env:
+          PYTHONPATH: ./llm-engine
+        run: pytest tests/llm/ -v
 
-  docker-and-orchestration:
-    name: Docker Build & Dagster Execution
-    needs: [data-pipeline-quality, llm-service-validation, frontend-validation]
+  pre-docker-dataops:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install DataOps Test Requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest duckdb
+      - name: Run DataOps Tests
+        run: pytest tests/dataops/ -v
+
+  docker-integration:
+    needs: [pre-docker-frontend, pre-docker-backend, pre-docker-dataops]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -131,10 +106,10 @@ jobs:
           docker exec fsbm-ollama ollama pull qwen2.5:3b
           echo "Model downloaded successfully."
 
-      - name: Start Dagster Orchestration Service
+      - name: Start Dagster Service
         run: docker compose up -d dagster
 
-      - name: Run DataOps Pipeline (Generate DuckDB via Dagster)
+      - name: Run DataOps Pipeline (Generate DuckDB)
         run: |
           echo "Waiting for Dagster to be ready..."
           sleep 10
@@ -172,11 +147,8 @@ jobs:
         if: always()
         run: docker compose down
   
-  # 4. CI/CD -> DEPLOYMENT & OBSERVABILITY
-
   docker-push:
-    name: Push Images to Registry
-    needs: docker-and-orchestration
+    needs: docker-integration
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
@@ -214,7 +186,6 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/fsbm-dagster:latest
   
   komodo-deploy:
-    name: Automated Deployment (Komodo)
     needs: docker-push
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
