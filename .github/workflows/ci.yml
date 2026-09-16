@@ -8,10 +8,10 @@ on:
 
 jobs:
 
-  # 1. SOURCES -> DLT -> DUCKDB -> DBT -> TESTS QUALITÉ
+  # 1. SOURCES -> DLT (Ingestion & Unit Tests)
 
-  data-pipeline-quality:
-    name: Data Ingestion & Quality Contracts
+  data-pipeline-ingestion:
+    name: Data Ingestion & Unit Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -23,13 +23,44 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
       
-      - name: Install DataOps Requirements (dlt, DuckDB, dbt)
+      - name: Install Ingestion Requirements
         run: |
           python -m pip install --upgrade pip
-          pip install pytest duckdb dbt-core dbt-duckdb dlt
+          pip install pytest duckdb dlt
       
-      - name: Run DataOps Unit Tests (Ingestion)
+      - name: Run DataOps Unit Tests
         run: pytest tests/dataops/ -v
+
+  # 2. DUCKDB -> DBT -> TESTS QUALITÉ
+
+  data-quality-contracts:
+    name: dbt Data Contracts & Quality
+    needs: [data-pipeline-ingestion]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: Install dbt Requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install dbt-core dbt-duckdb
+          
+      - name: Create Mock Docker Path for DuckDB
+        run: |
+          sudo mkdir -p /app/data/duckdb
+          sudo chown -R $USER:$USER /app
+          
+      # NOTE: If your dbt tests require actual data to pass (not just empty tables), 
+      # run your local python ingestion script here to populate the DuckDB file first:
+      # - name: Hydrate DuckDB Database
+      #   run: python dataops/ingest.py
         
       - name: Run dbt Data Contracts & Quality Tests
         working-directory: ./dataops/fsbm_transform
@@ -37,7 +68,7 @@ jobs:
           dbt deps
           dbt test
 
-  # 2. SERVICE ML (FastAPI) & LLM VALIDATION
+  # 3. SERVICE ML (FastAPI) & LLM VALIDATION
 
   llm-service-validation:
     name: FastAPI & LLM Engine Tests
@@ -62,7 +93,7 @@ jobs:
           PYTHONPATH: ./llm-engine
         run: pytest tests/llm/ -v
 
-  # 2.5 FRONTEND VALIDATION (NEXT.JS)
+  # 4 FRONTEND VALIDATION (NEXT.JS)
 
   frontend-validation:
     name: Next.js Frontend Tests
@@ -89,11 +120,11 @@ jobs:
       - name: Run Web Tests
         run: npm test -- --run
 
-  # 3. ORCHESTRATION (DAGSTER) & CONTENEURISATION
+  # 5. ORCHESTRATION (DAGSTER) & CONTENEURISATION
 
   docker-and-orchestration:
     name: Docker Build & Dagster Execution
-    needs: [data-pipeline-quality, llm-service-validation, frontend-validation]
+    needs: [data-quality-contracts, llm-service-validation, frontend-validation]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -172,7 +203,7 @@ jobs:
         if: always()
         run: docker compose down
   
-  # 4. CI/CD -> DEPLOYMENT & OBSERVABILITY
+  # 6. CI/CD -> DEPLOYMENT & OBSERVABILITY
 
   docker-push:
     name: Push Images to Registry
