@@ -151,7 +151,7 @@ jobs:
       - name: Run Web Tests
         run: npm test -- --run
 
-# ==========================================
+  # ==========================================
   # 5. ORCHESTRATION (DAGSTER)
   # ==========================================
   dagster-orchestration:
@@ -189,7 +189,8 @@ jobs:
       - name: Materialize Pipeline via Dagster
         working-directory: ./dataops
         env:
-          DAGSTER_HOME: ~/.dagster
+          # FIX: Use absolute GitHub workspace path instead of ~
+          DAGSTER_HOME: ${{ github.workspace }}/dagster_home
         run: |
           mkdir -p $DAGSTER_HOME
           dagster asset materialize -f orchestration.py --select "*"
