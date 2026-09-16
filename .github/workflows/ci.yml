@@ -39,9 +39,10 @@ jobs:
 
       - name: Hydrate DuckDB Database (Ingestion)
         working-directory: ./dataops
-        run: python ingest_dlt.py 
+        run: |
+          mkdir -p data/duckdb
+          python ingest_dlt.py 
 
-      # FIX 2: Upload from the local relative path
       - name: Upload DuckDB Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -90,6 +91,13 @@ jobs:
           dbt deps
           dbt run
           dbt test
+
+      - name: Upload Finalized DuckDB Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: duckdb-final-database
+          path: /app/data/duckdb/fsbm.duckdb
+          retention-days: 1
 
   # 3. SERVICE ML (FastAPI) & LLM VALIDATION
 
@@ -143,15 +151,74 @@ jobs:
       - name: Run Web Tests
         run: npm test -- --run
 
-  # 5. ORCHESTRATION (DAGSTER) & CONTENEURISATION
-
-  docker-and-orchestration:
-    name: Docker Build & Dagster Execution
+# ==========================================
+  # 5. ORCHESTRATION (DAGSTER)
+  # ==========================================
+  dagster-orchestration:
+    name: Dagster Orchestration Execution
     needs: [data-quality-contracts, llm-service-validation, frontend-validation]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dagster & DataOps Requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install dlt dbt-core dbt-duckdb dagster dagster-dbt duckdb requests
+          
+      - name: Create Mock Docker Path for DuckDB
+        run: |
+          sudo mkdir -p /app/data/duckdb
+          sudo chown -R $USER:$USER /app
+          
+      # Dagster needs the dbt manifest to compile the asset graph
+      - name: Compile dbt Manifest
+        working-directory: ./dataops/fsbm_transform
+        run: |
+          dbt deps
+          dbt parse
+          
+      # Run the entire ingestion and transformation via the Orchestrator
+      - name: Materialize Pipeline via Dagster
+        working-directory: ./dataops
+        env:
+          DAGSTER_HOME: ~/.dagster
+        run: |
+          mkdir -p $DAGSTER_HOME
+          dagster asset materialize -f orchestration.py --select "*"
+          
+      # Upload the database produced by Dagster for Docker to use
+      - name: Upload Orchestrated DuckDB Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: orchestrated-duckdb-database
+          path: /app/data/duckdb/fsbm.duckdb
+          retention-days: 1
+
+  # ==========================================
+  # 6. CONTENEURISATION (DOCKER INTEGRATION)
+  # ==========================================
+  docker-integration:
+    name: Docker Full Stack Integration
+    needs: [dagster-orchestration]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Download the database that Dagster just built
+      - name: Download Orchestrated DuckDB Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: orchestrated-duckdb-database
+          path: ./dataops/data/duckdb/
 
       - name: Allocate Swap Space to Prevent OOM
         uses: pierotofy/set-swap-space@master
@@ -185,19 +252,9 @@ jobs:
           docker exec fsbm-ollama ollama pull qwen2.5:3b
           echo "Model downloaded successfully."
 
-      - name: Start Dagster Orchestration Service
-        run: docker compose up -d dagster
-
-      - name: Run DataOps Pipeline (Generate DuckDB via Dagster)
-        run: |
-          echo "Waiting for Dagster to be ready..."
-          sleep 10
-          echo "Creating empty directories for the database..."
-          docker exec fsbm-dagster mkdir -p /app/data/duckdb
-          echo "Triggering data pipeline to build DuckDB..."
-          docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select "*"
-
-      - name: Start Full Stack (Backend, Frontend, Observability)
+      # Boot everything up. We no longer need to run `docker exec dagster` 
+      # because the artifact is already mounted!
+      - name: Start Full Stack (Backend, Frontend, Dagster, Observability)
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: docker compose up -d
@@ -226,11 +283,11 @@ jobs:
         if: always()
         run: docker compose down
   
-  # 6. CI/CD -> DEPLOYMENT & OBSERVABILITY
+  # 7. CI/CD -> DEPLOYMENT & OBSERVABILITY
 
   docker-push:
-    name: Push Images to Registry
-    needs: docker-and-orchestration
+    name: Push Images to DockerHub
+    needs: docker-integration
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
@@ -267,6 +324,8 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/fsbm-dagster:latest
   
+  # 8. DEPLOYMENT (KOMODO)
+
   komodo-deploy:
     name: Automated Deployment (Komodo)
     needs: docker-push
