@@ -83,15 +83,6 @@ services:
     restart: unless-stopped
     depends_on:
       - backend
-    
-  # 1. Add this temporary wiper service right above Grafana
-  wiper:
-    image: alpine:latest
-    container_name: assistant_conversationnel_universitaire-wiper
-    volumes:
-      - assistant_conversationnel_universitaire-grafana_data:/wipe_target
-    command: /bin/sh -c "rm -rf /wipe_target/* && echo 'Volume wiped!'"
-    restart: "no"
 
   grafana:
     image: grafana/grafana:latest
@@ -107,11 +98,7 @@ services:
       - ../monitoring/grafana/dashboards:/etc/grafana/dashboards:ro
     restart: unless-stopped
     depends_on:
-      # 2. Tell Grafana to wait for the wipe to finish before booting
-      wiper:
-        condition: service_completed_successfully
-      prometheus:
-        condition: service_started
+      - prometheus
 
   cadvisor:
     image: ghcr.io/google/cadvisor:latest
