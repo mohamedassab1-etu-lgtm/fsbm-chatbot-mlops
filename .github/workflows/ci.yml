@@ -156,7 +156,7 @@ jobs:
   # ==========================================
   dagster-orchestration:
     name: Dagster Orchestration Execution
-    needs: [data-quality-contracts, llm-service-validation, frontend-validation]
+    needs: [data-quality-contracts]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -213,7 +213,7 @@ jobs:
   # ==========================================
   docker-integration:
     name: Docker Full Stack Integration
-    needs: [dagster-orchestration]
+    needs: [dagster-orchestration, llm-service-validation, frontend-validation]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
