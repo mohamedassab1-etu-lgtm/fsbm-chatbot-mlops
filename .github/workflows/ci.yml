@@ -173,10 +173,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install dlt dbt-core dbt-duckdb dagster dagster-dbt duckdb requests
           
-      - name: Create Mock Docker Path for DuckDB
+      - name: Create Paths & Simulate Docker Mount
+        working-directory: ./dataops
         run: |
-          sudo mkdir -p /app/data/duckdb
+          # 1. Create the local directory for dlt
+          mkdir -p data/duckdb
+          
+          # 2. Simulate a Docker volume mount so dbt can find what dlt just wrote
+          sudo mkdir -p /app/data
           sudo chown -R $USER:$USER /app
+          ln -s ${{ github.workspace }}/dataops/data/duckdb /app/data/duckdb
           
       # Dagster needs the dbt manifest to compile the asset graph
       - name: Compile dbt Manifest
@@ -189,7 +195,6 @@ jobs:
       - name: Materialize Pipeline via Dagster
         working-directory: ./dataops
         env:
-          # FIX: Use absolute GitHub workspace path instead of ~
           DAGSTER_HOME: ${{ github.workspace }}/dagster_home
         run: |
           mkdir -p $DAGSTER_HOME
@@ -200,7 +205,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: orchestrated-duckdb-database
-          path: /app/data/duckdb/fsbm.duckdb
+          path: ./dataops/data/duckdb/fsbm.duckdb
           retention-days: 1
 
   # ==========================================
