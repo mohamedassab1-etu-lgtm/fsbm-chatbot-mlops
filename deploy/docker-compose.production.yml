@@ -27,6 +27,7 @@ services:
     container_name: assistant_conversationnel_universitaire-dagster
     ports:
       - "4802:3000"
+    command: ["dagster-webserver", "-h", "0.0.0.0", "-p", "3000"]
     volumes:
       - assistant_conversationnel_universitaire-shared_pipeline_data:/app/data
     restart: unless-stopped
@@ -82,7 +83,7 @@ services:
     restart: unless-stopped
     depends_on:
       - backend
-
+    
   grafana:
     image: grafana/grafana:latest
     container_name: assistant_conversationnel_universitaire-grafana
@@ -94,13 +95,13 @@ services:
       - assistant_conversationnel_universitaire-grafana_data:/var/lib/grafana
       - ../monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources:ro
       - ../monitoring/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards:ro
-      - ../monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - ../monitoring/grafana/dashboards:/etc/grafana/dashboards:ro
     restart: unless-stopped
     depends_on:
       - prometheus
 
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor:v0.49.1
+    image: ghcr.io/google/cadvisor:latest
     container_name: assistant_conversationnel_universitaire-cadvisor
     privileged: true
     ports:
@@ -108,6 +109,7 @@ services:
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
       - /dev/disk/:/dev/disk:ro
