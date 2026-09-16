@@ -8,8 +8,9 @@ on:
 
 jobs:
 
+  # ==========================================
   # 1. SOURCES -> DLT (Ingestion & Unit Tests)
-
+  # ==========================================
   data-pipeline-ingestion:
     name: Data Ingestion & Unit Tests
     runs-on: ubuntu-latest
@@ -28,29 +29,29 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest duckdb dlt
           
-      - name: Create Mock Docker Path for DuckDB
-        run: |
-          sudo mkdir -p /app/data/duckdb
-          sudo chown -R $USER:$USER /app
+      # FIX 1: Create the local relative directory that ingest_dlt.py expects
+      - name: Create Local DuckDB Directory
+        working-directory: ./dataops
+        run: mkdir -p data/duckdb
       
       - name: Run DataOps Unit Tests
         run: pytest tests/dataops/ -v
 
-      # FIX: Use the pure ingestion script, not the Dagster orchestrator
       - name: Hydrate DuckDB Database (Ingestion)
         working-directory: ./dataops
         run: python ingest_dlt.py 
 
-      # Pass the database file to the next job
+      # FIX 2: Upload from the local relative path
       - name: Upload DuckDB Artifact
         uses: actions/upload-artifact@v4
         with:
           name: duckdb-database
-          path: /app/data/duckdb/fsbm.duckdb
+          path: ./dataops/data/duckdb/fsbm.duckdb
           retention-days: 1
 
+  # ==========================================
   # 2. DUCKDB -> DBT -> TESTS QUALITÉ
-
+  # ==========================================
   data-quality-contracts:
     name: dbt Data Contracts & Quality
     needs: [data-pipeline-ingestion]
@@ -70,19 +71,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-core dbt-duckdb
           
+      # Keep this: dbt profiles.yml expects the absolute Docker path
       - name: Recreate Mock Docker Path
         run: |
           sudo mkdir -p /app/data/duckdb
           sudo chown -R $USER:$USER /app
           
-      # Retrieve the database built by the ingestion job
+      # Download the database from Job 1 into the absolute Docker path for Job 2
       - name: Download DuckDB Artifact
         uses: actions/download-artifact@v4
         with:
           name: duckdb-database
           path: /app/data/duckdb/
         
-      # Transform the raw data and test the contracts
       - name: Run dbt Data Contracts & Quality Tests
         working-directory: ./dataops/fsbm_transform
         run: |
