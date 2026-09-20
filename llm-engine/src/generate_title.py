@@ -5,11 +5,7 @@ from langchain_core.prompts import ChatPromptTemplate
 import asyncio
 from lingua import Language, LanguageDetectorBuilder
 
-detector = LanguageDetectorBuilder.from_languages(
-    Language.ARABIC,
-    Language.ENGLISH,
-    Language.FRENCH
-).build()
+detector = LanguageDetectorBuilder.from_all_languages().build()
 
 ollama_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 
@@ -110,8 +106,10 @@ async def detect_language(prompt: str) -> dict:
         else:
             language = "French"
 
+        detected_name = detected.name.lower() if detected else "unknown"
+
         return {
-            "detected_language": detected.name.lower(),
+            "detected_language": detected_name,
             "language": language
         }
 
