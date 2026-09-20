@@ -122,6 +122,7 @@ jobs:
       - name: Run LLM Unit Tests
         env:
           PYTHONPATH: ./llm-engine
+          ENABLE_METRICS: "true"
         run: pytest tests/llm/ -v
 
   # 4 FRONTEND VALIDATION (NEXT.JS)
