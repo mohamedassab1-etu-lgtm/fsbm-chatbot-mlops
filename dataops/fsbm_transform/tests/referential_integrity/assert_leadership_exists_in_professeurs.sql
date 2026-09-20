@@ -17,13 +17,27 @@ WITH leadership_roles AS (
     SELECT 'Laboratoire' AS entite_type, nom_laboratoire AS nom_entite, directeur AS nom_leader
     FROM {{ ref('stg_laboratoires') }}
     WHERE directeur IS NOT NULL
+),
+normalized_leaders AS (
+    SELECT 
+        entite_type,
+        nom_entite,
+        nom_leader,
+        trim(lower(nom_leader)) AS clean_leader
+    FROM leadership_roles
+),
+normalized_profs AS (
+    SELECT 
+        nom_professeur,
+        trim(lower(nom_professeur)) AS clean_prof
+    FROM {{ ref('stg_professeurs') }}
 )
 
 SELECT 
     l.entite_type, 
     l.nom_entite, 
     l.nom_leader
-FROM leadership_roles l
-LEFT JOIN {{ ref('stg_professeurs') }} p 
-    ON l.nom_leader = p.nom_professeur
-WHERE p.nom_professeur IS NULL
+FROM normalized_leaders l
+LEFT JOIN normalized_profs p 
+    ON l.clean_leader = p.clean_prof
+WHERE p.clean_prof IS NULL

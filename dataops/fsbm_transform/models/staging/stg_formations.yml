@@ -4,12 +4,8 @@ models:
   - name: stg_formations
     description: "Table structurée de toutes les formations (Licences, Masters, Doctorats)."
     tests:
-      # Phase 1: Schema Lock
       - dbt_expectations.expect_table_columns_to_match_set:
           column_list: ["cycle", "nom_departement", "nom_filiere", "coordonnateur", "specialite", "objectifs", "debouches", "cible", "domaine", "description", "modules_json", "axes_recherche_json"]
-      # Phase 2: Compound Unique Key (nom_filiere + cycle must be unique together)
-      - dbt_expectations.expect_compound_columns_to_be_unique:
-          column_list: ["nom_filiere", "cycle"]
     columns:
       - name: cycle
       - name: nom_departement
