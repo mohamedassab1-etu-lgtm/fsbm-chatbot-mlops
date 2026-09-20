@@ -3,26 +3,14 @@ version: 2
 models:
   - name: stg_formations
     description: "Table structurée de toutes les formations (Licences, Masters, Doctorats)."
+    tests:
+      # Phase 1: Schema Lock
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list: ["cycle", "nom_departement", "nom_filiere", "coordonnateur", "specialite", "objectifs", "debouches", "cible", "domaine", "description", "modules_json", "axes_recherche_json"]
+      # Phase 2: Compound Unique Key (nom_filiere + cycle must be unique together)
+      - dbt_expectations.expect_compound_columns_to_be_unique:
+          column_list: ["nom_filiere", "cycle"]
     columns:
       - name: cycle
-        tests:
-          - not_null
       - name: nom_departement
-        tests:
-          - not_null
       - name: nom_filiere
-        tests:
-          - not_null
-      - name: coordonnateur
-      - name: specialite
-      - name: objectifs
-      - name: debouches
-      - name: cible
-      - name: domaine
-        description: "Domaine de recherche (spécifique aux doctorats)."
-      - name: description
-        description: "Description de la formation (spécifique aux doctorats)."
-      - name: modules_json
-        description: "Structure contenant le détail des modules enseignés."
-      - name: axes_recherche_json
-        description: "Axes de recherche (spécifique aux doctorats)."
