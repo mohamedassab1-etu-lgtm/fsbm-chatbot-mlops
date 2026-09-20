@@ -282,6 +282,17 @@ jobs:
           done
           echo "Backend is ready!"
 
+      - name: Set up Python for Integration Tests
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python Integration Dependencies
+        run: pip install pytest httpx
+
+      - name: Run Python Post-Docker Integration Tests
+        run: pytest tests/integration/ -v
+
       - name: Run Post-Docker E2E Integration Tests
         run: bash tests/e2e_integration.sh
 

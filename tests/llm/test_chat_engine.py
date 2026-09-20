@@ -37,6 +37,12 @@ Département : Informatique"""
     assert result["département"] == "Informatique"
 
 
+def test_parse_fields_malformed_text():
+    content = "Nom Ahmed Alaoui\nEmail ahmed@example.com"
+    result = parse_fields(content)
+    assert result == {}
+
+
 def test_emails_from_doc():
     doc = SimpleNamespace(page_content="""Nom : Ahmed Alaoui
 Email : ahmed@example.com
@@ -45,6 +51,12 @@ Téléphone : 0600000000""")
     result = emails_from_doc(doc)
 
     assert result == ["ahmed@example.com"]
+
+
+def test_emails_from_doc_no_emails():
+    doc = SimpleNamespace(page_content="Nom : Ahmed Alaoui\nDépartement : Informatique")
+    result = emails_from_doc(doc)
+    assert result == []
 
 
 def test_best_matching_doc():
