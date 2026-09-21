@@ -44,7 +44,15 @@ def raw_fsbm_data():
     """
     Étape 1 : Ingestion des fichiers JSON bruts vers DuckDB via dlt.
     """
-    load_info = ingest_dlt.pipeline.run([
+    import dlt
+    
+    pipeline = dlt.pipeline(
+        pipeline_name="fsbm_ingestion",
+        destination=dlt.destinations.duckdb(credentials=ingest_dlt.DUCKDB_PATH),
+        dataset_name="raw_data" 
+    )
+    
+    load_info = pipeline.run([
         ingest_dlt.get_fsbm_data(),
         ingest_dlt.get_departements_data(),
         ingest_dlt.get_formations_data(),
