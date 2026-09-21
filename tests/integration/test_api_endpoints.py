@@ -5,7 +5,7 @@ import httpx
 BASE_URL = "http://localhost:8000"
 
 def test_health_endpoint_live():
-    response = httpx.get(f"{BASE_URL}/api/health")
+    response = httpx.get(f"{BASE_URL}/api/health", timeout=10.0)
     assert response.status_code == 200
     assert "opérationnelle" in response.json()["status"]
 
@@ -15,7 +15,7 @@ def test_health_endpoint_live():
 
 def test_chat_endpoint_validation_error():
     # Sending an empty payload should trigger FastAPI's 422 Unprocessable Entity
-    response = httpx.post(f"{BASE_URL}/api/chat/stream", json={})
+    response = httpx.post(f"{BASE_URL}/api/chat/stream", json={}, timeout=10.0)
     assert response.status_code == 422
     assert "detail" in response.json()
 
@@ -26,7 +26,8 @@ def test_chat_endpoint_success():
     }
     
     # We use httpx.stream to capture the Server-Sent Events (SSE) data chunks
-    with httpx.stream("POST", f"{BASE_URL}/api/chat/stream", json=payload) as response:
+    # INCREASED TIMEOUT: LLM generation on CI runners is slow
+    with httpx.stream("POST", f"{BASE_URL}/api/chat/stream", json=payload, timeout=120.0) as response:
         assert response.status_code == 200
         content = response.read().decode("utf-8")
         # Ensure the stream format matches the SSE spec your frontend expects
@@ -39,7 +40,7 @@ def test_chat_endpoint_success():
 def test_generate_title_only_prompt():
     # Scenario 1: Only the prompt is provided
     payload = {"prompt": "donne moi l'emploi du temps de la filière SMA"}
-    response = httpx.post(f"{BASE_URL}/generate-title", json=payload)
+    response = httpx.post(f"{BASE_URL}/generate-title", json=payload, timeout=120.0)
     
     assert response.status_code == 200
     data = response.json()
@@ -53,7 +54,7 @@ def test_generate_title_with_valid_language():
         "prompt": "what is the email address of the biology department?",
         "language": "en"
     }
-    response = httpx.post(f"{BASE_URL}/generate-title", json=payload)
+    response = httpx.post(f"{BASE_URL}/generate-title", json=payload, timeout=120.0)
     
     assert response.status_code == 200
     data = response.json()
@@ -67,7 +68,7 @@ def test_generate_title_with_invalid_language():
         "prompt": "¿Dónde está la biblioteca?",
         "language": "es"
     }
-    response = httpx.post(f"{BASE_URL}/generate-title", json=payload)
+    response = httpx.post(f"{BASE_URL}/generate-title", json=payload, timeout=120.0)
     
     assert response.status_code == 200
     data = response.json()
@@ -79,7 +80,7 @@ def test_generate_title_with_invalid_language():
 def test_generate_title_empty_prompt_exception():
     # Scenario 4: Empty prompt / Gibberish that causes an exception or fallback
     payload = {"prompt": "   "}
-    response = httpx.post(f"{BASE_URL}/generate-title", json=payload)
+    response = httpx.post(f"{BASE_URL}/generate-title", json=payload, timeout=120.0)
     
     assert response.status_code == 200
     data = response.json()
