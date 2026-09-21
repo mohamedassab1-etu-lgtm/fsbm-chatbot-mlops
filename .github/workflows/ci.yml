@@ -258,7 +258,7 @@ jobs:
           echo "NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}" >> website/.env.local
           echo "NEXTAUTH_URL=http://localhost:3000" >> website/.env.local
           echo "BACKEND_URL=http://backend:8000" >> website/.env.local
-          echo "DATABASE_URL="mysql://root:root@localhost:3306/fsbm_assistant" >> website/.env
+          echo "DATABASE_URL=mysql://root:root@localhost:3306/fsbm_assistant" >> website/.env
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
