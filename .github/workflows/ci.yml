@@ -8,16 +8,6 @@ on:
 
 jobs:
 
-  retrieve-secret:
-    name: Retrieve Secret for API Key
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run a script using the secret
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }} # Passes the secret as an environment variable
-        run: |
-          echo "The secret is: $HF_TOKEN"
-
   # 0. LINTING (PYTHON CODE QUALITY)
 
   python-lint:
