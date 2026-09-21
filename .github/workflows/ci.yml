@@ -8,11 +8,38 @@ on:
 
 jobs:
 
-  # ==========================================
-  # 1. SOURCES -> DLT (Ingestion & Unit Tests)
-  # ==========================================
+  # 0. LINTING (PYTHON CODE QUALITY)
+
+  python-lint:
+    name: Python Code Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          
+      - name: Install Flake8
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
+          
+      - name: Run Linter (Critical Errors Only)
+        run: flake8 ./llm-engine ./dataops --count --select=E9,F63,F7,F82 --show-source --statistics
+        
+      - name: Run Linter (Style Warnings)
+        continue-on-error: true
+        run: flake8 ./llm-engine ./dataops --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+  # 1. DATA UNIT TESTS -> SOURCES -> INGESTION DLT
+
   data-pipeline-ingestion:
     name: Data Ingestion & Unit Tests
+    needs: [python-lint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -29,7 +56,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest duckdb dlt
           
-      # FIX 1: Create the local relative directory that ingest_dlt.py expects
       - name: Create Local DuckDB Directory
         working-directory: ./dataops
         run: mkdir -p data/duckdb
@@ -50,9 +76,8 @@ jobs:
           path: ./dataops/data/duckdb/fsbm.duckdb
           retention-days: 1
 
-  # ==========================================
   # 2. DUCKDB -> DBT -> TESTS QUALITÉ
-  # ==========================================
+
   data-quality-contracts:
     name: dbt Data Contracts & Quality
     needs: [data-pipeline-ingestion]
@@ -72,13 +97,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-core dbt-duckdb
           
-      # Keep this: dbt profiles.yml expects the absolute Docker path
       - name: Recreate Mock Docker Path
         run: |
           sudo mkdir -p /app/data/duckdb
           sudo chown -R $USER:$USER /app
           
-      # Download the database from Job 1 into the absolute Docker path for Job 2
       - name: Download DuckDB Artifact
         uses: actions/download-artifact@v4
         with:
@@ -99,10 +122,11 @@ jobs:
           path: /app/data/duckdb/fsbm.duckdb
           retention-days: 1
 
-  # 3. SERVICE ML (FastAPI) & LLM VALIDATION
+  # 3. LLM SERVICE VALIDATION (FASTAPI + LLM ENGINE)
 
   llm-service-validation:
     name: FastAPI & LLM Engine Tests
+    needs: [python-lint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -129,6 +153,7 @@ jobs:
 
   frontend-validation:
     name: Next.js Frontend Tests
+    needs: [python-lint]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -152,9 +177,8 @@ jobs:
       - name: Run Web Tests
         run: npm test -- --run
 
-  # ==========================================
-  # 5. ORCHESTRATION (DAGSTER)
-  # ==========================================
+  # 5. DATA ORCHESTRATION (DAGSTER)
+
   dagster-orchestration:
     name: Dagster Orchestration Execution
     needs: [data-quality-contracts]
@@ -185,14 +209,12 @@ jobs:
           sudo chown -R $USER:$USER /app
           ln -s ${{ github.workspace }}/dataops/data/duckdb /app/data/duckdb
           
-      # Dagster needs the dbt manifest to compile the asset graph
       - name: Compile dbt Manifest
         working-directory: ./dataops/fsbm_transform
         run: |
           dbt deps
           dbt parse
           
-      # Run the entire ingestion and transformation via the Orchestrator
       - name: Materialize Pipeline via Dagster
         working-directory: ./dataops
         env:
@@ -201,7 +223,6 @@ jobs:
           mkdir -p $DAGSTER_HOME
           dagster asset materialize -f orchestration.py --select "*"
           
-      # Upload the database produced by Dagster for Docker to use
       - name: Upload Orchestrated DuckDB Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -209,9 +230,8 @@ jobs:
           path: ./dataops/data/duckdb/fsbm.duckdb
           retention-days: 1
 
-  # ==========================================
   # 6. CONTENEURISATION (DOCKER INTEGRATION)
-  # ==========================================
+
   docker-integration:
     name: Docker Full Stack Integration
     needs: [dagster-orchestration, llm-service-validation, frontend-validation]
@@ -220,7 +240,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Download the database that Dagster just built
       - name: Download Orchestrated DuckDB Artifact
         uses: actions/download-artifact@v4
         with:
@@ -232,13 +251,14 @@ jobs:
         with:
           swap-size-gb: 10
 
-      - name: Generate .env.local from Secrets
+      - name: Generate .env.local and .env from Secrets
         run: |
           echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> website/.env.local
           echo "GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}" >> website/.env.local
           echo "NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}" >> website/.env.local
           echo "NEXTAUTH_URL=http://localhost:3000" >> website/.env.local
           echo "BACKEND_URL=http://backend:8000" >> website/.env.local
+          echo "DATABASE_URL="mysql://root:root@localhost:3306/fsbm_assistant" >> website/.env
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -259,8 +279,6 @@ jobs:
           docker exec fsbm-ollama ollama pull qwen2.5:3b
           echo "Model downloaded successfully."
 
-      # Boot everything up. We no longer need to run `docker exec dagster` 
-      # because the artifact is already mounted!
       - name: Start Full Stack (Backend, Frontend, Dagster, Observability)
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}

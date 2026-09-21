@@ -107,12 +107,6 @@ Pour s'assurer que le vector store achemine correctement l'information, des règ
 * `stg_laboratoires.acronyme` DOIT ÊTRE unique.
 * `stg_professeurs.nom_professeur` DOIT ÊTRE unique et non nul.
 
-
-* **Unicité Composée :**
-* La combinaison de `stg_formations.nom_filiere` ET `stg_formations.cycle` DOIT ÊTRE unique. Il ne peut exister deux formations portant le même nom au sein d'un même cycle académique.
-
-
-
 ---
 
 ## 4. Intégrité Référentielle Stricte
@@ -126,8 +120,6 @@ La fenêtre de contexte du LLM ne doit jamais être polluée par des entités "f
 * `stg_departements.chef`
 * `stg_formations.coordonnateur`
 * `stg_laboratoires.directeur`
-
-
 
 ---
 
