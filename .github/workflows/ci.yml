@@ -287,6 +287,9 @@ jobs:
           echo "=== DUMPING LIVE DAGSTER LOGS ==="
           docker logs -f fsbm-dagster &
           
+          docker exec fsbm-dagster mkdir -p /app/data/duckdb
+          docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select "*"
+          
           COUNTER=0
           while ! docker logs fsbm-dagster 2>&1 | grep -q "Completed successfully"; do
             sleep 10
