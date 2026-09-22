@@ -279,25 +279,27 @@ jobs:
           docker exec fsbm-ollama ollama pull qwen2.5:3b
           echo "Model downloaded successfully."
 
-      - name: Start Frontend and Dagster
-        run: docker compose up -d frontend dagster
-
-      - name: Run Dagster Materialization
+      - name: Inject DuckDB Artifact into Docker Volume
         run: |
-          echo "Waiting 15 seconds for Dagster daemon to initialize its SQLite database..."
-          sleep 15
+          echo "Starting Dagster just to initialize the shared Docker volume..."
+          docker compose up -d dagster
           
-          echo "=== RUNNING DAGSTER MATERIALIZATION ==="
+          echo "Creating directory inside the volume..."
           docker exec fsbm-dagster mkdir -p /app/data/duckdb
           
-          docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select '*'
+          echo "Copying the DuckDB artifact from GitHub Runner INTO the Docker container..."
+          docker cp ./dataops/data/duckdb/fsbm.duckdb fsbm-dagster:/app/data/duckdb/fsbm.duckdb
           
-          echo "Dagster materialization finished successfully!"
-          
-      - name: Start Backend and Observability Stack
+          echo "Artifact successfully injected!"
+      
+      - name: Start Full Stack (Backend, Frontend, Dagster, Observability)
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: docker compose up -d
+        run: |
+          echo "Starting the rest of the infrastructure..."
+          # The orchestrated duckdb file is already in ./dataops/data/duckdb/
+          # so the backend can just mount it and start immediately!
+          docker compose up -d
 
       - name: Verify Backend Initialization
         run: |
