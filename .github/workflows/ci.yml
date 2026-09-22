@@ -290,7 +290,7 @@ jobs:
           echo "=== RUNNING DAGSTER MATERIALIZATION ==="
           docker exec fsbm-dagster mkdir -p /app/data/duckdb
           
-          docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select \*
+          docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select '*'
           
           echo "Dagster materialization finished successfully!"
           
