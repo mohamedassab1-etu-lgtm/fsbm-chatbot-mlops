@@ -282,25 +282,17 @@ jobs:
       - name: Start Frontend and Dagster
         run: docker compose up -d frontend dagster
 
-      - name: Verify Dagster Materialization Finish
+      - name: Run Dagster Materialization
         run: |
-          echo "=== DUMPING LIVE DAGSTER LOGS ==="
-          docker logs -f fsbm-dagster &
+          echo "Waiting 15 seconds for Dagster daemon to initialize its SQLite database..."
+          sleep 15
           
+          echo "=== RUNNING DAGSTER MATERIALIZATION ==="
           docker exec fsbm-dagster mkdir -p /app/data/duckdb
-          docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select "*"
           
-          COUNTER=0
-          while ! docker logs fsbm-dagster 2>&1 | grep -q "Completed successfully"; do
-            sleep 10
-            COUNTER=$((COUNTER + 1))
-            if [ $COUNTER -gt 90 ]; then
-              echo "ERROR: Dagster materialization timed out."
-              docker logs fsbm-dagster
-              exit 1
-            fi
-          done
-          echo "DuckDB is ready!"
+          docker exec fsbm-dagster dagster asset materialize -f orchestration.py --select \*
+          
+          echo "Dagster materialization finished successfully!"
           
       - name: Start Backend and Observability Stack
         env:
