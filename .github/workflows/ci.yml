@@ -279,7 +279,27 @@ jobs:
           docker exec fsbm-ollama ollama pull qwen2.5:3b
           echo "Model downloaded successfully."
 
-      - name: Start Full Stack (Backend, Frontend, Dagster, Observability)
+      - name: Start Frontend and Dagster
+        run: docker compose up -d frontend dagster
+
+      - name: Verify Dagster Materialization Finish
+        run: |
+          echo "=== DUMPING LIVE DAGSTER LOGS ==="
+          docker logs -f fsbm-dagster &
+          
+          COUNTER=0
+          while ! docker logs fsbm-dagster 2>&1 | grep -q "Completed successfully"; do
+            sleep 10
+            COUNTER=$((COUNTER + 1))
+            if [ $COUNTER -gt 90 ]; then
+              echo "ERROR: Dagster materialization timed out."
+              docker logs fsbm-dagster
+              exit 1
+            fi
+          done
+          echo "DuckDB is ready!"
+          
+      - name: Start Backend and Observability Stack
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: docker compose up -d
