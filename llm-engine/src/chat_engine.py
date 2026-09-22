@@ -32,17 +32,6 @@ RAG_DOCS_RETRIEVED = Summary(
 
 logger = logging.getLogger("fsbm-backend.chat_engine")
 
-# ---------------------------------------------------------------------------
-# 0. Fact grounding - correct exact strings (emails) the LLM may have
-#    subtly altered while generating natural-sounding prose
-# ---------------------------------------------------------------------------
-# Small local models (like llama3.2:1b) are prone to "fixing" or fabricating
-# structured strings such as emails, even when the correct value is right
-# there in the context - because generating fluent text and reproducing an
-# exact token sequence character-for-character are different skills. Rather
-# than trusting the model's transcription, we verify every email it
-# outputs against the emails that actually appear in the retrieved
-# documents, and correct or flag anything that doesn't match.
 EMAIL_REGEX = re.compile(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9.-]+")
 
 
