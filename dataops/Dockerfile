@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir uv --upgrade pip && \
+    uv pip install --system --no-cache -r requirements.txt
 
 COPY . .
 
@@ -16,7 +16,7 @@ ENV DAGSTER_HOME=/app/dagster_home
 RUN mkdir -p $DAGSTER_HOME
 
 # Generate the initial dbt manifest.json required by orchestration.py
-RUN cd fsbm_transform && dbt parse
+RUN cd fsbm_transform && dbt clean && dbt deps && dbt parse
 
 EXPOSE 3000
 

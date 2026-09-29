@@ -144,7 +144,7 @@
         {
             "nom": "Physique",
             "description": "Le Département de Physique de la Faculté des Sciences Ben M’Sik est une structure académique dédiée à l’enseignement et à la recherche dans les domaines fondamentaux et appliqués de la physique. Il forme des étudiants capables de modéliser, expérimenter et résoudre des phénomènes physiques complexes, en lien avec les avancées technologiques, industrielles et scientifiques. Le département met en œuvre une pédagogie dynamique alliant rigueur théorique, expérimentation pratique et ouverture vers l’innovation.",
-            "chef_de_departement": "MAZROUI M’hammed",
+            "chef_de_departement": "MAZROUI M'hammed",
             "formations": {
                 "licences": [
                     {

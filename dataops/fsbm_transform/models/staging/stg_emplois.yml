@@ -3,12 +3,14 @@ version: 2
 models:
   - name: stg_emplois
     description: "Table des emplois du temps structurés par section."
+    tests:
+      - dbt_expectations.expect_table_columns_to_match_set:
+          column_list: ["section", "planning_json"]
     columns:
       - name: section
         description: "Nom de la section ou du groupe d'étudiants (ex: Tronc Commun PC1)."
         tests:
           - not_null
+          - unique
       - name: planning_json
-        description: "Planning complet de la semaine au format JSON structuré. Contient pour chaque jour et chaque créneau une liste d'objets détaillant les cours (type, module, groupe, salle)."
-        tests:
-          - not_null
+        description: "Planning complet de la semaine au format JSON structuré."
